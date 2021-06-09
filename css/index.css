@@ -27,6 +27,33 @@
 	border-right: 0.1em solid var(--primary-color);
 }
 
+.qualifications {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
+	padding: 1em;
+	background-color: lightgray;
+}
+.qualification {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 10em;
+	text-align: center;
+}
+.qualification__icon {
+	font-size: 3em;
+	color: dimgrey;
+}
+.qualification__text {
+	margin-top: 0.5em;
+	font-family: "Allan";
+	font-style: italic;
+	color: grey;
+}
+
 @keyframes flash {
 	from {
 		opacity: 1;

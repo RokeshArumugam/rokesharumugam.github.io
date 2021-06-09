@@ -1,5 +1,6 @@
 :root {
 	--border-radius: 1em;
+	--primary-color: dodgerblue;
 }
 * {
 	margin: 0;
@@ -20,7 +21,7 @@ header {
 	top: 0;
 	display: flex;
 	align-items: center;
-	box-shadow: 0em 0em 0.5em 0em rgba(0, 0, 0, 0.3);
+	box-shadow: 0em 0em 0.5em 0em rgba(0, 0, 0, 0.2);
 	padding: 1em;
 	background-color: white;
 }
@@ -41,8 +42,12 @@ nav {
 .contactLink {
 	border-radius: var(--border-radius);
 	padding: 0.25em 0.75em;
-	background-color: dodgerblue;
+	background-color: var(--primary-color);
 	font-size: 1.1em;
 	text-align: center;
 	color: white;
+}
+
+main {
+	flex-grow: 1;
 }

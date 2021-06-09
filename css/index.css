@@ -29,7 +29,7 @@
 
 .qualifications {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 	gap: 1em;
 	padding: 1em;
@@ -38,7 +38,6 @@
 .qualification {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	width: 10em;
 	text-align: center;

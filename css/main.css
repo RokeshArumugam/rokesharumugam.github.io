@@ -19,11 +19,12 @@ body {
 main {
 	flex-grow: 1;
 }
-.contactLink {
+.primaryButton {
+	outline: none;
+	border: none;
 	border-radius: var(--border-radius);
 	padding: 0.25em 0.75em;
 	background-color: var(--primary-color);
-	font-size: 1.1em;
 	text-align: center;
 	text-decoration: none;
 	color: white;

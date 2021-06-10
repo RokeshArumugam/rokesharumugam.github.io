@@ -16,28 +16,8 @@ body {
 	min-height: 100vh;
 }
 
-header {
-	position: sticky;
-	top: 0;
-	display: flex;
-	align-items: center;
-	box-shadow: 0em 0em 0.5em 0em rgba(0, 0, 0, 0.2);
-	padding: 1em;
-	background-color: white;
-}
-.headerLogo {
-	margin-right: auto;
-	font-size: 1.5em;
-	font-weight: bold;
-}
-nav {
-	display: flex;
-	align-items: center;
-	gap: 1.5em;
-}
-.navLink {
-	text-decoration: none;
-	color: darkgrey;
+main {
+	flex-grow: 1;
 }
 .contactLink {
 	border-radius: var(--border-radius);
@@ -45,9 +25,6 @@ nav {
 	background-color: var(--primary-color);
 	font-size: 1.1em;
 	text-align: center;
+	text-decoration: none;
 	color: white;
-}
-
-main {
-	flex-grow: 1;
 }

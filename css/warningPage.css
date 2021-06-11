@@ -16,12 +16,11 @@ h1 {
 }
 .mainText {
 	margin-bottom: 0.3em;
-	color: black;
 }
 .subText {
+	opacity: 0.5;
 	margin-top: 0.1em;
 	font-size: 0.75em;
-	color: grey;
 }
 .backLink {
 	visibility: hidden;

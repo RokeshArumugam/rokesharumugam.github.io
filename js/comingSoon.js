@@ -1,3 +1,3 @@
-const infoText = document.querySelector(".infoText");
+const mainText = document.querySelector(".mainText");
 
-infoText.innerText = urlParams.get("infoText") + "\n" + infoText.innerText;
+mainText.innerText = urlParams.get("infoText");

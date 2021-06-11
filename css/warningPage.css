@@ -1,0 +1,30 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	font-size: 4em;
+}
+.infoText {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1em;
+	font-size: 1.5em;
+	text-align: center;
+}
+.mainText {
+	margin-bottom: 0.3em;
+	color: black;
+}
+.subText {
+	margin-top: 0.1em;
+	font-size: 0.75em;
+	color: grey;
+}
+.backLink {
+	visibility: hidden;
+	margin-top: 4em;
+	font-size: 1.3em;
+}

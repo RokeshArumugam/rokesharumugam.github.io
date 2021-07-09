@@ -6,7 +6,7 @@ const texts = [
 	"GCSE Tutoring",
 	"11+ Tutoring",
 	"Medicine University Application Advice",
-	"Medicine Personal Statment Advice",
+	"Medicine Personal Statement Advice",
 	"Programming Tutoring",
 	"Programming Courses",
 	"Programming Projects"

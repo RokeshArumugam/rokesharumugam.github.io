@@ -19,9 +19,11 @@ nav {
 	gap: 1.5em;
 }
 .navLink:not(.primaryButton) {
-	opacity: 0.55;
 	text-decoration: none;
 	color: var(--foreground-color);
+}
+.navLink--standard {
+	opacity: 0.55;
 }
 .contactLink {
 	font-size: 1.1em;

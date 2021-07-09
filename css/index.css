@@ -87,10 +87,8 @@
 	height: 12em;
 	padding: 1em;
 }
-.testimonial::before {
-	content: "\f10d";
+.testimonial__quoteIcon {
 	font-size: 2em;
-	font-family: "Font Awesome 5 Free";
 	color: var(--accent-color);
 }
 .testimonial__quote {

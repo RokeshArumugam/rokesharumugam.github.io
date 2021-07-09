@@ -56,8 +56,8 @@
 	opacity: 0.6;
 	margin-top: 0.5em;
 	font-size: 1.05em;
-	font-family: "Allan";
-	font-style: italic;
+	font-family: var(--cursive-font-family);
+	letter-spacing: 0.02em;
 	color: var(--background-color);
 }
 
@@ -98,7 +98,7 @@
 	display: grid;
 	place-items: center;
 	overflow: auto;
-	font-family: "Allan";
+	font-family: var(--serif-font-family);
 	font-style: italic;
 }
 .testimonial__personInfo {

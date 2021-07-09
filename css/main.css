@@ -4,6 +4,9 @@
 	--accent-color: dodgerblue;
 	--complement-color: white;
 	--danger-color: red;
+	--default-font-family: "Helvetica", sans-serif;
+	--serif-font-family: "Garamond", serif;
+	--cursive-font-family: "Apple Chancery", cursive;
 	--border-radius: 1em;
 }
 @media (prefers-color-scheme: dark) {
@@ -16,7 +19,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Helvetica", sans-serif;
+	font-family: var(--default-font-family);
 }
 body {
 	position: relative;

@@ -14,7 +14,9 @@ async function loadHeaderAndFooter() {
 			return response.text()
 		})
 		.then(data => {
-			document.getElementsByTagName("footer")[0].innerHTML = data;
+			let footer = document.getElementsByTagName("footer")[0];
+			footer.innerHTML = data;
+			footer.getElementsByClassName("copyrightNotice__year")[0].innerText = new Date().getFullYear();
 		});
 };
 

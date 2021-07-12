@@ -13,7 +13,7 @@ const texts = [
 ];
 const waitPerCharacterDuration = 175;
 const typeDuration = 60;
-const textContainer = document.querySelector(".textContainer");
+const textContainer = document.getElementsByClassName("textContainer")[0];
 
 const testimonials = [
 	{
@@ -43,7 +43,7 @@ const testimonials = [
 	}
 ];
 const testimonialTemplate = document.getElementById("testimonialTemplate");
-const testimonialsContainer = document.querySelector(".testimonials");
+const testimonialsContainer = document.getElementsByClassName("testimonials")[0];
 
 async function typeText() {
 	let oldText = textContainer.innerText;

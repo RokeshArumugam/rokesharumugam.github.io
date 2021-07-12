@@ -6,6 +6,7 @@ main {
 }
 h1 {
 	font-size: 4em;
+	text-align: center;
 }
 .infoText {
 	display: flex;

@@ -1,0 +1,38 @@
+.projectsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5em;
+}
+.project {
+	--gap: 1.5em;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+	box-shadow: var(--box-shadow);
+	border-radius: var(--border-radius);
+	padding: var(--gap);
+	color: var(--foreground-color);
+	text-decoration: none;
+}
+.project__info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2em;
+}
+.project__info__name {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: var(--accent-color);
+}
+.project__info__startDate {
+	opacity: 0.8;
+	font-size: 0.8em;
+}
+.project__info__startDate::before {
+	content: "Started in ";
+}
+.project__description {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}

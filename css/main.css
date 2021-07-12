@@ -7,6 +7,7 @@
 	--default-font-family: "Helvetica", sans-serif;
 	--serif-font-family: "Garamond", serif;
 	--cursive-font-family: "Apple Chancery", cursive;
+	--box-shadow: 0em 0em 1em -0.25em var(--accent-color);;
 	--border-radius: 1em;
 }
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,7 @@ body {
 
 main {
 	flex-grow: 1;
+	padding: 2em;
 }
 .primaryButton {
 	outline: none;
@@ -43,4 +45,19 @@ main {
 	text-align: center;
 	text-decoration: none;
 	color: var(--complement-color);
+}
+
+h1.pageTitle {
+	margin: 0.5em;
+	font-size: 3em;
+	text-align: center;
+	color: var(--accent-color);
+}
+p.pageIntro {
+	margin: 0.75em;
+	font-size: 1.2em;
+	text-align: center;
+}
+p.pageIntro:last-of-type {
+	margin-bottom: 3em;
 }

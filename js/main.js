@@ -9,6 +9,12 @@ async function loadHeaderAndFooter() {
 			let header = document.getElementsByTagName("header")[0];
 			if (header) {
 				header.innerHTML = data;
+				for (let navLink of header.getElementsByClassName("navLink--standard")) {
+					if (window.location.href.startsWith(navLink.href)) {
+						navLink.classList.add("navLink--current");
+						break;
+					}
+				};
 			};
 		});
 

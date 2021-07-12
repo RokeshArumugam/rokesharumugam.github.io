@@ -7,7 +7,8 @@
 	--default-font-family: "Helvetica", sans-serif;
 	--serif-font-family: "Garamond", serif;
 	--cursive-font-family: "Apple Chancery", cursive;
-	--box-shadow: 0em 0em 1em -0.25em var(--accent-color);;
+	--box-shadow: 0em 0em 1em -0.25em var(--accent-color);
+	--border-thickness: 0.2em;
 	--border-radius: 1em;
 }
 @media (prefers-color-scheme: dark) {
@@ -61,12 +62,29 @@ nav {
 	align-items: center;
 	gap: 1.5em;
 }
-.navLink:not(.primaryButton) {
+.navLink {
+	position: relative;
 	text-decoration: none;
+}
+.navLink:not(.primaryButton):not(.navLink--current) {
 	color: var(--foreground-color);
 }
 .navLink--standard {
-	opacity: 0.55;
+	opacity: 0.6;
+}
+.navLink--current {
+	opacity: 1;
+	color: var(--accent-color)
+}
+.navLink--current::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	margin-top: var(--border-thickness);
+	width: 100%;
+	height: var(--border-thickness);
+	background-color: var(--accent-color);
 }
 .contactLink {
 	font-size: 1.1em;

@@ -2,7 +2,6 @@ const projects = [
 	{
 		"name": "Ball Jump",
 		"startDate": "2015-06",
-		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
 		"description": [
 			"Ball Jump is a simple yet addictive 2D computer game! With easy controls and simple layout, this is very a fun game!",
 			"Navigate your own customizable character through evil enemies and jump up through the platforms. With power-ups and skill there will be nothing to stop you!"

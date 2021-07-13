@@ -3,7 +3,7 @@
 	flex-direction: column;
 	gap: 2.5em;
 }
-.project {
+.project, .project:visited {
 	--gap: 1.5em;
 	display: flex;
 	flex-direction: column;
@@ -31,8 +31,6 @@
 .project__info__startDate::before {
 	content: "Started in ";
 }
-.project__description {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5em;
+.project__description p {
+	margin-left: 0em;
 }

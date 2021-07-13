@@ -66,13 +66,14 @@ nav {
 	position: relative;
 	text-decoration: none;
 }
-.navLink:not(.primaryButton):not(.navLink--current) {
+.navLink:not(.primaryButton):not(.navLink--current),
+.navLink:not(.primaryButton):not(.navLink--current):visited {
 	color: var(--foreground-color);
 }
 .navLink--standard {
 	opacity: 0.6;
 }
-.navLink--current {
+.navLink--current, .navLink--current:visited {
 	opacity: 1;
 	color: var(--accent-color)
 }
@@ -106,7 +107,21 @@ main {
 	flex-grow: 1;
 	padding: 2em;
 }
-.primaryButton {
+p {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 72ch;
+}
+p + p {
+	margin-top: 0.7em;
+}
+a {
+	color: dodgerblue;
+}
+a:visited {
+	color: orchid;
+}
+.primaryButton, .primaryButton:visited {
 	outline: none;
 	border: none;
 	border-radius: var(--border-radius);
@@ -124,7 +139,6 @@ h1.pageTitle {
 	color: var(--accent-color);
 }
 p.pageIntro {
-	margin: 0.75em;
 	font-size: 1.2em;
 	text-align: center;
 }

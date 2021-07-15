@@ -4,10 +4,12 @@
 	--accent-color: dodgerblue;
 	--complement-color: white;
 	--danger-color: red;
+	--border-color: gainsboro;
 	--default-font-family: "Helvetica", sans-serif;
 	--serif-font-family: "Garamond", serif;
 	--cursive-font-family: "Apple Chancery", cursive;
 	--box-shadow: 0em 0em 1em -0.25em var(--accent-color);
+	--border: var(--border-thickness) solid var(--border-color);
 	--border-thickness: 0.2em;
 	--border-radius: 1em;
 }

@@ -116,6 +116,7 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 72ch;
+	line-height: 1.3em;
 }
 p + p {
 	margin-top: 0.7em;

@@ -77,3 +77,10 @@
 	clip-path: circle(0%);
 	transition: clip-path var(--image-wait-duration) linear;
 }
+
+.section--download__link {
+	display: block;
+	margin: auto;
+	width: max-content;
+	font-size: 1.75em;
+}

@@ -44,13 +44,13 @@ const projects = [
 	}
 ].sort((one, two) => (one["startDate"] < two["startDate"]));
 const projectTemplate = document.getElementById("projectTemplate");
-const projectsContainer = document.getElementsByClassName("projectsContainer")[0];
+const projectsContainer = document.getElementsByClassName("section--projects")[0];
 
 function populateProjects() {
 	for (let project of projects) {
 		let projectElement = document.importNode(projectTemplate.content, true).querySelector(".project");
-		projectElement.getElementsByClassName("project__info__name")[0].innerText = project["name"];
-		projectElement.getElementsByClassName("project__info__startDate")[0].innerText =
+		projectElement.getElementsByClassName("project__name")[0].innerText = project["name"];
+		projectElement.getElementsByClassName("project__startDate")[0].innerText =
 			new Date(project["startDate"]).toLocaleDateString(
 				"en-gb",
 				{

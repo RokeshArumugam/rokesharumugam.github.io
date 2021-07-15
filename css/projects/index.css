@@ -1,7 +1,9 @@
-.projectsContainer {
+.section--projects {
 	display: flex;
 	flex-direction: column;
-	gap: 2.5em;
+	gap: 2em;
+	margin: auto;
+	width: max-content;
 }
 .project, .project:visited {
 	--gap: 1.5em;
@@ -14,21 +16,21 @@
 	color: var(--foreground-color);
 	text-decoration: none;
 }
-.project__info {
+.project__infoContainer {
 	display: flex;
 	flex-direction: column;
 	gap: 0.2em;
 }
-.project__info__name {
+.project__name {
 	font-size: 1.5em;
 	font-weight: bold;
 	color: var(--accent-color);
 }
-.project__info__startDate {
+.project__startDate {
 	opacity: 0.8;
 	font-size: 0.8em;
 }
-.project__info__startDate::before {
+.project__startDate::before {
 	content: "Started in ";
 }
 .project__description p {

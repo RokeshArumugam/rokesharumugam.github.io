@@ -1,7 +1,7 @@
-.carousel {
+.section--carousel {
 	--image-change-duration: 150ms;
 	--image-wait-duration: 10000ms;
-	--padding: 1em;
+	--gap: 1em;
 	display: grid;
 	place-content: center;
 	grid-template-columns: min-content minmax(300px, 800px) min-content;
@@ -9,27 +9,26 @@
 	grid-template-areas: 
 		"leftButton imagesContainer rightButton"
 		"dotsContainer dotsContainer dotsContainer";
-	margin: 2em;
+	gap: var(--gap);
 }
-.carousel__buttonContainer {
+.section--carousel__buttonContainer {
 	place-self: center;
-	padding: var(--padding);
 }
-.carousel__buttonContainer--left {
+.section--carousel__buttonContainer--left {
 	grid-area: leftButton;
 }
-.carousel__buttonContainer--right {
+.section--carousel__buttonContainer--right {
 	grid-area: rightButton;
 }
-.carousel__button {
+.section--carousel__button {
 	cursor: pointer;
 	font-size: 2em;
 }
-.carousel__imagesContainer {
+.section--carousel__imagesContainer {
 	grid-area: imagesContainer;
 	position: relative;
 }
-.carousel__image {
+.section--carousel__image {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -38,20 +37,19 @@
 	width: 100%;
 	object-fit: cover;
 }
-.carousel__image:first-child {
+.section--carousel__image:first-child {
 	position: relative;
 }
-.carousel__image--current {
+.section--carousel__image--current {
 	opacity: 1;
 }
-.carousel__dotsContainer {
+.section--carousel__dotsContainer {
 	grid-area: dotsContainer;
 	display: flex;
 	justify-content: center;
-	gap: var(--padding);
-	padding: var(--padding);
+	gap: var(--gap);
 }
-.carousel__dot {
+.section--carousel__dot {
 	--diameter: 1.25em;
 	display: grid;
 	place-items: center;
@@ -62,10 +60,10 @@
 	background-color: var(--border-color);
 	cursor: pointer;
 }
-.carousel__dot--current {
+.section--carousel__dot--current {
 	background-color: var(--accent-color);
 }
-.carousel__dot::after {
+.section--carousel__dot::after {
 	content: "";
 	clip-path: circle(35%);
 	transition: clip-path var(--image-change-duration) ease;
@@ -75,7 +73,7 @@
 	height: 100%;
 	background-color: var(--background-color);
 }
-.carousel__dot--current::after {
+.section--carousel__dot--current::after {
 	clip-path: circle(0%);
 	transition: clip-path var(--image-wait-duration) linear;
 }

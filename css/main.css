@@ -107,7 +107,10 @@ footer {
 
 main {
 	flex-grow: 1;
-	padding: 2em;
+}
+section {
+	width: 100%;
+	padding: 2.5em 1.5em;
 }
 p {
 	margin-left: auto;
@@ -134,16 +137,17 @@ a:visited {
 	color: var(--complement-color);
 }
 
-h1.pageTitle {
+.section--pageIntro__title {
 	margin: 0.5em;
 	font-size: 3em;
 	text-align: center;
 	color: var(--accent-color);
 }
-p.pageIntro {
-	font-size: 1.2em;
+.section--pageIntro__description p {
+	font-size: 1.3em;
 	text-align: center;
 }
-p.pageIntro:last-of-type {
-	margin-bottom: 3em;
+.section--text {
+	padding-top: 1em;
+	padding-bottom: 1em;
 }

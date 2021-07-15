@@ -16,15 +16,15 @@
 <body>
 	<header></header>
 	<main>
-		<div class="heroContainer">
-			<div class="heroSide heroSide--left">
-				<span class="heroLogo">Rokesh Arumugam</span>
+		<section class="section--hero">
+			<div class="section--hero__side section--hero__side--left">
+				<span class="section--hero__logo">Rokesh Arumugam</span>
 			</div>
-			<div class="heroSide heroSide--right">
-				<p class="textContainer"></p>
+			<div class="section--hero__side section--hero__side--right">
+				<p class="section--hero__textContainer"></p>
 			</div>
-		</div>
-		<div class="qualifications">
+		</section>
+		<section class="section--qualifications">
 			<div class="qualification">
 				<i class="fas fa-chalkboard-teacher qualification__icon"></i>
 				<span class="qualification__text">Medify TA</span>
@@ -49,19 +49,19 @@
 				<i class="fas fa-terminal qualification__icon"></i>
 				<span class="qualification__text">Self-taught Programmer</span>
 			</div>
-		</div>
-		<div class="testimonials">
+		</section>
+		<section class="section--testimonials">
 			<template id="testimonialTemplate">
 				<div class="testimonial">
 					<i class="testimonial__quoteIcon fas fa-quote-left"></i>
-					<p class="testimonial__quote"></p>
-					<div class="testimonial__personInfo">
-						<span class="testimonial__personInfo__name"></span>
-						<span class="testimonial__personInfo__position"></span>
+					<p class="testimonial__quoteText"></p>
+					<div class="testimonial__authorContainer">
+						<span class="testimonial__authorName"></span>
+						<span class="testimonial__authorPosition"></span>
 					</div>
 				</div>
 			</template>
-		</div>
+		</section>
 	</main>
 	<footer></footer>
 </body>

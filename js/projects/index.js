@@ -10,7 +10,6 @@ const projects = [
 	{
 		"name": "Stickmen Battles",
 		"startDate": "2016-06",
-		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
 		"description": [
 			"Stickmen Battles is a simple yet addictive 2D computer game! With easy controls and simple layout, this is very a fun game!",
 			"Navigate your own customizable character past evil enemies and see how long you can survive. With power-ups and skill there will be nothing to stop you!"

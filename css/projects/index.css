@@ -3,7 +3,7 @@
 	flex-direction: column;
 	gap: 2em;
 	margin: auto;
-	width: max-content;
+	max-width: max-content;
 }
 .project, .project:visited {
 	--gap: 1.5em;

@@ -9,21 +9,29 @@ main {
 	display: flex;
 	justify-content: space-evenly;
 	max-width: 1000px;
-	height: 20em;
+	padding: 4em 0em;
 }
 .section--hero__side {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 30%;
-	text-align: center;
+	width: 35%;
 }
-.section--hero__logo  {
-	font-size: 4em;
+.section--hero__side--left p {
+	margin-left: 0em;
+}
+.section--hero__intro {
+	font-size: 2.25em;
+}
+.section--hero__name {
 	color: var(--accent-color);
 }
+.section--hero__description {
+	font-size: 1.2em;
+}
 .section--hero__textContainer {
+	text-align: center;
 	font-size: 2em;
 }
 .section--hero__cursor {

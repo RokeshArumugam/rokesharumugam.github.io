@@ -1,4 +1,5 @@
 :root {
+	--mobile-screen-width: 641px;
 	--background-color: white;
 	--foreground-color: black;
 	--accent-color: dodgerblue;
@@ -12,6 +13,8 @@
 	--border: var(--border-thickness) solid var(--border-color);
 	--border-thickness: 0.2em;
 	--border-radius: 1em;
+	--section-default-padding-vertical: 2.5em;
+	--section-default-padding-horizontal: 1.5em;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -183,4 +186,18 @@ a:visited {
 }
 .section--doubleItem__textContainer {
 	font-size: 1.2em;
+}
+@media (max-width: 641px) {
+	.section--doubleItem {
+		flex-direction: column;
+		gap: 1.5em;
+		padding-left: var(--section-default-padding-horizontal);
+		padding-right: var(--section-default-padding-horizontal);
+	}
+	.section--doubleItem > * {
+		width: initial;
+	}
+	.section--doubleItem__icon {
+		font-size: 6em;
+	}
 }

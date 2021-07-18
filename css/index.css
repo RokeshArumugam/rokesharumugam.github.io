@@ -36,6 +36,11 @@ main {
 	margin-left: 0.1em;
 	border-right: 0.1em solid var(--accent-color);
 }
+@media (max-width: 641px) {
+	.section--hero__textContainer {
+		font-size: 1.5em;
+	}
+}
 
 /* Qualifications */
 

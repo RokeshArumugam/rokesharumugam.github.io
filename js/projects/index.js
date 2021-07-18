@@ -19,7 +19,6 @@ const projects = [
 	{
 		"name": "Easy Type",
 		"startDate": "2016-10",
-		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
 		"description": [
 			"Easy Type is a simple yet easy to use text-editor! Its simple layout makes typing quick and effortless.",
 			"There's even support for emojis in some fonts!"

@@ -19,8 +19,8 @@ const projects = [
 		"name": "Easy Type",
 		"startDate": "2016-10",
 		"description": [
-			"Easy Type is a text editor.",
-			"I created it for my classmates and I to use during ICT lessons at school."
+			"Easy Type is another secondary school project.",
+			"It is a text editor that I created for my classmates and I to use during ICT lessons at school."
 		]
 	},
 	{
@@ -28,8 +28,9 @@ const projects = [
 		"startDate": "2017-01",
 		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
 		"description": [
-			"Solitaire is a single player card game.",
-			"You may know it as Klondike."
+			"Solitaire is a single player card game. You may know it as Klondike",
+			"I created this online version of Solitaire for my friends and I to play on our school iPads - since popular game websites were blocked at my secondary school.",
+			"For any student reading this, I am obliged to ask you to not play games during lessons like we did. Paying attention in school is highly recommended."
 		]
 	},
 	{
@@ -37,7 +38,8 @@ const projects = [
 		"startDate": "2021-05",
 		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
 		"description": [
-			"TV Tracker can be used to keep track of how many episodes you have watched of each TV shows."
+			"TV Tracker is a PWA (Progressive Web App) that I created to keep track of how many episodes I've watched of each TV show.",
+			"This is nowhere near finished and was simply an experiment so I could see how PWAs work. They seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."
 		]
 	}
 ].sort((one, two) => (one["startDate"] < two["startDate"]));

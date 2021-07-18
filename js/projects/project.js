@@ -18,6 +18,8 @@ function getCurrentIndex() {
 
 function changeImage(currentIndex, targetIndex) {
 	targetIndex = ((targetIndex % images.length) + images.length) % images.length;
+	if (currentIndex == targetIndex) return;
+
 	images[currentIndex].classList.remove("section--carousel__image--current");
 	images[targetIndex].classList.add("section--carousel__image--current");
 	dots[currentIndex].classList.remove("section--carousel__dot--current");

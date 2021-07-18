@@ -5,18 +5,15 @@ main {
 /* Hero */
 
 .section--hero {
-	margin: auto;
-	display: flex;
-	justify-content: space-evenly;
-	max-width: 1000px;
-	padding: 4em 0em;
+	padding-top: 4em;
+	padding-bottom: 4em;
 }
 .section--hero__side {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 35%;
+	min-height: 7.5em;
 }
 .section--hero__side--left p {
 	margin-left: 0em;
@@ -71,6 +68,10 @@ main {
 	color: var(--background-color);
 }
 
+/* Double Item Sections */
+.section--tutoring {
+	padding-top: 4em;
+}
 
 /* Testimonials */
 .section--testimonials {

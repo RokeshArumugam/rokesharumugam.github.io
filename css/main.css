@@ -148,6 +148,7 @@ a:visited {
 	font-size: 1.3em;
 	text-align: center;
 }
+
 .section--text {
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -155,4 +156,31 @@ a:visited {
 .section--text img {
 	display: block;
 	margin: 2em auto;
+}
+
+.section--doubleItem {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: auto;
+	max-width: 1000px;
+	padding-left: 0em;
+	padding-right: 0em;
+}
+.section--doubleItem--reverse {
+	flex-direction: row-reverse;
+}
+.section--doubleItem > * {
+	width: 35%;
+}
+.section--doubleItem__iconContainer {
+	display: grid;
+	place-items: center;
+}
+.section--doubleItem__icon {
+	font-size: 8em;
+	color: var(--accent-color)
+}
+.section--doubleItem__textContainer {
+	font-size: 1.2em;
 }

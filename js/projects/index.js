@@ -3,24 +3,24 @@ const projects = [
 		"name": "Ball Jump",
 		"startDate": "2015-06",
 		"description": [
-			"Ball Jump is a simple yet addictive 2D computer game! With easy controls and simple layout, this is very a fun game!",
-			"Navigate your own customizable character through evil enemies and jump up through the platforms. With power-ups and skill there will be nothing to stop you!"
+			"Ball Jump is my first ever project.",
+			"It is a 2D computer game I made during my secondary school summer holidays."
 		]
 	},
 	{
 		"name": "Stickmen Battles",
 		"startDate": "2016-06",
 		"description": [
-			"Stickmen Battles is a simple yet addictive 2D computer game! With easy controls and simple layout, this is very a fun game!",
-			"Navigate your own customizable character past evil enemies and see how long you can survive. With power-ups and skill there will be nothing to stop you!"
+			"Stickmen Battles is another project I made during my secondary school years.",
+			"It is a 2D computer game like Ball Jump, however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickemen Battles."
 		]
 	},
 	{
 		"name": "Easy Type",
 		"startDate": "2016-10",
 		"description": [
-			"Easy Type is a simple yet easy to use text-editor! Its simple layout makes typing quick and effortless.",
-			"There's even support for emojis in some fonts!"
+			"Easy Type is a text editor.",
+			"I created it for my classmates and I to use during ICT lessons at school."
 		]
 	},
 	{

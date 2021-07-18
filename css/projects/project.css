@@ -4,12 +4,14 @@
 	--gap: 1em;
 	display: grid;
 	place-content: center;
-	grid-template-columns: min-content minmax(300px, 800px) min-content;
+	grid-template-columns: min-content 1fr min-content;
 	grid-template-rows: auto auto;
 	grid-template-areas: 
 		"leftButton imagesContainer rightButton"
 		"dotsContainer dotsContainer dotsContainer";
 	gap: var(--gap);
+	margin: auto;
+	max-width: 1000px;
 }
 .section--carousel__buttonContainer {
 	place-self: center;

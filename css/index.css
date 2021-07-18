@@ -74,11 +74,13 @@ main {
 }
 
 /* Double Item Sections */
+
 .section--tutoring {
 	padding-top: 4em;
 }
 
 /* Testimonials */
+
 .section--testimonials {
 	--gap: 2em;
 	display: flex;

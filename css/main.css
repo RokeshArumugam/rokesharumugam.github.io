@@ -196,6 +196,8 @@ a:visited {
 	color: var(--complement-color);
 }
 
+/* -- Sections */
+
 .section--pageIntro__title {
 	margin: 0.5em;
 	font-size: 3em;

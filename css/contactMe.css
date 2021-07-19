@@ -1,0 +1,22 @@
+.section--emailLinks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+}
+.emailLinkContainer {
+	order: 2;
+	font-size: 1.5em;
+}
+.emailLinkContainer span {
+	margin: 0.5em;
+	color: var(--accent-color);
+}
+.emailLinkContainer--suggested {
+	order: 1;
+	margin-bottom: 0.25em;
+	font-size: 2em;
+}
+.emailLinkContainer--suggested span {
+	font-weight: bold;
+}

@@ -3,7 +3,10 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 2em;
+	padding-top: max(2em, env(safe-area-inset-top));
+	padding-bottom: max(2em, env(safe-area-inset-bottom));
+	padding-left: max(2em, env(safe-area-inset-left));
+	padding-right: max(2em, env(safe-area-inset-right));
 }
 h1 {
 	font-size: 4em;

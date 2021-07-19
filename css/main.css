@@ -107,8 +107,7 @@ nav {
 }
 @media (max-width: 641px) {
 	#navToggleInput:not(:checked) ~ nav {
-		opacity: 0;
-		pointer-events: none;
+		display: none;
 	}
 	nav {
 		--gap: 2em;
@@ -116,7 +115,6 @@ nav {
 		top: 0;
 		left: 0;
 		flex-direction: column;
-		opacity: 1;
 		width: 100vw;
 		height: 100vh;
 		padding: var(--gap);

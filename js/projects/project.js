@@ -2,7 +2,7 @@ let imagesContainer;
 let images;
 let dotsContainer;
 let dots;
-let carouselTimeoutDuration
+let carouselTimeoutDuration = 10000;
 let carouselTimeout;
 
 function startCarousel() {
@@ -42,9 +42,10 @@ if (document.getElementsByClassName("section--carousel")[0]) {
 	images = Array.from(imagesContainer.getElementsByClassName("section--carousel__image"));
 	dotsContainer = document.getElementsByClassName("section--carousel__dotsContainer")[0];
 	dots = Array.from(dotsContainer.getElementsByClassName("section--carousel__dot"));
-	carouselTimeoutDuration = getComputedStyle(
-		document.getElementsByClassName("section--carousel")[0]
-	).getPropertyValue("--image-wait-duration").replace("ms", "");
+	document.getElementsByClassName("section--carousel")[0].style.setProperty(
+		"--image-wait-duration",
+		carouselTimeoutDuration + "ms"
+	);
 
 	document.getElementsByClassName("section--carousel__button--left")[0].addEventListener("click", (evt) => {
 		previousImage();

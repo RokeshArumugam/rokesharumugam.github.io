@@ -16,31 +16,11 @@ const typeDuration = 60;
 const textContainer = document.getElementsByClassName("section--hero__textContainer")[0];
 
 const testimonials = [
-	{
-		"authorName": "John Doe",
-		"authorPosition": "A Level Student",
-		"quoteText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum, repellat nesciunt quidem inventore officiis vel dolorum possimus non ab."
-	},
-	{
-		"authorName": "John Doe",
-		"authorPosition": "A Level Student",
-		"quoteText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum, repellat nesciunt quidem inventore officiis vel dolorum possimus non ab."
-	},
-	{
-		"authorName": "John Doe",
-		"authorPosition": "A Level Student",
-		"quoteText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum, repellat nesciunt quidem inventore officiis vel dolorum possimus non ab."
-	},
-	{
-		"authorName": "John Doe",
-		"authorPosition": "A Level Student",
-		"quoteText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum, repellat nesciunt quidem inventore officiis vel dolorum possimus non ab."
-	},
-	{
-		"authorName": "John Doe",
-		"authorPosition": "A Level Student",
-		"quoteText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum, repellat nesciunt quidem inventore officiis vel dolorum possimus non ab."
-	}
+	// {
+	// 	"authorName": "John Doe",
+	// 	"authorPosition": "A Level Student",
+	// 	"quoteText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum, repellat nesciunt quidem inventore officiis vel dolorum possimus non ab."
+	// }
 ];
 const testimonialTemplate = document.getElementById("testimonialTemplate");
 const testimonialsContainer = document.getElementsByClassName("section--testimonials")[0];

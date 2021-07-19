@@ -1,3 +1,4 @@
-const mainText = document.getElementsByClassName("mainText")[0];
-
-mainText.innerText = urlParams.get("infoText");
+if (urlParams.get("infoText")) {
+	document.getElementsByClassName("mainText")[0].innerText =
+		urlParams.get("infoText");
+};

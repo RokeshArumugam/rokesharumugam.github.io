@@ -283,7 +283,7 @@ main {
 }
 section {
 	width: 100%;
-	padding: 2.5em 1.5em;
+	padding: var(--section-default-padding-vertical) var(--section-default-padding-horizontal);
 }
 p {
 	margin-left: auto;
@@ -373,6 +373,8 @@ a:visited {
 	.section--doubleItem {
 		flex-direction: column;
 		gap: 1.5em;
+		padding-left: var(--section-default-padding-horizontal);
+		padding-right: var(--section-default-padding-horizontal);
 	}
 	.section--doubleItem > * {
 		width: initial;

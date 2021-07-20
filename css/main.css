@@ -17,7 +17,7 @@
 	--border-thickness: 0.2em;
 	--border-radius: 1em;
 	--section-default-padding-vertical: 2.5em;
-	--section-default-padding-horizontal: max(1.5em, env(safe-area-inset-left));
+	--section-default-padding-horizontal: max(1em, env(safe-area-inset-left));
 	--transition-duration: 150ms;
 }
 @media (prefers-color-scheme: dark) {
@@ -333,8 +333,8 @@ a:visited {
 }
 
 .section--text {
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-top: var(--section-default-padding-horizontal);
+	padding-bottom: var(--section-default-padding-horizontal);
 }
 .section--text img {
 	display: block;
@@ -371,8 +371,6 @@ a:visited {
 	.section--doubleItem {
 		flex-direction: column;
 		gap: 1.5em;
-		padding-left: var(--section-default-padding-horizontal);
-		padding-right: var(--section-default-padding-horizontal);
 	}
 	.section--doubleItem > * {
 		width: initial;

@@ -58,7 +58,7 @@
 	border-radius: 50%;
 	width: var(--diameter);
 	height: var(--diameter);
-	background-color: var(--border-color);
+	background-color: gainsboro;
 	cursor: pointer;
 }
 .section--carousel__dot--current {

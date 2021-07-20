@@ -1,16 +1,18 @@
 :root {
 	--mobile-screen-width: 641px;
 	--background-color: white;
-	--foreground-color: black;
+	--on-background-color: black;
+	--surface-color: white;
+	--on-surface-color: black;
+	--surface-overlay-color: black;
 	--primary-color: rgb(30, 144, 255);
 	--on-primary-color: white;
 	--danger-color: red;
 	--border-color: gainsboro;
-	--box-shadow-color: rgba(30, 144, 255, 0.75);
 	--default-font-family: "Helvetica", sans-serif;
 	--serif-font-family: "Garamond", serif;
 	--cursive-font-family: "Apple Chancery", cursive;
-	--box-shadow: 0em 0em 1em -0.35em var(--box-shadow-color);
+	--box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.15);
 	--border: var(--border-thickness) solid var(--border-color);
 	--border-thickness: 0.2em;
 	--border-radius: 1em;
@@ -20,8 +22,10 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background-color: black;
-		--foreground-color: #EFEFEF;
-		--box-shadow-color: var(--primary-color);
+		--on-background-color: #EFEFEF;
+		--surface-color: black;
+		--on-surface-color: #EFEFEF;
+		--surface-overlay-color: white;
 	}
 }
 * {
@@ -37,7 +41,26 @@ body {
 	align-items: stretch;
 	min-height: 100vh;
 	background-color: var(--background-color);
-	color: var(--foreground-color);
+	color: var(--on-background-color);
+}
+.surface {
+	box-shadow: var(--box-shadow);
+}
+@media (prefers-color-scheme: dark) {
+	.surface {
+		position: relative;
+		box-shadow: none;
+	}
+	.surface::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: inherit;
+		width: 100%;
+		height: 100%;
+		background-color: var(--surface-overlay-color);
+	}
 }
 
 /* Header and Footer */
@@ -52,6 +75,7 @@ header, footer {
 /* Header */
 
 header {
+	--box-shadow-color: rgba(30, 144, 255, 0.75);
 	position: sticky;
 	z-index: 1;
 	top: 0;
@@ -60,6 +84,11 @@ header {
 	padding-top: env(safe-area-inset-top);
 	padding-bottom: 0em;
 	background-color: var(--background-color);
+}
+@media (prefers-color-scheme: dark) {
+	header {
+		--box-shadow-color: var(--primary-color);
+	}
 }
 
 /* -- Nav */
@@ -82,7 +111,7 @@ nav {
 }
 .navLink:not(.navLink--contact):not(.navLink--current),
 .navLink:not(.navLink--contact):not(.navLink--current):visited {
-	color: var(--foreground-color);
+	color: var(--on-background-color);
 }
 .navLink--standard {
 	opacity: 0.6;
@@ -156,7 +185,7 @@ nav {
 
 footer {
 	padding-bottom: max(1em, env(safe-area-inset-bottom));
-	background-color: var(--foreground-color);
+	background-color: var(--on-background-color);
 	color: var(--background-color);
 }
 .copyrightNotice {

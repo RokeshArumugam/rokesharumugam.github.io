@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
 :root {
 	--mobile-screen-width: 641px;
 	--background-color: white;
@@ -12,7 +14,7 @@
 	--danger-color: red;
 	--default-font-family: "Helvetica", sans-serif;
 	--serif-font-family: "Garamond", serif;
-	--cursive-font-family: "Apple Chancery", cursive;
+	--cursive-font-family: "Niconne", cursive;
 	--box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.15);
 	--border-thickness: 0.2em;
 	--border-radius: 1em;

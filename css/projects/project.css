@@ -62,7 +62,7 @@
 	cursor: pointer;
 }
 .section--carousel__dot--current {
-	background-color: var(--accent-color);
+	background-color: var(--primary-color);
 }
 .section--carousel__dot::after {
 	content: "";

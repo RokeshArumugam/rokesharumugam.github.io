@@ -10,7 +10,7 @@
 }
 .emailLinkContainer span {
 	margin: 0.5em;
-	color: var(--accent-color);
+	color: var(--primary-color);
 }
 .emailLinkContainer--suggested {
 	order: 1;

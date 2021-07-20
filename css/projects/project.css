@@ -1,5 +1,5 @@
 .section--carousel {
-	--image-change-duration: 150ms;
+	--image-change-duration: var(--transition-duration);
 	--gap: 1em;
 	display: grid;
 	place-content: center;

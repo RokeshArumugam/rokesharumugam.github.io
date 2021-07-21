@@ -1,10 +1,37 @@
 const urlParams = new URLSearchParams(window.location.search);
-const alertTypes = {
+const modalTypes = {
 	Information: "fa-info-circle",
 	Success: "fa-check-circle",
 	Warning: "fa-exclamation-triangle",
 	Error: "fa-times-circle"
 };
+const alertTemplateString = `
+	<div id="modal">
+		<div id="modal__overlay"></div>
+		<div id="modal__box" class="surface">
+			<i id="modal__icon" class="fas"></i>
+			<span id="modal__title"></span>
+			<div id="modal__message"></div>
+			<div id="modal__buttonContainer">
+				<button class="modal__button primaryButton">Close</button>
+			</div>
+		</div>
+	</div>
+`;
+const confirmTemplateString = `
+	<div id="modal">
+		<div id="modal__overlay"></div>
+		<div id="modal__box" class="surface">
+			<i id="modal__icon" class="fas"></i>
+			<span id="modal__title"></span>
+			<div id="modal__message"></div>
+			<div id="modal__buttonContainer">
+				<button id="modal__button--cancel" class="modal__button primaryButton">Cancel</button>
+				<button id="modal__button--ok" class="modal__button primaryButton">OK</button>
+			</div>
+		</div>
+	</div>
+`;
 
 async function loadHeaderAndFooter() {
 	fetch("/components/header.html")
@@ -37,30 +64,49 @@ async function loadHeaderAndFooter() {
 		});
 };
 
-window.alert = (message, type) => {
-	let alertElem = new DOMParser().parseFromString(`
-		<div id="alert">
-			<div id="alert__modal"></div>
-			<div id="alert__box" class="surface">
-				<i id="alert__icon" class="fas"></i>
-				<div id="alert__message"></div>
-				<button id="alert__button" class="primaryButton" onclick="let alertElem = this.parentElement.parentElement; alertElem.parentElement.removeChild(alertElem);">Close</button>
-			</div>
-		</div>
-	`, "text/html");
-	let messageElem = alertElem.getElementById("alert__message");
+function createModal(templateString, title, message, type) {
+	let modalElem = new DOMParser().parseFromString(templateString, "text/html");
+	let messageElem = modalElem.getElementById("modal__message");
 
-	if (!Object.values(alertTypes).includes(type)) {
-		type = alertTypes.Information;
-	};
-	alertElem.getElementById("alert__icon").classList.add(type);
+	modalElem.getElementById("modal__icon").classList.add(type);
+
+	modalElem.getElementById("modal__title").innerText = title;
 
 	for (let paragraph of message.split("\n")) {
 		let paragraphElem = document.createElement("p");
 		paragraphElem.innerText = paragraph;
 		messageElem.appendChild(paragraphElem);
 	};
-	document.getElementsByTagName("body")[0].appendChild(alertElem.body.firstChild);
+
+	modalElem = modalElem.body.firstChild;
+	modalElem.addEventListener("click", (evt, elem) => {
+		if (evt.target.classList.contains("modal__button")) {
+			modalElem.parentElement.removeChild(modalElem);
+		};
+	});
+	return modalElem
+};
+
+window.alert = (title, message, type=modalTypes.Information) => {
+	return new Promise((resolve, reject) => {
+		let alertElem = createModal(alertTemplateString, title, message, type);
+		alertElem.querySelector(".modal__button").addEventListener("click", () => {
+			resolve(undefined);
+		});
+		document.body.appendChild(alertElem);
+	})
+};
+window.confirm = (title, message) => {
+	return new Promise((resolve, reject) => {
+		let alertElem = createModal(confirmTemplateString, title, message, modalTypes.Warning);
+		alertElem.querySelector("#modal__button--ok").addEventListener("click", () => {
+			resolve(true);
+		});
+		alertElem.querySelector("#modal__button--cancel").addEventListener("click", () => {
+			resolve(false);
+		});
+		document.body.appendChild(alertElem);
+	})
 };
 
 loadHeaderAndFooter();

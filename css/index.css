@@ -73,6 +73,26 @@ main {
 	font-family: var(--cursive-font-family);
 }
 
+/* Ask A Medicine Applicant */
+
+.section--askAMedicineApplicant {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--primary-color);
+	font-size: 1.15em;
+	color: var(--on-primary-color);
+}
+.section--askAMedicineApplicant__title {
+	margin-bottom: 0.5em;
+	font-size: 1.75em;
+}
+.section--askAMedicineApplicant__button, .section--askAMedicineApplicant__button:visited {
+	margin-top: 0.75em;
+	background-color: var(--on-primary-color);
+	color: var(--primary-color);
+}
+
 /* Double Item Sections */
 
 .section--tutoring {

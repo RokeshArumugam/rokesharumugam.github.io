@@ -73,9 +73,9 @@ main {
 	font-family: var(--cursive-font-family);
 }
 
-/* Ask A Medicine Applicant */
+/* Ask A Medicine Student */
 
-.section--askAMedicineApplicant {
+.section--askAMedicineStudent {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -83,11 +83,11 @@ main {
 	font-size: 1.15em;
 	color: var(--on-primary-color);
 }
-.section--askAMedicineApplicant__title {
+.section--askAMedicineStudent__title {
 	margin-bottom: 0.5em;
 	font-size: 1.75em;
 }
-.section--askAMedicineApplicant__button, .section--askAMedicineApplicant__button:visited {
+.section--askAMedicineStudent__button, .section--askAMedicineStudent__button:visited {
 	margin-top: 0.75em;
 	background-color: var(--on-primary-color);
 	color: var(--primary-color);

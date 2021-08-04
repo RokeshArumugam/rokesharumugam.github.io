@@ -59,6 +59,6 @@ if (document.getElementsByClassName("section--carousel")[0]) {
 		});
 	});
 
-	dots[0].classList.add("section--carousel__dot--current");
+	setTimeout(() => dots[0].classList.add("section--carousel__dot--current"), 1);
 	startCarousel();
 };

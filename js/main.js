@@ -34,7 +34,7 @@ const confirmTemplateString = `
 `;
 
 async function loadHeaderAndFooter() {
-	fetch("/components/header.html")
+	fetch("/COMPONENTS/header.html")
 		.then(response => {
 			return response.text()
 		})
@@ -51,7 +51,7 @@ async function loadHeaderAndFooter() {
 			};
 		});
 
-	fetch("/components/footer.html")
+	fetch("/COMPONENTS/footer.html")
 		.then(response => {
 			return response.text()
 		})

@@ -6,7 +6,7 @@ const modalTypes = {
 	Error: "fa-times-circle"
 };
 const alertTemplateString = `
-	<div id="modal">
+	<div id="modal" role="alertdialog">
 		<div id="modal__overlay"></div>
 		<div id="modal__box" class="surface">
 			<i id="modal__icon" class="fas"></i>
@@ -19,7 +19,7 @@ const alertTemplateString = `
 	</div>
 `;
 const confirmTemplateString = `
-	<div id="modal">
+	<div id="modal" role="alertdialog">
 		<div id="modal__overlay"></div>
 		<div id="modal__box" class="surface">
 			<i id="modal__icon" class="fas"></i>

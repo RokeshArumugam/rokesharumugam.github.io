@@ -381,6 +381,10 @@ a:visited {
 .section--doubleItem__textContainer {
 	font-size: 1.2em;
 }
+.section--doubleItem__textContainer h2 {
+	margin-bottom: 0.5em;
+	font-size: 1.3em;
+}
 @media (max-width: 641px) {
 	.section--doubleItem {
 		flex-direction: column;

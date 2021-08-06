@@ -50,7 +50,7 @@ function populateProjects() {
 	for (let project of projects) {
 		let projectElement = document.importNode(projectTemplate.content, true).querySelector(".project");
 		projectElement.getElementsByClassName("project__name")[0].innerText = project["name"];
-		projectElement.getElementsByClassName("project__startDate")[0].innerText =
+		projectElement.getElementsByClassName("project__startDate")[0].innerText = "Started in " +
 			new Date(project["startDate"]).toLocaleDateString(
 				"en-gb",
 				{

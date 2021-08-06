@@ -36,9 +36,6 @@
 	opacity: 0.8;
 	font-size: 0.8em;
 }
-.project__startDate::before {
-	content: "Started in ";
-}
 .project__description p {
 	margin-left: 0em;
 }

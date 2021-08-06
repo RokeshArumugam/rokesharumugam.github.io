@@ -12,7 +12,7 @@ const projects = [
 		"startDate": "2016-06",
 		"description": [
 			"Stickmen Battles is another project I made during my secondary school years.",
-			"It is a 2D computer game like Ball Jump, however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickemen Battles."
+			"It is a 2D computer game like Ball Jump - however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickemen Battles."
 		]
 	},
 	{
@@ -20,7 +20,7 @@ const projects = [
 		"startDate": "2016-10",
 		"description": [
 			"Easy Type is another secondary school project.",
-			"It is a text editor that I created for my classmates and I to use during ICT lessons at school."
+			"It is a text editor that I created for my classmates and me to use during ICT lessons at school."
 		]
 	},
 	{
@@ -28,8 +28,8 @@ const projects = [
 		"startDate": "2017-01",
 		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
 		"description": [
-			"Solitaire is a single player card game. You may know it as Klondike",
-			"I created this online version of Solitaire for my friends and I to play on our school iPads - since popular game websites were blocked at my secondary school.",
+			"Solitaire is a single-player card game. You may know it as Klondike.",
+			"I created this online version of Solitaire for my friends and me to play on our school iPads - since popular gaming websites were blocked at my secondary school.",
 			"For any student reading this, I am obliged to ask you to not play games during lessons like we did. Paying attention in school is highly recommended."
 		]
 	},
@@ -39,7 +39,7 @@ const projects = [
 		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
 		"description": [
 			"TV Tracker is a PWA (Progressive Web App) that I created to keep track of how many episodes I've watched of each TV show.",
-			"This is nowhere near finished and was simply an experiment so I could see how PWAs work. They seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."
+			"This project is nowhere near finished and was simply an experiment for me to see how PWAs work. PWAs seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."
 		]
 	}
 ].sort((one, two) => (one["startDate"] < two["startDate"]));

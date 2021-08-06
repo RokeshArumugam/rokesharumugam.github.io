@@ -5,8 +5,8 @@ main {
 /* Hero */
 
 .section--hero {
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding-top: calc(2 * var(--section-default-padding-vertical));
+	padding-bottom: calc(2 * var(--section-default-padding-vertical));
 }
 .section--hero__side {
 	display: flex;
@@ -93,12 +93,6 @@ main {
 	margin-top: 0.75em;
 	background-color: var(--on-primary-color);
 	color: var(--primary-color);
-}
-
-/* Double Item Sections */
-
-.section--tutoring {
-	padding-top: 4em;
 }
 
 /* Testimonials */

@@ -15,6 +15,8 @@
 	--default-font-family: "Helvetica", sans-serif;
 	--serif-font-family: "Garamond", serif;
 	--cursive-font-family: "Charmonman", cursive;
+	--default-font-weight: 400;
+	--thin-font-weight: 350;
 	--box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.15);
 	--border-thickness: 0.2em;
 	--border-radius: 1em;
@@ -261,11 +263,11 @@ footer {
 }
 #modal__title {
 	font-size: 2em;
-	font-weight: 400;
+	font-weight: var(--default-font-weight);
 	text-align: center;
 }
 #modal__message {
-	font-weight: 400;
+	font-weight: var(--default-font-weight);
 }
 #modal__message p {
 	margin-left: 0em;
@@ -280,7 +282,7 @@ footer {
 }
 @media (prefers-color-scheme: dark) {
 	#modal__title, #modal__message {
-		font-weight: 350;
+		font-weight: var(--thin-font-weight);
 	}
 }
 
@@ -288,11 +290,11 @@ footer {
 
 main {
 	flex-grow: 1;
-	font-weight: 400;
 }
 section {
 	width: 100%;
 	padding: var(--section-default-padding-vertical) var(--section-default-padding-horizontal);
+	font-weight: var(--default-font-weight);
 }
 p {
 	margin-left: auto;
@@ -317,6 +319,7 @@ a:visited {
 	padding: 0.25em 0.75em;
 	background-color: var(--primary-color);
 	cursor: pointer;
+	font-weight: var(--default-font-weight);
 	text-align: center;
 	text-decoration: none;
 	color: var(--on-primary-color);
@@ -325,8 +328,8 @@ a:visited {
 	transform: scale(1.05);
 }
 @media (prefers-color-scheme: dark) {
-	main {
-		font-weight: 350;
+	section {
+		font-weight: var(--thin-font-weight);
 	}
 }
 

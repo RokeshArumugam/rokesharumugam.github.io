@@ -81,6 +81,7 @@ main {
 	align-items: center;
 	background-color: var(--primary-color);
 	font-size: 1.15em;
+	font-weight: var(--default-font-weight);
 	color: var(--on-primary-color);
 }
 .section--askAMedicineStudent__title {

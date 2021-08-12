@@ -4,7 +4,7 @@ const projects = [
 		"startDate": "2015-06",
 		"description": [
 			"Ball Jump is my first ever project.",
-			"It is a 2D computer game I made during my secondary school summer holidays."
+			"It is a 2D computer game I made during my Year 7 summer holidays."
 		]
 	},
 	{

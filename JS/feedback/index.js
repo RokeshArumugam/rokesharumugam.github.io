@@ -13,7 +13,7 @@ document.getElementsByClassName("form")[0].addEventListener("submit", (ev) => {
 			let errorMsgs = [];
 			for (const error of json["errors"]) {
 				errorMsgs.push(
-					document.querySelector(`label[for="${error["field"]}"]`).innerText + " " + error["message"] + "."
+					document.querySelector(`label[for="${error["field"]}"]`).firstChild.wholeText + " " + error["message"] + "."
 				);
 			};
 			await alert("Please make some changes", errorMsgs.join("\n"), modalTypes.Warning);

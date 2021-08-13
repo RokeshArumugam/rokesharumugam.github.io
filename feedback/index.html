@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta name="color-scheme" content="light dark">
+	<link rel="stylesheet" href="/CSS/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="/CSS/main.css">
+	<link rel="stylesheet" href="/CSS/feedback/index.css">
+	<script defer src="/JS/main.js"></script>
+	<script defer src="/JS/feedback/index.js"></script>
+	<title>Rokesh Arumugam</title>
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<section class="section--pageIntro">
+			<h1 class="section--pageIntro__title">Feedback</h1>
+			<div class="section--pageIntro__description">
+				<p>I would appreciate any feedback using the form below!</p>
+			</div>
+		</section>
+		<section class="section--formContainer">
+			<form class="form surface" action="https://formspree.io/f/mbjqplzo" method="POST">
+				<div class="form__field required">
+					<label class="form__label" for="firstName">First Name</label>
+					<div class="form__inputContainer surface">
+						<input id="firstName" class="form__input" type="text" name="firstName" required>
+					</div>
+				</div>
+				<div class="form__field required">
+					<label class="form__label" for="lastName">Last Name</label>
+					<div class="form__inputContainer surface">
+						<input id="lastName" class="form__input" type="text" name="lastName" required>
+					</div>
+				</div>
+				<div class="form__field required">
+					<label class="form__label" for="email">Email</label>
+					<div class="form__inputContainer surface">
+						<input id="email" class="form__input" type="email" name="email" required>
+					</div>
+				</div>
+				<div class="form__field">
+					<label class="form__label" for="position">Position<span>e.g. A Level student, GCSE student, parent...</span></label>
+					<div class="form__inputContainer surface">
+						<input id="position" class="form__input" type="text" name="position">
+					</div>
+				</div>
+				<div class="form__field required">
+					<label class="form__label" for="message">Feedback</label>
+					<div class="form__inputContainer surface">
+						<textarea id="message" class="form__input" name="message" required></textarea>
+					</div>
+				</div>
+				<div class="form__field">
+					<button class="form__input primaryButton" type="submit">Send</button>
+				</div>
+			</form>
+			<p>Required items are marked with a <span style="color: var(--danger-color)">*</span></p>
+		</section>
+	</main>
+	<footer></footer>
+</body>
+
+</html>

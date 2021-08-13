@@ -87,6 +87,10 @@ function createModal(templateString, title, message, type) {
 	return modalElem
 };
 
+window.onbeforeunload = () => {
+	document.getElementById("navToggleInput").checked = false;
+};
+
 window.alert = (title, message, type=modalTypes.Information) => {
 	return new Promise((resolve, reject) => {
 		let alertElem = createModal(alertTemplateString, title, message, type);

@@ -1,0 +1,98 @@
+.section--formContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	padding-left: calc(var(--section-default-padding-horizontal) * 2);
+	padding-right: calc(var(--section-default-padding-horizontal) * 2);
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 1.5em;
+	border-radius: var(--border-radius);
+	width: 100%;
+	max-width: 500px;
+	padding: 1.5em;
+}
+.form::before {
+	opacity: 0.07;
+}
+.form.completed {
+	display: grid;
+	place-items: center;
+	padding: 3em;
+}
+.form__completionMsg {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.25em;
+	color: var(--primary-color);
+}
+.form__field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+.form__field.required .form__label::before {
+	content: "*";
+	position: absolute;
+	left: -0.6em;
+	color: var(--danger-color);
+}
+.form__label {
+	position: relative;
+	align-self: flex-start;
+	cursor: pointer;
+	font-size: 1.25em;
+}
+.form__label span {
+	opacity: 0.5;
+	margin-left: 0.5em;
+	font-size: 0.75em;
+}
+.form__inputContainer {
+	position: relative;
+	align-self: stretch;
+	border-radius: var(--border-radius);
+	background: none;
+}
+.form__inputContainer::before {
+	opacity: 0.07;
+}
+.form__inputContainer:focus-within::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: var(--border-thickness) solid var(--primary-color);
+	border-radius: inherit;
+	pointer-events: none;
+}
+.form__input {
+	border: none;
+	outline: none;
+	border-radius: inherit;
+	width: 100%;
+	padding: 0.5em 0.75em;
+	font-size: 1em;
+	appearance: none;
+	resize: none;
+}
+input.form__input, textarea.form__input {
+	background: none;
+}
+textarea.form__input {
+	height: 10em;
+}
+.form__input[type="submit"] {
+	align-self: center;
+	border: none;
+	border-radius: var(--border-radius);
+	max-width: 15ch;
+	font-size: 1.25em;
+}

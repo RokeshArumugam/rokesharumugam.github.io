@@ -1,3 +1,11 @@
+@font-face {
+	font-family: "Graphik";
+    src: url("https://assets.website-files.com/5d3ac7a15216e366e6929e20/5d3ac7a15216e338a2929e79_Graphik-Semibold-Web.woff2") format("woff2"), url("https://assets.website-files.com/5d3ac7a15216e366e6929e20/5d3ac7a15216e3b2ee929e7a_Graphik-Semibold-Web.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: auto;
+}
+
 main {
 	padding: 0em;
 }
@@ -65,6 +73,22 @@ main {
 .qualification__icon {
 	opacity: 0.75;
 	font-size: 3em;
+}
+.qualification__icon--medify {
+	border-radius: 0.125em;
+	width: 2em;
+	padding: 0.25em 0.3125em;
+	font-size: 1.5em;
+	background-color: var(--on-background-color);
+}
+.qualification__icon--medify p {
+	font-size: 1.5em;
+	line-height: 1em;
+	font-family: "Graphik", sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.009em;
+	color: var(--background-color);
+	-webkit-font-smoothing: antialiased;
 }
 .qualification__text {
 	opacity: 0.5;

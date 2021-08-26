@@ -1,0 +1,10 @@
+.section--askAbout__heading {
+	color: var(--primary-color);
+}
+.section--askAbout__list {
+	font-size: 1.2em;
+	font-style: italic;
+}
+.section--askAbout__listItem:not(:last-child) {
+	margin-bottom: 0.25em;
+}

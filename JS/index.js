@@ -15,16 +15,6 @@ const waitPerCharacterDuration = 175;
 const typeDuration = 60;
 const textContainer = document.getElementsByClassName("section--hero__textContainer")[0];
 
-const testimonials = [
-	// {
-	// 	"authorName": "John Doe",
-	// 	"authorPosition": "A Level Student",
-	// 	"quoteText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum, repellat nesciunt quidem inventore officiis vel dolorum possimus non ab."
-	// }
-];
-const testimonialTemplate = document.getElementById("testimonialTemplate");
-const testimonialsContainer = document.getElementsByClassName("section--testimonials")[0];
-
 async function typeText() {
 	let oldText = textContainer.innerText;
 	let textsToChooseFrom = texts.filter((val) => (val != oldText));
@@ -40,15 +30,4 @@ async function typeText() {
 	setTimeout(typeText, newText.length * waitPerCharacterDuration);
 };
 
-function populateTestimonials() {
-	for (let testimonial of testimonials) {
-		let testimonialElement = document.importNode(testimonialTemplate.content, true).querySelector(".testimonial");
-		for (let [key, val] of Object.entries(testimonial)) {
-			testimonialElement.getElementsByClassName("testimonial__" + key)[0].innerText = val;
-		};
-		testimonialsContainer.appendChild(testimonialElement);
-	};
-};
-
 typeText();
-populateTestimonials();

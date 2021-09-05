@@ -14,9 +14,11 @@
 .section--testimonials {
 	--gap: 2em;
 	display: flex;
-	justify-content: center;
 	gap: var(--gap);
 	overflow: auto;
+	margin: auto;
+	width: min-content;
+	max-width: 100%;
 	padding: var(--gap) 0em;
 }
 .section--testimonials::before, .section--testimonials::after {

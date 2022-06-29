@@ -26,7 +26,7 @@ const projects = [
 	{
 		"name": "Solitaire",
 		"startDate": "2017-01",
-		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
 			"Solitaire is a single-player card game. You may know it as Klondike.",
 			"I created this online version of Solitaire for my friends and me to play on our school iPads - since popular gaming websites were blocked at my secondary school.",
@@ -36,7 +36,7 @@ const projects = [
 	{
 		"name": "TV Tracker",
 		"startDate": "2021-05",
-		"url": "/comingSoon.html?infoText=Details%20for%20this%20project%20will%20be%20added%20soon.",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
 			"TV Tracker is a PWA (Progressive Web App) that I created to keep track of how many episodes I've watched of each TV show.",
 			"This project is nowhere near finished and was simply an experiment for me to see how PWAs work. PWAs seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."

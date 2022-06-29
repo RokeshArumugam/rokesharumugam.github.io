@@ -19,6 +19,28 @@ function populateTestimonials() {
 		for (let [key, val] of Object.entries(testimonial)) {
 			testimonialElement.getElementsByClassName("testimonial__" + key)[0].innerText = val;
 		};
+		testimonialElement.addEventListener("click", () => {
+			const testimonialModal = document.createElement("div");
+			testimonialModal.classList.add("modal");
+
+			const testimonialModalOverlay = document.createElement("div");
+			testimonialModalOverlay.classList.add("modal__overlay");
+			testimonialModal.appendChild(testimonialModalOverlay)
+
+			const testimonialClone = testimonialElement.cloneNode(true);
+			testimonialClone.classList.remove("testimonial--card");
+			testimonialClone.classList.add("testimonial--modal", "modal__box");
+			testimonialModal.appendChild(testimonialClone);
+
+
+			testimonialModal.addEventListener("click", evt => {
+				if (evt.target.classList.contains("modal")) {
+					testimonialModal.parentElement.removeChild(testimonialModal);
+				};
+			});
+			
+			document.body.appendChild(testimonialModal);
+		});
 		testimonialsContainer.appendChild(testimonialElement);
 	};
 };

@@ -30,27 +30,43 @@
 	flex-shrink: 0;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	gap: 0.5em;
+	transition: transform var(--transition-duration) ease;
 	border-radius: var(--border-radius);
 	width: 20em;
 	height: 12em;
 	padding: 1em;
+	cursor: pointer;
 }
-.testimonial::before {
+.testimonial--modal {
+	width: 60vw;
+	height: auto;
+	max-height: 60vh;
+	padding: 1.25em;
+	cursor: default;
+	font-size: 1.25em;
+}
+.testimonial--card::before {
 	opacity: 0.05;
+}
+.testimonial--card:hover {
+	transform: scale(1.025);
 }
 .testimonial__quoteIcon {
 	font-size: 2em;
 	color: var(--primary-color);
 }
 .testimonial__quoteText {
-	flex-grow: 1;
-	display: grid;
-	place-items: center;
-	overflow: auto;
 	font-family: var(--serif-font-family);
 	font-style: italic;
+}
+.testimonial--card .testimonial__quoteText {
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 .testimonial__authorContainer {
 	align-self: flex-end;

@@ -6,9 +6,9 @@ const modalTypes = {
 	Error: "fa-times-circle"
 };
 const alertTemplateString = `
-	<div id="modal" role="alertdialog">
-		<div id="modal__overlay"></div>
-		<div id="modal__box" class="surface">
+	<div id="modal" class="modal" role="alertdialog">
+		<div id="modal__overlay" class="modal__overlay"></div>
+		<div id="modal__box" class="modal__box surface">
 			<i id="modal__icon" class="fas"></i>
 			<span id="modal__title"></span>
 			<div id="modal__message"></div>
@@ -19,9 +19,9 @@ const alertTemplateString = `
 	</div>
 `;
 const confirmTemplateString = `
-	<div id="modal" role="alertdialog">
-		<div id="modal__overlay"></div>
-		<div id="modal__box" class="surface">
+	<div id="modal" class="modal" role="alertdialog">
+		<div id="modal__overlay" class="modal__overlay"></div>
+		<div id="modal__box" class="modal__box surface">
 			<i id="modal__icon" class="fas"></i>
 			<span id="modal__title"></span>
 			<div id="modal__message"></div>
@@ -79,7 +79,7 @@ function createModal(templateString, title, message, type) {
 	};
 
 	modalElem = modalElem.body.firstChild;
-	modalElem.addEventListener("click", (evt, elem) => {
+	modalElem.addEventListener("click", evt => {
 		if (evt.target.classList.contains("modal__button")) {
 			modalElem.parentElement.removeChild(modalElem);
 		};

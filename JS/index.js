@@ -1,13 +1,13 @@
 const textLinks = {
-	"A Level Biology Tutoring": "/comingSoon.html?infoTextId=tutoring",
-	"A Level Chemistry Tutoring": "/comingSoon.html?infoTextId=tutoring",
-	"A Level Maths Tutoring": "/comingSoon.html?infoTextId=tutoring",
-	"A Level Computer Science Tutoring": "/comingSoon.html?infoTextId=tutoring",
-	"GCSE Tutoring": "/comingSoon.html?infoTextId=tutoring",
-	"11+ Tutoring": "/comingSoon.html?infoTextId=tutoring",
+	"A Level Biology Tutoring": "/tutoring/",
+	"A Level Chemistry Tutoring": "/tutoring/",
+	"A Level Maths Tutoring": "/tutoring/",
+	"A Level Computer Science Tutoring": "/tutoring/",
+	"GCSE Tutoring": "/tutoring/",
+	"11+ Tutoring": "/tutoring/",
 	"Medicine University Application Advice": "/ask/",
 	"Medicine Personal Statement Advice": "/ask/",
-	"Programming Tutoring": "/comingSoon.html?infoTextId=tutoring",
+	"Programming Tutoring": "/tutoring/",
 	"Programming Courses": "/comingSoon.html?infoTextId=courses",
 	"Programming Projects": "/projects/"
 };

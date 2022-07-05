@@ -53,28 +53,6 @@ main {
 
 /* Qualifications */
 
-.section--qualifications {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	gap: 1em;
-	background-color: var(--surface-color);
-}
-.section--qualifications::before {
-	opacity: 0.07;
-}
-.qualification {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 10em;
-	text-align: center;
-	color: var(--on-background-color);
-}
-.qualification__icon {
-	opacity: 0.75;
-	font-size: 3em;
-}
 .qualification__icon--medify {
 	border-radius: 0.125em;
 	width: 2em;
@@ -90,12 +68,6 @@ main {
 	letter-spacing: 0.009em;
 	color: var(--background-color);
 	-webkit-font-smoothing: antialiased;
-}
-.qualification__text {
-	opacity: 0.5;
-	margin-top: 0.5em;
-	font-size: 0.9em;
-	font-family: var(--cursive-font-family);
 }
 
 /* Ask A Medicine Student */

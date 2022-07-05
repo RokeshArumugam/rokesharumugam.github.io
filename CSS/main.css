@@ -368,6 +368,39 @@ li {
 	margin: 2em auto;
 }
 
+/* -- -- Qualifications */
+
+.section--qualifications {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 1em;
+	background-color: var(--surface-color);
+}
+.section--qualifications::before {
+	opacity: 0.07;
+}
+.qualification {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 10em;
+	text-align: center;
+	color: var(--on-background-color);
+}
+.qualification__icon {
+	opacity: 0.75;
+	font-size: 3em;
+}
+.qualification__text {
+	opacity: 0.5;
+	margin-top: 0.5em;
+	font-size: 0.9em;
+	font-family: var(--cursive-font-family);
+}
+
+/* -- -- Double Item */
+
 .section--doubleItem {
 	display: flex;
 	justify-content: space-evenly;
@@ -413,6 +446,8 @@ li {
 	}
 }
 
+/* -- -- Price Display */
+
 .section--priceDisplay {
 	display: flex;
 	flex-direction: column;
@@ -435,4 +470,79 @@ li {
 }
 .section--priceDisplay__button {
 	font-size: 1.25em;
+}
+
+/* -- -- Testimonials */
+
+.section--testimonials {
+	--gap: 2em;
+	display: flex;
+	gap: var(--gap);
+	overflow: auto;
+	margin: auto;
+	width: min-content;
+	max-width: 100%;
+	padding: var(--gap) 0em;
+}
+.section--testimonials::before, .section--testimonials::after {
+	content: "";
+	align-self: stretch;
+	min-width: 1px;
+}
+.testimonial {
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5em;
+	transition: transform var(--transition-duration) ease;
+	border-radius: var(--border-radius);
+	width: 20em;
+	height: 12em;
+	padding: 1em;
+	cursor: pointer;
+}
+.testimonial--modal {
+	width: 60vw;
+	height: auto;
+	max-height: 60vh;
+	padding: 1.25em;
+	cursor: default;
+	font-size: 1.25em;
+}
+.testimonial--card::before {
+	opacity: 0.05;
+}
+.testimonial--card:hover {
+	transform: scale(1.025);
+}
+.testimonial__quoteIcon {
+	font-size: 2em;
+	color: var(--primary-color);
+}
+.testimonial__quoteText {
+	font-family: var(--serif-font-family);
+	font-style: italic;
+}
+.testimonial--card .testimonial__quoteText {
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.testimonial__authorContainer {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.75em;
+	text-align: right;
+}
+.testimonial__authorName {
+	opacity: 0.7;
+	font-weight: bold;
+}
+.testimonial__authorPosition {
+	opacity: 0.5;
+	font-size: 0.9em;
 }

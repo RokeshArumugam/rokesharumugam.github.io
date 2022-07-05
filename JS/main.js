@@ -33,6 +33,9 @@ const confirmTemplateString = `
 	</div>
 `;
 
+const testimonialTemplate = document.getElementById("testimonialTemplate");
+const testimonialsContainer = document.getElementsByClassName("section--testimonials")[0];
+
 async function loadHeaderAndFooter() {
 	fetch("/COMPONENTS/header.html")
 		.then(response => {
@@ -111,6 +114,38 @@ window.confirm = (title, message) => {
 		});
 		document.body.appendChild(alertElem);
 	})
+};
+
+function populateTestimonials() {
+	for (let testimonial of testimonials) {
+		let testimonialElement = document.importNode(testimonialTemplate.content, true).querySelector(".testimonial");
+		for (let [key, val] of Object.entries(testimonial)) {
+			testimonialElement.getElementsByClassName("testimonial__" + key)[0].innerText = val;
+		};
+		testimonialElement.addEventListener("click", () => {
+			const testimonialModal = document.createElement("div");
+			testimonialModal.classList.add("modal");
+
+			const testimonialModalOverlay = document.createElement("div");
+			testimonialModalOverlay.classList.add("modal__overlay");
+			testimonialModal.appendChild(testimonialModalOverlay)
+
+			const testimonialClone = testimonialElement.cloneNode(true);
+			testimonialClone.classList.remove("testimonial--card");
+			testimonialClone.classList.add("testimonial--modal", "modal__box");
+			testimonialModal.appendChild(testimonialClone);
+
+
+			testimonialModal.addEventListener("click", evt => {
+				if (evt.target.classList.contains("modal")) {
+					testimonialModal.parentElement.removeChild(testimonialModal);
+				};
+			});
+			
+			document.body.appendChild(testimonialModal);
+		});
+		testimonialsContainer.appendChild(testimonialElement);
+	};
 };
 
 loadHeaderAndFooter();

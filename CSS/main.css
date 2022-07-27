@@ -266,7 +266,7 @@ footer {
 #modal__icon.fa-times-circle {
 	color: var(--danger-color);
 }
-#modal__title {
+#modal__heading {
 	font-size: 2em;
 	font-weight: var(--default-font-weight);
 	text-align: center;
@@ -286,7 +286,7 @@ footer {
 	font-size: 0.9em;
 }
 @media (prefers-color-scheme: dark) {
-	#modal__title, #modal__message {
+	#modal__heading, #modal__message {
 		font-weight: var(--thin-font-weight);
 	}
 }

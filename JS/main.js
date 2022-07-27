@@ -10,7 +10,7 @@ const alertTemplateString = `
 		<div id="modal__overlay" class="modal__overlay"></div>
 		<div id="modal__box" class="modal__box surface">
 			<i id="modal__icon" class="fas"></i>
-			<span id="modal__title"></span>
+			<span id="modal__heading"></span>
 			<div id="modal__message"></div>
 			<div id="modal__buttonContainer">
 				<button class="modal__button primaryButton">Close</button>
@@ -23,7 +23,7 @@ const confirmTemplateString = `
 		<div id="modal__overlay" class="modal__overlay"></div>
 		<div id="modal__box" class="modal__box surface">
 			<i id="modal__icon" class="fas"></i>
-			<span id="modal__title"></span>
+			<span id="modal__heading"></span>
 			<div id="modal__message"></div>
 			<div id="modal__buttonContainer">
 				<button id="modal__button--cancel" class="modal__button primaryButton">Cancel</button>
@@ -36,44 +36,58 @@ const confirmTemplateString = `
 const testimonialTemplate = document.getElementById("testimonialTemplate");
 const testimonialsContainer = document.getElementsByClassName("section--testimonials")[0];
 
-async function loadHeaderAndFooter() {
-	fetch("/COMPONENTS/header.html")
+async function loadComponent(fileName, identifier) {
+	await fetch("/COMPONENTS/" + fileName)
 		.then(response => {
 			return response.text()
 		})
 		.then(data => {
-			let header = document.getElementsByTagName("header")[0];
-			if (header) {
-				header.innerHTML = data;
-				for (let navLink of header.getElementsByClassName("navLink--standard")) {
-					if (window.location.href.startsWith(navLink.href)) {
-						navLink.classList.add("navLink--current");
-						break;
-					}
-				};
+			for (let elem of document.querySelectorAll(identifier)) {
+				elem.innerHTML = data;
 			};
-		});
-
-	fetch("/COMPONENTS/footer.html")
-		.then(response => {
-			return response.text()
 		})
-		.then(data => {
-			let footer = document.getElementsByTagName("footer")[0];
-			if (footer) {
-				footer.innerHTML = data;
-				footer.getElementsByClassName("copyrightNotice__year")[0].innerText = new Date().getFullYear();
-			};
+		.catch(err => {
+			alert(err, modalTypes.Error);
 		});
 };
 
-function createModal(templateString, title, message, type) {
+async function loadHeaderAndFooter() {
+	await Promise.all([
+		loadComponent("header.html", "header")
+			.then(_ => {
+				let header = document.getElementsByTagName("header")[0];
+				if (header) {
+					for (let navLink of header.getElementsByClassName("navLink--standard")) {
+						if (window.location.href.startsWith(navLink.href)) {
+							navLink.classList.add("navLink--current");
+							break;
+						};
+					};
+				};
+			}),
+		loadComponent("footer.html", "footer")
+			.then(data => {
+				let footer = document.getElementsByTagName("footer")[0];
+				if (footer) {
+					footer.getElementsByClassName("copyrightNotice__year")[0].innerText = new Date().getFullYear();
+				};
+			})
+	]);
+};
+
+function createModal(templateString, message, type, heading) {
+	if (!heading) {
+		heading = Object.keys(modalTypes).find(key => modalTypes[key] === type);
+	};
 	let modalElem = new DOMParser().parseFromString(templateString, "text/html");
 	let messageElem = modalElem.getElementById("modal__message");
 
 	modalElem.getElementById("modal__icon").classList.add(type);
 
-	modalElem.getElementById("modal__title").innerText = title;
+	modalElem.getElementById("modal__heading").innerText = heading;
+
+	if (typeof message !== "string")
+		message = String(message);
 
 	for (let paragraph of message.split("\n")) {
 		let paragraphElem = document.createElement("p");
@@ -94,18 +108,21 @@ window.onbeforeunload = () => {
 	document.getElementById("navToggleInput").checked = false;
 };
 
-window.alert = (title, message, type=modalTypes.Information) => {
+window.alert = (message, type = modalTypes.Information, heading) => {
 	return new Promise((resolve, reject) => {
-		let alertElem = createModal(alertTemplateString, title, message, type);
+		let alertElem = createModal(alertTemplateString, message, type, heading);
 		alertElem.querySelector(".modal__button").addEventListener("click", () => {
 			resolve(undefined);
 		});
 		document.body.appendChild(alertElem);
 	})
 };
-window.confirm = (title, message) => {
+window.confirm = (message, heading) => {
+	if (!heading) {
+		heading = "Warning";
+	};
 	return new Promise((resolve, reject) => {
-		let alertElem = createModal(confirmTemplateString, title, message, modalTypes.Warning);
+		let alertElem = createModal(confirmTemplateString, message, modalTypes.Warning, heading);
 		alertElem.querySelector("#modal__button--ok").addEventListener("click", () => {
 			resolve(true);
 		});
@@ -141,7 +158,7 @@ function populateTestimonials() {
 					testimonialModal.parentElement.removeChild(testimonialModal);
 				};
 			});
-			
+
 			document.body.appendChild(testimonialModal);
 		});
 		testimonialsContainer.appendChild(testimonialElement);

@@ -16,9 +16,9 @@ document.getElementsByClassName("form")[0].addEventListener("submit", (ev) => {
 					document.querySelector(`label[for="${error["field"]}"]`).firstChild.wholeText + " " + error["message"] + "."
 				);
 			};
-			await alert("Please make some changes", errorMsgs.join("\n"), modalTypes.Warning);
+			await alert(errorMsgs.join("\n"), modalTypes.Warning, "Please make some changes");
 		} else {
-			await alert("Thank you", "Thank you for your feedback, it has been submitted successfully!\nYou may close this window now.", modalTypes.Success);
+			await alert("Thank you for your feedback, it has been submitted successfully!\nYou may close this window now.", modalTypes.Success, "Thank you");
 			ev.target.innerHTML = `
 				<div class="form__completionMsg">
 					<p>Successfully submitted!</p>
@@ -28,6 +28,6 @@ document.getElementsByClassName("form")[0].addEventListener("submit", (ev) => {
 			ev.target.classList.add("completed");
 		};
 	}).catch(async (error) => {
-		await alert("Sorry...", "There was a problem submitting your feedback.\nPlease try again.", modalTypes.Error);
+		await alert("There was a problem submitting your feedback.\nPlease try again.", modalTypes.Error, "Sorry...");
 	});
 });

@@ -14,7 +14,7 @@ const projects = [
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
 			"Prandium is a bot to book meals at Gonville and Caius college, University of Cambridge.",
-			"At my college we have to book meals in advance if we would like to dine at the college. The booking webpage may open as early as 6am and places may sell out is less than 5 seconds depending on the menu, number of courses and formality of the meal. This resulted in people setting alarms to wake up early to book meals and often still missing them due to being a few seconds slow.",
+			"At my college we have to book meals in advance if we would like to dine at the college. The booking webpage may open as early as 6am and places may sell out in less than 5 seconds depending on the menu, number of courses and formality of the meal. This resulted in people setting alarms to wake up early to book meals and often still missing them due to being a few seconds slow.",
 			"So I created Prandium. I have been able to sleep in and get a place at any meal I would like for over a year now. I also let some friends occasionally use it too."
 		]
 	},
@@ -32,7 +32,7 @@ const projects = [
 		"startDate": "2021-05",
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
-			"Command Bar is menu bar application for Macs that allow you to run shell commands and see their outputs.",
+			"Command Bar is menu bar application for MacOS that allow you to run shell commands and see their outputs.",
 			"I spent a week creating this to save me (and hopefully other developers when I released Command Bar on the App Store) some time when performing routine tasks. However less than a week after I finished Command Bar I heard that Apple was developing almost identical functionality as part of their Shortcuts app on MacOS; so I abandoned this project."
 		]
 	},

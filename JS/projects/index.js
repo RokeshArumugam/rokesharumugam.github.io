@@ -1,26 +1,57 @@
 const projects = [
 	{
-		"name": "Ball Jump",
-		"startDate": "2015-06",
+		"name": "Price Checker",
+		"startDate": "2022-07",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
-			"Ball Jump is my first ever project.",
-			"It is a 2D computer game I made during my Year 7 summer holidays."
+			"Price Checker is a web scraper that checks if the price of a product on amazon.co.uk changes.",
+			"I add the URLs of products I would like to monitor to a file and my phone is pinged when the price changes. It helps me save a few pounds every so often."
 		]
 	},
 	{
-		"name": "Stickmen Battles",
-		"startDate": "2016-06",
+		"name": "Prandium",
+		"startDate": "2021-11",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
-			"Stickmen Battles is another project I made during my secondary school years.",
-			"It is a 2D computer game like Ball Jump - however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickemen Battles."
+			"Prandium is a bot to book meals at Gonville and Caius college, University of Cambridge.",
+			"At my college we have to book meals in advance if we would like to dine at the college. The booking webpage may open as early as 6am and places may sell out is less than 5 seconds depending on the menu, number of courses and formality of the meal. This resulted in people setting alarms to wake up early to book meals and often still missing them due to being a few seconds slow.",
+			"So I created Prandium. I have been able to sleep in and get a place at any meal I would like for over a year now. I also let some friends occasionally use it too."
 		]
 	},
 	{
-		"name": "Easy Type",
-		"startDate": "2016-10",
+		"name": "Invoice Generator",
+		"startDate": "2021-06",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
-			"Easy Type is another secondary school project.",
-			"It is a text editor that I created for my classmates and me to use during ICT lessons at school."
+			"Invoice Generator is a command-line program that can be used to generate, track and manage invoices.",
+			"I used this create invoices when I worked as a TA for Medify. It uses a HTML template so you can design the invoice to look however you want."
+		]
+	},
+	{
+		"name": "Command Bar",
+		"startDate": "2021-05",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
+		"description": [
+			"Command Bar is menu bar application for Macs that allow you to run shell commands and see their outputs.",
+			"I spent a week creating this to save me (and hopefully other developers when I released Command Bar on the App Store) some time when performing routine tasks. However less than a week after I finished Command Bar I heard that Apple was developing almost identical functionality as part of their Shortcuts app on MacOS; so I abandoned this project."
+		]
+	},
+	{
+		"name": "TV Tracker",
+		"startDate": "2021-05",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
+		"description": [
+			"TV Tracker is a PWA (Progressive Web App) that I created to keep track of how many episodes I've watched of each TV show.",
+			"This project is nowhere near finished and was simply an experiment for me to see how PWAs work. PWAs seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."
+		]
+	},
+	{
+		"name": "Remote Controller",
+		"startDate": "2020-09",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
+		"description": [
+			"Remote Controller is a command-line and webpage application that can be used to control your computer (via mouse and keyboard) from your phone.",
+			"I created this so I could pause movies that were playing on my laptop which was connected to my TV while I was sitting on the other side of the room."
 		]
 	},
 	{
@@ -34,12 +65,27 @@ const projects = [
 		]
 	},
 	{
-		"name": "TV Tracker",
-		"startDate": "2021-05",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
+		"name": "Easy Type",
+		"startDate": "2016-10",
 		"description": [
-			"TV Tracker is a PWA (Progressive Web App) that I created to keep track of how many episodes I've watched of each TV show.",
-			"This project is nowhere near finished and was simply an experiment for me to see how PWAs work. PWAs seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."
+			"Easy Type is another secondary school project.",
+			"It is a text editor that I created for my classmates and me to use during ICT lessons at school."
+		]
+	},
+	{
+		"name": "Stickmen Battles",
+		"startDate": "2016-06",
+		"description": [
+			"Stickmen Battles is another project I made during my secondary school years.",
+			"It is a 2D computer game like Ball Jump - however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickemen Battles."
+		]
+	},
+	{
+		"name": "Ball Jump",
+		"startDate": "2015-06",
+		"description": [
+			"Ball Jump is my first ever project.",
+			"It is a 2D computer game I made during my Year 7 summer holidays."
 		]
 	}
 ].sort((one, two) => (one["startDate"] < two["startDate"]));

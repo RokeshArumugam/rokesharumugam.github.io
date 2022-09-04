@@ -58,7 +58,7 @@ async function loadHeaderAndFooter() {
 				let header = document.getElementsByTagName("header")[0];
 				if (header) {
 					for (let navLink of header.getElementsByClassName("navLink--standard")) {
-						if (window.location.href.startsWith(navLink.href)) {
+						if (window.location.pathname == navLink.pathname) {
 							navLink.classList.add("navLink--current");
 							break;
 						};

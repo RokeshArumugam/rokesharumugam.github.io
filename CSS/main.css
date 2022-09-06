@@ -232,6 +232,7 @@ footer {
 .modal__box {
 	max-width: 500px;
 	min-width: 300px;
+	max-height: 90vh;
 }
 .modal__box::before {
 	opacity: 0.16;
@@ -272,6 +273,7 @@ footer {
 	text-align: center;
 }
 #modal__message {
+	overflow: auto;
 	font-weight: var(--default-font-weight);
 }
 #modal__message p {

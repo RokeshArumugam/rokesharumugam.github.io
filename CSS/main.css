@@ -38,7 +38,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: var(--default-font-family);
 }
 body {
 	position: relative;
@@ -47,6 +46,7 @@ body {
 	align-items: stretch;
 	min-height: 100vh;
 	background-color: var(--background-color);
+	font-family: var(--default-font-family);
 	color: var(--on-background-color);
 	-webkit-text-size-adjust: 100%;
 }
@@ -333,6 +333,9 @@ a:visited {
 }
 .primaryButton:hover {
 	transform: scale(1.05);
+}
+input, select {
+	font-family: inherit;
 }
 li {
 	list-style-position: inside;

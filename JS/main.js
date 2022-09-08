@@ -133,10 +133,7 @@ window.alert = (message, type = modalTypes.Information, heading) => {
 		document.body.appendChild(alertElem);
 	})
 };
-window.confirm = (message, heading) => {
-	if (!heading) {
-		heading = "Warning";
-	};
+window.confirm = (message, heading = "Warning") => {
 	return new Promise((resolve, reject) => {
 		let alertElem = createModal(confirmTemplateString, message, modalTypes.Warning, heading);
 		alertElem.querySelector("#modal__button--ok").addEventListener("click", () => {
@@ -148,13 +145,7 @@ window.confirm = (message, heading) => {
 		document.body.appendChild(alertElem);
 	})
 };
-window.prompt = (message, heading, defaultText) => {
-	if (!heading) {
-		heading = "Prompt";
-	};
-	if (!defaultText) {
-		defaultText = "";
-	};
+window.prompt = (message, heading = "Prompt", defaultText = "") => {
 	return new Promise((resolve, reject) => {
 		let modalElem = createModal(promptTemplateString, message, modalTypes.Prompt, heading);
 		let modalFieldElem = modalElem.querySelector("#modal__field");

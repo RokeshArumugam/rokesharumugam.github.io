@@ -3,7 +3,8 @@ const modalTypes = {
 	Information: "fa-info-circle",
 	Success: "fa-check-circle",
 	Warning: "fa-exclamation-triangle",
-	Error: "fa-times-circle"
+	Error: "fa-times-circle",
+	Prompt: "fa-question-circle"
 };
 const alertTemplateString = `
 	<div id="modal" class="modal" role="alertdialog">
@@ -25,6 +26,21 @@ const confirmTemplateString = `
 			<i id="modal__icon" class="fas"></i>
 			<span id="modal__heading"></span>
 			<div id="modal__message"></div>
+			<div id="modal__buttonContainer">
+				<button id="modal__button--cancel" class="modal__button primaryButton">Cancel</button>
+				<button id="modal__button--ok" class="modal__button primaryButton">OK</button>
+			</div>
+		</div>
+	</div>
+`;
+const promptTemplateString = `
+	<div id="modal" class="modal" role="alertdialog">
+		<div id="modal__overlay" class="modal__overlay"></div>
+		<div id="modal__box" class="modal__box">
+			<i id="modal__icon" class="fas"></i>
+			<span id="modal__heading">Prompt</span>
+			<div id="modal__message"></div>
+			<input type="text" id="modal__field">
 			<div id="modal__buttonContainer">
 				<button id="modal__button--cancel" class="modal__button primaryButton">Cancel</button>
 				<button id="modal__button--ok" class="modal__button primaryButton">OK</button>
@@ -131,6 +147,27 @@ window.confirm = (message, heading) => {
 		});
 		document.body.appendChild(alertElem);
 	})
+};
+window.prompt = (message, heading, defaultText) => {
+	if (!heading) {
+		heading = "Prompt";
+	};
+	if (!defaultText) {
+		defaultText = "";
+	};
+	return new Promise((resolve, reject) => {
+		let modalElem = createModal(promptTemplateString, message, modalTypes.Prompt, heading);
+		let modalFieldElem = modalElem.querySelector("#modal__field");
+		modalFieldElem.value = defaultText;
+		modalElem.querySelector("#modal__button--ok").addEventListener("click", () => {
+			resolve(modalFieldElem.value);
+		});
+		modalElem.querySelector("#modal__button--cancel").addEventListener("click", () => {
+			resolve(null);
+		});
+		document.body.appendChild(modalElem);
+		modalFieldElem.focus();
+	});
 };
 
 function populateTestimonials() {

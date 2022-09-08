@@ -255,11 +255,11 @@ footer {
 	place-items: center;
 	font-size: 5em;
 }
+#modal__icon.fa-info-circle, #modal__icon.fa-question-circle {
+	color: var(--primary-color)
+}
 #modal__icon.fa-check-circle {
 	color: var(--success-color);
-}
-#modal__icon.fa-info-circle {
-	color: var(--primary-color)
 }
 #modal__icon.fa-exclamation-triangle {
 	color: var(--warning-color);

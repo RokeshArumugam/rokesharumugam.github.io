@@ -36,7 +36,7 @@ const confirmTemplateString = `
 const promptTemplateString = `
 	<div id="modal" class="modal" role="alertdialog">
 		<div id="modal__overlay" class="modal__overlay"></div>
-		<div id="modal__box" class="modal__box">
+		<div id="modal__box" class="modal__box surface">
 			<i id="modal__icon" class="fas"></i>
 			<span id="modal__heading">Prompt</span>
 			<div id="modal__message"></div>

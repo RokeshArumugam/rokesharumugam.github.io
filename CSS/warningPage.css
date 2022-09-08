@@ -1,3 +1,6 @@
+body {
+	min-height: -webkit-fill-available;
+}
 main {
 	display: flex;
 	flex-direction: column;

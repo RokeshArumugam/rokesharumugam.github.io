@@ -40,7 +40,9 @@ const promptTemplateString = `
 			<i id="modal__icon" class="fas"></i>
 			<span id="modal__heading">Prompt</span>
 			<div id="modal__message"></div>
-			<input type="text" id="modal__field">
+			<div class="inputWrapper surface">
+				<input type="text" id="modal__field">
+			</div>
 			<div id="modal__buttonContainer">
 				<button id="modal__button--cancel" class="modal__button primaryButton">Cancel</button>
 				<button id="modal__button--ok" class="modal__button primaryButton">OK</button>

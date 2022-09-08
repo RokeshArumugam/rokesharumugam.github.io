@@ -335,9 +335,6 @@ a:visited {
 .primaryButton:hover {
 	transform: scale(1.05);
 }
-input, select {
-	font-family: inherit;
-}
 li {
 	list-style-position: inside;
 }
@@ -551,4 +548,49 @@ li {
 .testimonial__authorPosition {
 	opacity: 0.5;
 	font-size: 0.9em;
+}
+
+/* Input */
+
+input, select, textarea {
+	border: none;
+	outline: none;
+	border-radius: inherit;
+	background: none;
+	width: 100%;
+	padding: 0.5em 0.75em;
+	font-size: 1em;
+	font-family: inherit;
+	appearance: none;
+	resize: none;
+}
+textarea {
+	height: 10em;
+}
+input[type="submit"] {
+	align-self: center;
+	border: none;
+	border-radius: var(--border-radius);
+	max-width: 15ch;
+	font-size: 1.25em;
+}
+.inputWrapper {
+	position: relative;
+	align-self: stretch;
+	border-radius: var(--border-radius);
+	background: none;
+}
+.inputWrapper::before {
+	opacity: 0.07;
+}
+.inputWrapper:focus-within::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: var(--border-thickness) solid var(--primary-color);
+	border-radius: inherit;
+	pointer-events: none;
 }

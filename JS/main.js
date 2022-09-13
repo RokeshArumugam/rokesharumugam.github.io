@@ -1,3 +1,5 @@
+const donationLink = "https://donate.stripe.com/fZe5kv5SJ3jZfjG000";
+
 const urlParams = new URLSearchParams(window.location.search);
 const modalTypes = {
 	Information: "fa-info-circle",
@@ -196,3 +198,8 @@ function populateTestimonials() {
 };
 
 loadHeaderAndFooter();
+
+for (const elem of document.getElementsByClassName("donationLink")) {
+	elem.href = donationLink;
+	elem.target = "_blank";
+};

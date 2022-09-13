@@ -345,6 +345,8 @@ li {
 
 /* -- Sections */
 
+/* -- -- Page Intro */
+
 .section--pageIntro__heading {
 	margin: 0.5em;
 	font-size: 3em;
@@ -355,6 +357,8 @@ li {
 	font-size: 1.3em;
 	text-align: center;
 }
+
+/* -- -- Text */
 
 .section--text {
 	margin: auto;
@@ -469,6 +473,7 @@ li {
 }
 .section--priceDisplay__term {
 	opacity: 0.5;
+	margin-top: 1em;
 }
 .section--priceDisplay__button {
 	font-size: 1.25em;

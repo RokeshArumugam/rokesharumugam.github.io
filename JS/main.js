@@ -195,6 +195,32 @@ function populateTestimonials() {
 		});
 		testimonialsContainer.appendChild(testimonialElement);
 	};
+	setInterval(() => {
+		if (testimonialsContainer.querySelector(":hover") || document.getElementsByClassName("modal").length)
+			return;
+		let increment;
+		let endX;
+		switch (testimonialsContainer.dataset.scrollDirection) {
+			case "right":
+				increment = 1;
+				endX = (testimonialsContainer.scrollWidth - testimonialsContainer.clientWidth);
+				break;
+			case "left":
+				increment = -1;
+				endX = 0;
+				break;
+			default:
+				break;
+		}
+		if (testimonialsContainer.scrollLeft !== endX) {
+			testimonialsContainer.scrollTo(testimonialsContainer.scrollLeft + increment, 0);
+		} else {
+			if (testimonialsContainer.dataset.scrollDirection == "right")
+				testimonialsContainer.dataset.scrollDirection = "left";
+			else if (testimonialsContainer.dataset.scrollDirection == "left")
+				testimonialsContainer.dataset.scrollDirection = "right";
+		};
+	}, 50)
 };
 
 loadHeaderAndFooter();

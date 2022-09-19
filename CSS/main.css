@@ -17,7 +17,9 @@
 	--cursive-font-family: "Charmonman", cursive;
 	--default-font-weight: 400;
 	--thin-font-weight: 350;
+	--primary-box-shadow-color: rgba(30, 144, 255, 0.75);
 	--box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.15);
+	--primary-box-shadow: 0em 0em 0.5em var(--primary-box-shadow-color);
 	--border-thickness: 0.2em;
 	--border-radius: 1em;
 	--section-default-padding-vertical: 2.5em;
@@ -86,11 +88,10 @@ header, footer {
 /* Header */
 
 header {
-	--box-shadow-color: rgba(30, 144, 255, 0.75);
 	position: sticky;
 	z-index: 1;
 	top: 0;
-	box-shadow: 0em -0.35em 1em 0em var(--box-shadow-color);
+	box-shadow: 0em -0.35em 1em 0em var(--primary-box-shadow-color);
 	height: calc(4em + env(safe-area-inset-top));
 	padding-top: env(safe-area-inset-top);
 	padding-bottom: 0em;
@@ -98,7 +99,7 @@ header {
 }
 @media (prefers-color-scheme: dark) {
 	header {
-		--box-shadow-color: var(--primary-color);
+		--primary-box-shadow-color: var(--primary-color);
 	}
 }
 
@@ -304,6 +305,12 @@ section {
 	padding: var(--section-default-padding-vertical) var(--section-default-padding-horizontal);
 	font-weight: var(--default-font-weight);
 }
+h2 {
+	font-size: 1.75em;
+}
+h3 {
+	font-size: 1.25em;
+}
 p {
 	margin-left: auto;
 	margin-right: auto;
@@ -367,7 +374,7 @@ li {
 	padding-top: var(--section-default-padding-horizontal);
 	padding-bottom: var(--section-default-padding-horizontal);
 }
-.section--text h2 {
+.section--text h2, .section--text h3 {
 	margin-bottom: 0.25em;
 }
 .section--text img {

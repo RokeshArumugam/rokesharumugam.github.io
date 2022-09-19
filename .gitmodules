@@ -1,0 +1,3 @@
+[submodule "projects/characterSheet"]
+	path = projects/characterSheet
+	url = https://github.com/RokeshArumugam/characterSheet

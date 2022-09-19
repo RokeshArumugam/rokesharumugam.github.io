@@ -1,3 +1,16 @@
+.viewProjectLink, .section--download__link {
+	display: block;
+	margin: auto;
+	width: max-content;
+}
+.viewProjectLink {
+	margin-top: 1em;
+	font-size: 1.25em;
+}
+.section--download__link {
+	font-size: 1.5em;
+}
+
 .section--carousel {
 	--image-change-duration: var(--transition-duration);
 	--gap: 1em;
@@ -77,11 +90,4 @@
 .section--carousel__dot--current::after {
 	clip-path: circle(0%);
 	transition: clip-path var(--image-wait-duration) linear;
-}
-
-.section--download__link {
-	display: block;
-	margin: auto;
-	width: max-content;
-	font-size: 1.75em;
 }

@@ -1,5 +1,14 @@
 const projects = [
 	{
+		"name": "Character Sheet",
+		"startDate": "2022-09",
+		"description": [
+			"Character Sheet is a digital character sheet that has some web-scraping-powered automations.",
+			"I use this instead of my paper character sheet when I'm playing D&D. I just copy the URL when I'm done and then I can use it later to access the same character sheet again.",
+			"All of the data is saved in the URL so anyone can use this and save data without an account."
+		]
+	},
+	{
 		"name": "Price Checker",
 		"startDate": "2022-07",
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",

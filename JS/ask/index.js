@@ -22,3 +22,10 @@ const testimonials = [
 ];
 
 populateTestimonials();
+
+for (const elem of document.getElementsByClassName("section--otherProducts__product--reducedAvailability")) {
+	let bannerElem = document.createElement("span");
+	bannerElem.classList.add("section--otherProducts__banner");
+	bannerElem.innerHTML = "Reduced availability. Please <a href='/contactMe.html?suggestedId=ask'>email</a> first.";
+	elem.appendChild(bannerElem)
+};

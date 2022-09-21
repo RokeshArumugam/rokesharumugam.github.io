@@ -35,7 +35,7 @@
 }
 .section--otherServices__service--reducedAvailability .section--otherServices__serviceButton {
 	border: var(--border-thickness) solid var(--primary-color);
-	background-color: var(--on-primary-color);
+	background-color: var(--background-color);
 	color: var(--primary-color);
 }
 .section--otherServices__banner {

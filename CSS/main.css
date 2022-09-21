@@ -20,7 +20,7 @@
 	--primary-box-shadow-color: rgba(30, 144, 255, 0.75);
 	--box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.15);
 	--primary-box-shadow: 0em 0em 0.5em var(--primary-box-shadow-color);
-	--border-thickness: 0.2em;
+	--border-thickness: 0.12em;
 	--border-radius: 1em;
 	--section-default-padding-vertical: 2.5em;
 	--section-default-padding-horizontal: max(1em, env(safe-area-inset-left));

@@ -321,6 +321,7 @@ p + p {
 	margin-top: 0.7em;
 }
 a {
+	word-break: break-word;
 	color: dodgerblue;
 }
 a:visited {
@@ -341,9 +342,6 @@ a:visited {
 }
 .primaryButton:hover {
 	transform: scale(1.05);
-}
-li {
-	list-style-position: inside;
 }
 @media (prefers-color-scheme: dark) {
 	section {
@@ -376,6 +374,16 @@ li {
 }
 .section--text h2, .section--text h3 {
 	margin-bottom: 0.25em;
+	color: var(--primary-color);
+}
+.section--text h2:not(:first-child), .section--text h3:not(:first-child) {
+	margin-top: 0.75em;
+}
+.section--text ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25em;
+	padding-left: 1em;
 }
 .section--text img {
 	display: block;

@@ -1,12 +1,8 @@
-.section--askAbout__heading {
-	color: var(--primary-color);
+.section--askAbout {
+	font-style: italic;
 }
 .section--askAbout__list {
-	display: flex;
-	flex-direction: column;
-	gap: 0.25em;
 	font-size: 1.15em;
-	font-style: italic;
 }
 .section--otherProducts__heading {
 	margin-bottom: 0.75em;

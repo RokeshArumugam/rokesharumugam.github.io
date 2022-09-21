@@ -30,21 +30,33 @@
 	list-style-type: none;
 }
 .section--otherServices__service--reducedAvailability > *:not(.section--otherServices__banner) {
-	opacity: 0.5;
+	opacity: 0.6;
 	pointer-events: none;
+}
+.section--otherServices__service--reducedAvailability .section--otherServices__serviceButton {
+	border: var(--border-thickness) solid var(--primary-color);
+	background-color: var(--on-primary-color);
+	color: var(--primary-color);
 }
 .section--otherServices__banner {
 	position: absolute;
 	top: 50%;
 	left: 0;
 	right: 0;
-	opacity: 0.75;
+	opacity: 0.9;
 	transform: translateY(-50%);
-	background-color: var(--danger-color);
 	padding: 0.5em;
 	font-size: 1.75em;
 	font-weight: bold;
 	color: white;
+}
+.section--otherServices__banner::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	opacity: 0.75;
+	background-color: var(--danger-color);
 }
 .section--otherServices__banner a {
 	color: skyblue;

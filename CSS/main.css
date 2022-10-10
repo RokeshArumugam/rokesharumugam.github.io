@@ -372,11 +372,11 @@ a:visited {
 	padding-top: var(--section-default-padding-horizontal);
 	padding-bottom: var(--section-default-padding-horizontal);
 }
-.section--text h2, .section--text h3 {
+.section--text h2, .section--text h3, .section--text h4 {
 	margin-bottom: 0.25em;
 	color: var(--primary-color);
 }
-.section--text h2:not(:first-child), .section--text h3:not(:first-child) {
+.section--text h2:not(:first-child), .section--text h3:not(:first-child), .section--text h4:not(:first-child) {
 	margin-top: 0.75em;
 }
 .section--text ul {

@@ -311,6 +311,12 @@ h2 {
 h3 {
 	font-size: 1.25em;
 }
+h4 {
+	font-size: 1.1em;
+}
+h5 {
+	font-size: 1em;
+}
 p {
 	margin-left: auto;
 	margin-right: auto;
@@ -372,11 +378,11 @@ a:visited {
 	padding-top: var(--section-default-padding-horizontal);
 	padding-bottom: var(--section-default-padding-horizontal);
 }
-.section--text :is(h2, h3, h4) {
-	margin-bottom: 0.25em;
+.section--text :is(h2, h3, h4, h5) {
+	margin-bottom: 0.3em;
 	color: var(--primary-color);
 }
-.section--text :is(h2, h3, h4):not(:first-child) {
+.section--text :is(h2, h3, h4, h5):not(:first-child) {
 	margin-top: 0.75em;
 }
 .section--text ul {

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404.html
+Disallow: /comingSoon.html
+
+Sitemap: https://www.rokesharumugam.com/sitemap.txt

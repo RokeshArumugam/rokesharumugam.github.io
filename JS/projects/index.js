@@ -9,6 +9,14 @@ const projects = [
 		]
 	},
 	{
+		"name": "Meal Booking Website",
+		"startDate": "2022-07",
+		"description": [
+			"Meal Booking Website is a new website I created to (hopefully) replace the old meal booking website at my college (Gonville and Caius) at the University of Cambridge.",
+			"This was a nice project to do over the summer, but it is yet to be seen whether it will be bought by the college."
+		]
+	},
+	{
 		"name": "Price Checker",
 		"startDate": "2022-07",
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",
@@ -96,7 +104,7 @@ const projects = [
 			"It is a 2D computer game I made during my Year 7 summer holidays."
 		]
 	}
-].sort((one, two) => (one["startDate"] < two["startDate"]));
+].sort((one, two) => (one["startDate"] <= two["startDate"]));
 const projectTemplate = document.getElementById("projectTemplate");
 const projectsContainer = document.getElementsByClassName("section--projects")[0];
 

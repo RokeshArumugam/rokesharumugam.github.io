@@ -309,13 +309,13 @@ h2 {
 	font-size: 1.75em;
 }
 h3 {
-	font-size: 1.25em;
+	font-size: 1.45em;
 }
 h4 {
-	font-size: 1.1em;
+	font-size: 1.25em;
 }
 h5 {
-	font-size: 1em;
+	font-size: 1.1em;
 }
 p {
 	margin-left: auto;
@@ -349,6 +349,9 @@ a:visited {
 .primaryButton:hover {
 	transform: scale(1.05);
 }
+video {
+	max-width: 100%;
+}
 @media (prefers-color-scheme: dark) {
 	section {
 		font-weight: var(--thin-font-weight);
@@ -379,7 +382,7 @@ a:visited {
 	padding-bottom: var(--section-default-padding-horizontal);
 }
 .section--text :is(h2, h3, h4, h5) {
-	margin-bottom: 0.3em;
+	margin-bottom: 0.35em;
 	color: var(--primary-color);
 }
 .section--text :is(h2, h3, h4, h5):not(:first-child) {
@@ -388,8 +391,11 @@ a:visited {
 .section--text ul {
 	display: flex;
 	flex-direction: column;
-	gap: 0.25em;
+	gap: 0.3em;
 	padding-left: 1em;
+}
+.section--text li {
+	line-height: 1.3em;
 }
 .section--text img {
 	display: block;

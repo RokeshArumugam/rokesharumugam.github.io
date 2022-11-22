@@ -1,5 +1,14 @@
 const projects = [
 	{
+		"name": "Open Sesame",
+		"startDate": "2022-11",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
+		"description": [
+			"Open Sesame is a project where my Raspberry Pi can contol a servomotor to press the intercom button in my room to unlock the front door of my accomodation.",
+			"Instead of using my key to unlock the front door I can now just tap a button on my watch and buzz myself in."
+		]
+	},
+	{
 		"name": "Character Sheet",
 		"startDate": "2022-09",
 		"description": [

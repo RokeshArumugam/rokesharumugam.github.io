@@ -35,15 +35,15 @@ const projects = [
 			"I add the URLs of products I would like to monitor to a file and my phone is pinged when the price changes. It helps me save a few pounds every so often."
 		]
 	},
-	{
-		"name": "Prandium",
-		"startDate": "2021-11",
-		"description": [
-			"Prandium is a bot to book meals at Gonville and Caius college, University of Cambridge.",
-			"We have to book meals in advance and they can be very competitive. People wake up early to book meals and still often miss them.",
-			"So I created Prandium. I have been able to sleep in and get a place at any meal I would like for over a year now. I also let some friends occasionally use it too."
-		]
-	},
+	// {
+	// 	"name": "Prandium",
+	// 	"startDate": "2021-11",
+	// 	"description": [
+	// 		"Prandium is a bot to book meals at Gonville and Caius college, University of Cambridge.",
+	// 		"We have to book meals in advance and they can be very competitive. People wake up early to book meals and still often miss them.",
+	// 		"So I created Prandium. I have been able to sleep in and get a place at any meal I would like for over a year now. I also let some friends occasionally use it too."
+	// 	]
+	// },
 	{
 		"name": "Invoice Generator",
 		"startDate": "2021-06",

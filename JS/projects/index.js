@@ -1,10 +1,10 @@
 const projects = [
 	{
-		"name": "Open Sesame",
+		"name": "Sesame",
 		"startDate": "2022-11",
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
-			"Open Sesame is a project that allows my Raspberry Pi to unlock the front door of my accomodation using a servomotor and the intercom button in my room.",
+			"Sesame is a project that allows my Raspberry Pi to unlock the front door of my accomodation using a servomotor and the intercom button in my room.",
 			"Instead of using my key to unlock the front door I can now just tap a button on my watch and buzz myself in.",
 			"This was my first electronics projects so it was a good learning experience."
 		]

@@ -5,7 +5,7 @@ const projects = [
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
 			"Video Speeder is a browser extension that allows you to change the playback speed of videos beyond the normal 0.5-2.0x. ",
-			"I created this since I sometimes watch lectures at 3.0-4.0x speed, but I had to use Google Chrome instead of Safari (which is what I normally use) to use the 'Fast Panopto' extension. Now I can stick with Safari."
+			"I created this since I sometimes watch lectures at 3.0-4.0x speed, but I had to use Google Chrome instead of Safari (which is what I normally use) to use the 'Fast Panopto' extension - now I can stick with Safari."
 		]
 	},
 	{

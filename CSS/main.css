@@ -503,11 +503,11 @@ video {
 	font-size: 3.5em;
 	color: var(--primary-color);
 }
-.section--priceDisplay__description {
-	opacity: 0.4;
-}
 .section--priceDisplay__term {
 	opacity: 0.6;
+}
+.section--priceDisplay__description {
+	opacity: 0.4;
 	margin-top: 0.5em;
 }
 .section--priceDisplay__button {

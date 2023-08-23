@@ -1,3 +1,6 @@
+[submodule "projects/TVTracker"]
+	path = projects/TVTracker
+	url = https://github.com/RokeshArumugam/TVTracker.git
 [submodule "projects/characterSheet"]
 	path = projects/characterSheet
 	url = https://github.com/RokeshArumugam/characterSheet

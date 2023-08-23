@@ -4,3 +4,6 @@
 [submodule "projects/characterSheet"]
 	path = projects/characterSheet
 	url = https://github.com/RokeshArumugam/characterSheet
+[submodule "projects/Solitaire"]
+	path = projects/Solitaire
+	url = https://github.com/RokeshArumugam/solitaire.git

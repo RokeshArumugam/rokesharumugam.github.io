@@ -92,7 +92,6 @@ const projects = [
 	{
 		"name": "Solitaire",
 		"startDate": "2017-01",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
 			"Solitaire is a single-player card game. You may know it as Klondike.",
 			"I created this online version of Solitaire for my friends and me to play on our school iPads - since popular gaming websites were blocked at my secondary school.",

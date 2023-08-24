@@ -128,32 +128,25 @@ const projectTemplate = document.getElementById("projectTemplate");
 const projectsContainer = document.getElementsByClassName("section--projects")[0];
 
 function populateProjects() {
-	for (let project of projects) {
-		let projectElement = document.importNode(projectTemplate.content, true).querySelector(".project");
+	projectsContainer.append(...projects.map(project => {
+		let projectElement = projectTemplate.cloneNode(true).content.firstElementChild;
 		projectElement.getElementsByClassName("project__name")[0].innerText = project["name"];
-		projectElement.getElementsByClassName("project__startDate")[0].innerText = "Started in " +
+		projectElement.getElementsByClassName("project__startDate")[0].innerText =
+			"Started in " +
 			new Date(project["startDate"]).toLocaleDateString(
-				"en-gb",
-				{
-					"month": "long",
-					"year": "numeric"
-				}
+				"en-gb", { "month": "long", "year": "numeric" }
 			);
-		if (project["url"]) {
-			projectElement.href = project["url"];
-		} else {
-			projectElement.href = project["name"].replaceAll(" ", "_").toLowerCase() + ".html";
-		};
+		projectElement.href = project["url"] ?? project["name"].replaceAll(" ", "_").toLowerCase() + ".html";
 
 		let projectDescription = projectElement.getElementsByClassName("project__description")[0];
-		for (let line of project["description"]) {
+		projectDescription.append(...project["description"].map(line => {
 			let paragraph = document.createElement("p");
 			paragraph.innerText = line;
-			projectDescription.appendChild(paragraph);
-		};
+			return paragraph;
+		}));
 
-		projectsContainer.appendChild(projectElement);
-	};
+		return projectElement;
+	}));
 };
 
 populateProjects();

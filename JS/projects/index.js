@@ -1,10 +1,19 @@
 const projects = [
+	// {
+	// 	"name": "Salt",
+	// 	"startDate": "2023-08",
+	// 	"url": "/comingSoon.html?infoTextId=unpublishedProject",
+	// 	"description": [
+	// 		"Salt is a browser extension that enhances the meal booking website at my college (Gonville and Caius) at the University of Cambridge.",
+	// 		"Salt applies almost all of the improvements (and more) from my Meal Booking Website project on top of the old website via a browser extension; however this is far less efficient than replacing the old website."
+	// 	]
+	// },
 	{
 		"name": "Video Speeder",
 		"startDate": "2023-07",
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
-			"Video Speeder is a browser extension that allows you to change the playback speed of videos beyond the normal 0.5-2.0x. ",
+			"Video Speeder is a browser extension that allows you to change the playback speed of videos beyond the normal 0.5-2.0x.",
 			"I created this since I sometimes watch lectures at 3.0-4.0x speed, but I had to use Google Chrome instead of Safari (which is what I normally use) to use the 'Fast Panopto' extension - now I can stick with Safari."
 		]
 	},

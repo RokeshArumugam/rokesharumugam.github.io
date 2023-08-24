@@ -1,9 +1,9 @@
 [submodule "projects/solitaire"]
 	path = projects/solitaire
 	url = https://github.com/RokeshArumugam/solitaire.git
-[submodule "projects/TVTracker"]
-	path = projects/TVTracker
-	url = https://github.com/RokeshArumugam/TVTracker.git
+[submodule "projects/tvTracker"]
+	path = projects/tvTracker
+	url = https://github.com/RokeshArumugam/tvTracker.git
 [submodule "projects/characterSheet"]
 	path = projects/characterSheet
 	url = https://github.com/RokeshArumugam/characterSheet

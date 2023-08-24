@@ -74,7 +74,6 @@ const projects = [
 	{
 		"name": "TV Tracker",
 		"startDate": "2021-05",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
 			"TV Tracker is a PWA (Progressive Web App) that I created to keep track of how many episodes I've watched of each TV show.",
 			"This project is nowhere near finished and was simply an experiment for me to see how PWAs work. PWAs seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."

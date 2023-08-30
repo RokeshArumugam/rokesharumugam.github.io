@@ -33,7 +33,7 @@ const projects = [
 		"description": [
 			"Character Sheet is a digital character sheet that has some web-scraping-powered automations.",
 			"I use this instead of my paper character sheet when I'm playing D&D. I just close the tab when I'm done and reopen it next time to access my previous character sheets.",
-			"All of the data is saved in the browser on your device so anyone can use this and save data without an account. Alternatively you can also download your character sheet as a file to use on a different device."
+			"All of the data is saved in the browser on your device so anyone can use this and save data without an account. Alternatively you can also download and upload your character sheet as an editable PDF."
 		]
 	},
 	{

@@ -26,6 +26,6 @@ populateTestimonials();
 for (const elem of document.getElementsByClassName("section--otherServices__service--reducedAvailability")) {
 	let bannerElem = document.createElement("span");
 	bannerElem.classList.add("section--otherServices__banner");
-	bannerElem.innerHTML = "Reduced availability. Please <a href='/contactMe.html?suggestedId=ask'>email</a> first.";
+	bannerElem.innerHTML = "Reduced availability. Please <a href='/contact/?suggestedId=ask'>email</a> first.";
 	elem.appendChild(bannerElem)
 };

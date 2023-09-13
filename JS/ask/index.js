@@ -18,6 +18,11 @@ const testimonials = [
 		"authorName": "Jaysri Govindarajan",
 		"authorPosition": "A Level Student",
 		"quoteText": "Rokesh has been extremely helpful with my medicine application! He did not hold back on giving me invaluable advice. He has spent hours helping me create a plan for my personal statement, from outlining the qualities of a doctor to finding examples of these qualities in my own experiences. Thank you very much for all the help Rokesh!"
+	},
+	{
+		"authorName": "Davin Chandra",
+		"authorPosition": "A Level Student",
+		"quoteText": "Rokesh is really helpful and knowledgeable about the medical application process. He is very friendly and easily approachable, and provided me with apt and appropriate feedback. I highly recommend contacting him and seeking his expertise."
 	}
 ];
 

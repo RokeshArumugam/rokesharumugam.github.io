@@ -203,12 +203,17 @@ nav {
 /* Footer */
 
 footer {
+	gap: 1em;
+	justify-content: space-between;
 	padding-bottom: max(1em, env(safe-area-inset-bottom));
 	background-color: var(--on-background-color);
 	color: var(--background-color);
 }
-.copyrightNotice {
+footer > span {
 	font-size: 0.8em;
+}
+footer > span:last-child {
+	text-align: center;
 }
 
 /* Modal */
@@ -323,7 +328,7 @@ p {
 	max-width: var(--paragraph-max-width);
 	line-height: 1.3em;
 }
-p + p {
+p + :is(p, ul) {
 	margin-top: 0.7em;
 }
 a {

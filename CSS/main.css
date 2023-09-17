@@ -41,6 +41,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	position: relative;
 	display: flex;
@@ -51,7 +54,6 @@ body {
 	font-family: var(--default-font-family);
 	color: var(--on-background-color);
 	-webkit-text-size-adjust: 100%;
-	scroll-behavior: smooth;
 }
 .surface {
 	box-shadow: var(--box-shadow);

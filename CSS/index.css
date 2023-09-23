@@ -51,25 +51,6 @@ main {
 	}
 }
 
-/* Qualifications */
-
-.qualification__icon--medify {
-	border-radius: 0.125em;
-	width: 2em;
-	padding: 0.25em 0.3125em;
-	font-size: 1.5em;
-	background-color: var(--on-background-color);
-}
-.qualification__icon--medify p {
-	font-size: 1.5em;
-	line-height: 1em;
-	font-family: "Graphik", sans-serif;
-	font-weight: 700;
-	letter-spacing: 0.009em;
-	color: var(--background-color);
-	-webkit-font-smoothing: antialiased;
-}
-
 /* Ask A Medicine Student */
 
 .section--askAMedicineStudent {

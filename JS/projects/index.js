@@ -1,13 +1,12 @@
 const projects = [
-	// {
-	// 	"name": "Salt",
-	// 	"startDate": "2023-08",
-	// 	"url": "/comingSoon.html?infoTextId=unpublishedProject",
-	// 	"description": [
-	// 		"Salt is a browser extension that enhances the meal booking website at my college (Gonville and Caius) at the University of Cambridge.",
-	// 		"Salt applies almost all of the improvements (and more) from my Meal Booking Website project on top of the old website via a browser extension; however this is far less efficient than replacing the old website."
-	// 	]
-	// },
+	{
+		"name": "Salt",
+		"startDate": "2023-08",
+		"description": [
+			"Salt is a browser extension that enhances the meal booking website at my college (Gonville and Caius) at the University of Cambridge.",
+			"Salt applies almost all of the improvements (and more) from my Meal Booking Website project on top of the old website via a browser extension (albeit not as efficiently as replacing the old website would be)."
+		]
+	},
 	{
 		"name": "Video Speeder",
 		"startDate": "2023-07",

@@ -65,7 +65,7 @@
 .section--otherServices__serviceTitle {
 	display: grid;
 	place-items: center;
-	min-height: 2em;
+	min-height: 2.25em;
 	color: var(--primary-color);
 }
 .section--otherServices__serviceButton {

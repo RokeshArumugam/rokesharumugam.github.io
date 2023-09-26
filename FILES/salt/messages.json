@@ -1,11 +1,21 @@
 [
 	{
+		"repeatName": "donationRequest",
 		"repeatWaitTime": 1512000000,
 		"repeatShowInitial": false,
 		"lines": [
 			"Hi,",
 			"If you like using Salt and would like to give back in some way, [donations](https://donate.stripe.com/fZe5kv5SJ3jZfjG000) are most welcome!",
 			"There is also a link in the footer at the bottom of the page."
+		]
+	},
+	{
+		"repeatName": "reviewRequest",
+		"repeatWaitTime": 1512000000,
+		"repeatShowInitial": false,
+		"lines": [
+			"Hi,",
+			"If you like using Salt please consider giving a rating on the [Chrome Web Store](https://chrome.google.com/webstore/detail/salt/mjmcaioleoioplapgocohdkkcdlhlhci)!"
 		]
 	}
 ]

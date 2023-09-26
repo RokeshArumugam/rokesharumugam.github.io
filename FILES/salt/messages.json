@@ -1,7 +1,7 @@
 [
 	{
 		"repeatName": "donationRequest",
-		"repeatWaitTime": 1512000000,
+		"repeatWaitTime": 1814400000,
 		"repeatShowInitial": false,
 		"lines": [
 			"Hi,",

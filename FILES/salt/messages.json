@@ -20,6 +20,7 @@
 	},
 	{
 		"name": "profileTutorial",
+		"page": "profile.html",
 		"showOnce": true,
 		"lines": [
 			"With Salt, you can now use your profile page to choose a theme (e.g. dark mode) and specify friends' names so they appear at the top of the list of booked in people for a meal!"

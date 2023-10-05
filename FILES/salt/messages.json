@@ -25,5 +25,14 @@
 		"lines": [
 			"With Salt, you can now use your profile page to choose a theme (e.g. dark mode) and specify friends' names so they appear at the top of the list of who's booked in for a meal!"
 		]
+	},
+	{
+		"name": "mainPageTutorial",
+		"showOnce": true,
+		"lines": [
+			"Hi,",
+			"Thanks for downloading Salt!",
+			"If you're ever unsure about what something is or does, just hover over it and it will tell you (or contact me with the feedback link in the footer and I can redesign it to make it easier to understand)."
+		]
 	}
 ]

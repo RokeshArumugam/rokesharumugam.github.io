@@ -1,3 +1,6 @@
+.section--intro {
+	padding-top: var(--section-default-padding-vertical);
+}
 .section--askAbout {
 	padding-bottom: var(--section-default-padding-vertical);
 	font-style: italic;

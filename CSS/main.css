@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Charmonman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root {
 	--mobile-screen-width: 641px;
@@ -14,7 +14,7 @@
 	--danger-color: red;
 	--default-font-family: "Helvetica", sans-serif;
 	--serif-font-family: "Garamond", serif;
-	--cursive-font-family: "Charmonman", cursive;
+	--cursive-font-family: "Lobster", cursive;
 	--default-font-weight: 400;
 	--thin-font-weight: 350;
 	--primary-box-shadow-color: rgba(30, 144, 255, 0.75);
@@ -458,8 +458,8 @@ video {
 .qualification__text {
 	opacity: 0.5;
 	margin-top: 0.5em;
-	font-size: 0.9em;
 	font-family: var(--cursive-font-family);
+	letter-spacing: 0.1ch;
 }
 
 /* -- -- Double Item */

@@ -5,14 +5,19 @@ const testimonials = [
 		"quoteText": "The help Rokesh gave me with my personal statement was invaluable and extremely useful. Going through each paragraph and planning it together gave me a much better understanding of what a good personal statement consists of."
 	},
 	{
-		"authorName": "Gabriella Kwei",
-		"authorPosition": "Parent of A Level Student",
-		"quoteText": "Rokesh was extremely helpful and personable - we found his advice to be informative and practical. The session exceeded expectations as it enabled my daughter to get tailored feedback. I would highly recommend Rokesh to prospective students."
+		"authorName": "Karthik Prabhu",
+		"authorPosition": "A Level Student to Successful Cambridge Medical Student",
+		"quoteText": "When I initially decided to pursue a career in medicine, I was overwhelmed by the complex application process and the fierce competition for admission into medical schools. Fortunately, I got in touch with Rokesh, and I can confidently say that it was one of the best decisions I've ever made. The university-specific advice Rokesh gave me helped me navigate and gain acceptance by many medical schools. If you're looking for someone to help you with the medical school application process, I would highly recommend Rokesh!"
 	},
 	{
 		"authorName": "Samyuktha Ramesh Dhayanand",
 		"authorPosition": "A Level Student to Successful Medical Student",
 		"quoteText": "I am very appreciative of Rokesh's assistance with my personal statement because it was incredibly helpful. I valued how he carefully went over each paragraph and advised me on the necessary improvements and editing to make it the best possible final draft. It significantly improved my personal statement, in my opinion. Thank you so much."
+	},
+	{
+		"authorName": "Gabriella Kwei",
+		"authorPosition": "Parent of A Level Student",
+		"quoteText": "Rokesh was extremely helpful and personable - we found his advice to be informative and practical. The session exceeded expectations as it enabled my daughter to get tailored feedback. I would highly recommend Rokesh to prospective students."
 	},
 	{
 		"authorName": "Jaysri Govindarajan",

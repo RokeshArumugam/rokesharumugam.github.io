@@ -1,5 +1,14 @@
 const projects = [
 	{
+		"name": "May Ball Website",
+		"startDate": "2023-12",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
+		"description": [
+			"May Ball Website is a website that I made for my college (Gonville and Caius) at the University of Cambridge to be used for the May Ball.",
+			"The May Ball is a big, fancy party at the end of the year and the website is usually used to sell tickets and show FAQs. This year the committee wanted to do something a little more advanced so they enlisted my help."
+		]
+	},
+	{
 		"name": "Salt",
 		"startDate": "2023-08",
 		"description": [

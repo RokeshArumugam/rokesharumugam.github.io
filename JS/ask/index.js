@@ -10,6 +10,11 @@ const testimonials = [
 		"quoteText": "When I initially decided to pursue a career in medicine, I was overwhelmed by the complex application process and the fierce competition for admission into medical schools. Fortunately, I got in touch with Rokesh, and I can confidently say that it was one of the best decisions I've ever made. The university-specific advice Rokesh gave me helped me navigate and gain acceptance by many medical schools. If you're looking for someone to help you with the medical school application process, I would highly recommend Rokesh!"
 	},
 	{
+		"authorName": "Srinija Barri",
+		"authorPosition": "A Level Student to Successful Cambridge Medicine Offer-Holder",
+		"quoteText": "The help Rokesh provided for both my personal statement and interview practice was incredibly useful. Although planning and writing a personal statement seemed daunting at first, he made the process a lot easier. From guiding me with planning, to providing invaluable, detailed feedback on every line of my drafts, he helped my personal statement become the best version it could be. His mock interviews also made sure I was ready to face the real thing! Thank you so much Rokesh!"
+	},
+	{
 		"authorName": "Samyuktha Ramesh Dhayanand",
 		"authorPosition": "A Level Student to Successful Medical Student",
 		"quoteText": "I am very appreciative of Rokesh's assistance with my personal statement because it was incredibly helpful. I valued how he carefully went over each paragraph and advised me on the necessary improvements and editing to make it the best possible final draft. It significantly improved my personal statement, in my opinion. Thank you so much."

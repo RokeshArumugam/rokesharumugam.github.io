@@ -11,7 +11,7 @@ const testimonials = [
 	},
 	{
 		"authorName": "Srinija Barri",
-		"authorPosition": "A Level Student to Cambridge Medicine Offer-Holder",
+		"authorPosition": "A Level Student to Cambridge Medical Student",
 		"quoteText": "The help Rokesh provided for both my personal statement and interview practice was incredibly useful. Although planning and writing a personal statement seemed daunting at first, he made the process a lot easier. From guiding me with planning, to providing invaluable, detailed feedback on every line of my drafts, he helped my personal statement become the best version it could be. His mock interviews also made sure I was ready to face the real thing! Thank you so much Rokesh!"
 	},
 	{

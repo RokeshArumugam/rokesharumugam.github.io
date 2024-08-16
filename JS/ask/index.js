@@ -15,6 +15,11 @@ const testimonials = [
 		"quoteText": "The help Rokesh provided for both my personal statement and interview practice was incredibly useful. Although planning and writing a personal statement seemed daunting at first, he made the process a lot easier. From guiding me with planning, to providing invaluable, detailed feedback on every line of my drafts, he helped my personal statement become the best version it could be. His mock interviews also made sure I was ready to face the real thing! Thank you so much Rokesh!"
 	},
 	{
+		"authorName": "Harshini Kamalakannan",
+		"authorPosition": "A Level Student to Medical Student",
+		"quoteText": "Rokesh has been pivotal during my medicine application journey, from giving me UCAT tips to upgrading my personal statement. He is truly an exceptional tutor and ultimately helped me get a place at Queen's University Belfast for medicine!"
+	},
+	{
 		"authorName": "Samyuktha Ramesh Dhayanand",
 		"authorPosition": "A Level Student to Medical Student",
 		"quoteText": "I am very appreciative of Rokesh's assistance with my personal statement because it was incredibly helpful. I valued how he carefully went over each paragraph and advised me on the necessary improvements and editing to make it the best possible final draft. It significantly improved my personal statement, in my opinion. Thank you so much."

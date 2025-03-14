@@ -157,7 +157,7 @@ nav {
 #navToggleInput {
 	display: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 792px) {
 	#navToggleInput:not(:checked) ~ nav {
 		display: none;
 	}

@@ -61,11 +61,11 @@ const projects = [
 		]
 	},
 	{
-		"name": "Price Checker",
+		"name": "Static Site Checker",
 		"startDate": "2022-07",
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
-			"Price Checker is a web scraper that checks if the price of a product on amazon.co.uk changes.",
+			"Static Site Checker is a web scraper that checks if a website changes e.g. if the price of a product on amazon.co.uk changes.",
 			"I add the URLs of products I would like to monitor to a file and my phone is pinged when the price changes. It helps me save a few pounds every so often."
 		]
 	},

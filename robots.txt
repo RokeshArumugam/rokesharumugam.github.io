@@ -30,6 +30,10 @@ Disallow: /
 User-agent: *
 Disallow: /404.html
 Disallow: /comingSoon.html
+Disallow: /CSS/
+Disallow: /JS/
+Disallow: /IMAGES/
+Disallow: /COMPONENTS/
 Disallow: /FILES/
 
 Sitemap: https://www.rokesharumugam.com/sitemap.txt

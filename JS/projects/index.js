@@ -2,6 +2,7 @@ const projects = [
 	{
 		"name": "Blaze",
 		"startDate": "2024-10",
+		"url": "/comingSoon.html?infoTextId=unpublishedProject",
 		"description": [
 			"Blaze is a project that I made to convert my university timetable from a website format to a subscribable link.",
 			"My university's timetable is only available on a website (after several logins and clicks) which they update frequently without notice so often students have turned up to a session only to find out that it was cancelled shortly before.",

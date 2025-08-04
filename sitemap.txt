@@ -1,8 +1,8 @@
-https://rokesharumugam.com
-https://rokesharumugam.com/contact
-https://rokesharumugam.com/ask
-https://rokesharumugam.com/tutoring
-https://rokesharumugam.com/projects
+https://rokesharumugam.com/
+https://rokesharumugam.com/contact/
+https://rokesharumugam.com/ask/
+https://rokesharumugam.com/tutoring/
+https://rokesharumugam.com/projects/
 https://rokesharumugam.com/projects/ball_jump.html
 https://rokesharumugam.com/projects/stickmen_battles.html
 https://rokesharumugam.com/projects/easy_type.html
@@ -14,4 +14,4 @@ https://rokesharumugam.com/projects/character_sheet.html
 https://rokesharumugam.com/projects/salt.html
 https://rokesharumugam.com/projects/may_ball_website.html
 https://rokesharumugam.com/projects/video_speeder.html
-https://rokesharumugam.com/feedback
+https://rokesharumugam.com/feedback/

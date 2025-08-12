@@ -36,4 +36,4 @@ Disallow: /IMAGES/
 Disallow: /COMPONENTS/
 Disallow: /FILES/
 
-Sitemap: https://www.rokesharumugam.com/sitemap.txt
+Sitemap: https://rokesharumugam.com/sitemap.txt

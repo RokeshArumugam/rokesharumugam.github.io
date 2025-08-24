@@ -10,6 +10,15 @@ const projects = [
 		]
 	},
 	{
+		"name": "NIA",
+		"startDate": "2024-07",
+		"description": [
+			"NIA is a simple webapp I made to help allocate accommodation to students at my college (Gonville and Caius) at the University of Cambridge.",
+			"For clinical medical students, we have to self-assign a representative who then manually allocates rooms to students based on their preferences. This can be a tedious task so I made NIA to help with this.",
+			"Update (2025-08): the accommodation officer is MIA so I sent a link to NIA to the college in case it helps them.",
+		]
+	},
+	{
 		"name": "May Ball Website",
 		"startDate": "2023-12",
 		"description": [

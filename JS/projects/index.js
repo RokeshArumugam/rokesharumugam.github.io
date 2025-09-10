@@ -1,5 +1,13 @@
 const projects = [
 	{
+		"name": "AVT",
+		"startDate": "2025-09",
+		"description": [
+			"AVT is a simple webapp I made to help collect data for the Ambient Voice Technology study.",
+			"There was already an old website which was quite good but was just missing a few quality of life features, so I quickly whipped up this version to replace it."
+		]
+	},
+	{
 		"name": "Blaze",
 		"startDate": "2024-10",
 		"url": "/comingSoon.html?infoTextId=unpublishedProject",

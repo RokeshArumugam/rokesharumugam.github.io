@@ -262,6 +262,7 @@ footer > span:last-child {
 #modal__icon {
 	display: grid;
 	place-items: center;
+	width: 100%;
 	font-size: 5em;
 }
 #modal__icon.fa-info-circle, #modal__icon.fa-question-circle {

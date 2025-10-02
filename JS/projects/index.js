@@ -1,4 +1,9 @@
-const projects = [
+"use strict";
+
+
+/* Variables */
+
+const projectsOld = [
 	{
 		"name": "AVT",
 		"startDate": "2025-09",
@@ -153,7 +158,7 @@ const projects = [
 		"startDate": "2016-06",
 		"description": [
 			"Stickmen Battles is another project I made during my secondary school years.",
-			"It is a 2D computer game like Ball Jump - however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickemen Battles."
+			"It is a 2D computer game like Ball Jump - however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickmen Battles."
 		]
 	},
 	{
@@ -165,29 +170,344 @@ const projects = [
 		]
 	}
 ].sort((one, two) => (one["startDate"] <= two["startDate"]));
+const projects = {
+	"avt": {},
+	"blaze": {},
+	"nia": {},
+	"mayBallWebsite": {},
+	"salt": {},
+	"videoSpeeder": {},
+	"sesame": {},
+	"characterSheet": {},
+	"mealBookingWebsite": {},
+	"staticSiteChecker": {},
+	"prandium": {},
+	"invoiceGenerator": {},
+	"commandBar": {},
+	"tvTracker": {},
+	"remoteController": {},
+	"solitaire": {},
+	"easyType": {},
+	"stickmenBattles": {},
+	"ballJump": {}
+};
+const md = window.markdownit();
+const pageIntroTemplate = document.getElementById("pageIntroTemplate");
 const projectTemplate = document.getElementById("projectTemplate");
-const projectsContainer = document.getElementsByClassName("section--projects")[0];
+const carouselTemplate = document.getElementById("carouselTemplate");
+const carouselTimeoutDuration = 10000;
 
-function populateProjects() {
-	projectsContainer.append(...projects.map(project => {
-		let projectElement = projectTemplate.cloneNode(true).content.firstElementChild;
-		projectElement.getElementsByClassName("project__name")[0].innerText = project["name"];
-		projectElement.getElementsByClassName("project__startDate")[0].innerText =
-			"Started in " +
-			new Date(project["startDate"]).toLocaleDateString(
-				"en-gb", { "month": "long", "year": "numeric" }
-			);
-		projectElement.href = project["url"] ?? project["name"].replaceAll(" ", "_").toLowerCase() + ".html";
 
-		let projectDescription = projectElement.getElementsByClassName("project__description")[0];
-		projectDescription.append(...project["description"].map(line => {
-			let paragraph = document.createElement("p");
-			paragraph.innerText = line;
-			return paragraph;
-		}));
+/* Functions */
 
-		return projectElement;
+async function fetchProjects() {
+	await Promise.all(Object.keys(projects).map(async projectName => {
+		if (
+			(projects[projectName]["name"]) &&
+			(projects[projectName]["startDate"]) &&
+			(projects[projectName]["description"])
+		) {
+			return;
+		};
+
+		await fetch(
+			projectName + "/README.md"
+		).then(
+			response => response.ok ? response.text() : null
+		).then(text => {
+			if (!text) return;
+
+			let tokens = md.parse(text, {});
+
+			for (let i = 0; i < tokens.length; i++) {
+				// Heading
+				if (
+					(tokens[i]["type"] == "heading_open") &&
+					(tokens[i]["tag"] == "h1")
+				) {
+					projects[projectName]["name"] = tokens[i + 1]["content"].trim();
+					i += 2;
+					continue;
+				};
+
+				// Start date
+				if (tokens[i]["type"] == "blockquote_open") {
+					projects[projectName]["startDate"] = tokens[i + 2]["content"].replace(/.*Started in: (\d\d\d\d-\d\d).*/s, "$1");
+					i += 4;
+					continue;
+				};
+
+				// Description
+				if (tokens[i]["type"] == "paragraph_open") {
+					if (!projects[projectName]["description"]) projects[projectName]["description"] = [];
+					projects[projectName]["description"].push(tokens[i + 1]["content"].trim());
+					if (projects[projectName]["description"].length >= 2) break;
+					i += 2;
+					continue;
+				};
+			};
+		}).catch(
+			error => console.error(error)
+		);
 	}));
 };
 
-populateProjects();
+/* -- Section population -- */
+
+function populatePageIntroHeading(heading) {
+	if (!document.querySelector(".section--pageIntro")) {
+		document.querySelectorAll("section").forEach(elem => elem.remove());
+		document.querySelector("main").append(pageIntroTemplate.cloneNode(true).content.firstElementChild);
+	};
+	document.getElementsByClassName("section--pageIntro__heading")[0].innerText = heading.trim();
+}
+function populatePageIntroDescription(description) {
+	let descriptionElem = document.getElementsByClassName("section--pageIntro__description")[0];
+	descriptionElem.innerHTML = "";
+	for (let line of description.trim().split("\n")) {
+		line = line.trim();
+		let elem;
+		let linkMatch = line.match(/^\[([^\]]+?)\]\(([^\)]+?)\)$/);
+		if (linkMatch) {
+			elem = document.createElement("a");
+			elem.innerText = linkMatch[1];
+			elem.href = linkMatch[2];
+			elem.classList.add("primaryButton");
+		} else {
+			elem = document.createElement("p");
+			elem.innerText = line;
+		}
+		descriptionElem.append(elem);
+	};
+};
+function populateTextSection(h2, elems) {
+	if (h2 != "Background") {
+		let h2Elem = document.createElement("h2");
+		h2Elem.innerText = h2;
+		elems = [h2Elem, ...elems];
+	};
+
+	elems.forEach(elem => elem.innerHTML = elem.innerHTML.replaceAll(/\[([^\]]+?)\]\(([^\)]+?)\)/g, "<a href=\"$2\">$1</a>"));
+	
+	if (
+		(elems[1].tagName == "P") &&
+		(elems[1].children.length == 1) &&
+		(elems[1].firstElementChild.tagName == "A") &&
+		(elems[1].innerText == elems[1].firstElementChild.innerText)
+	) {
+		elems[1] = elems[1].firstElementChild;
+		elems[1].classList.add("primaryButton");
+	};
+
+	let sectionElem = document.createElement("section");
+	sectionElem.id = h2.charAt(0).toLowerCase() + h2.slice(1).replaceAll(" ", "") + "Section";
+	sectionElem.classList.add("section--text");
+	sectionElem.append(...elems);
+	document.querySelector("main").append(sectionElem);
+};
+function populateCarouselSection(imageElems) {
+	let startCarousel = () => carouselTimeout = setTimeout(nextImage, carouselTimeoutDuration);
+	let stopCarousel = () => clearTimeout(carouselTimeout);
+	let getCurrentIndex = () => imageElems.findIndex(elem => elem.className.includes("section--carousel__image--current"));
+	let changeImage = (currentIndex, targetIndex) => {
+		targetIndex = ((targetIndex % imageElems.length) + imageElems.length) % imageElems.length;
+		if (currentIndex == targetIndex) return;
+
+		imageElems[currentIndex].classList.remove("section--carousel__image--current");
+		imageElems[targetIndex].classList.add("section--carousel__image--current");
+		dotElems[currentIndex].classList.remove("section--carousel__dot--current");
+		dotElems[targetIndex].classList.add("section--carousel__dot--current");
+		stopCarousel();
+		startCarousel();
+	};
+	let previousImage = () => {
+		let currentIndex = getCurrentIndex();
+		changeImage(currentIndex, currentIndex - 1);
+	};
+	let nextImage = () => {
+		let currentIndex = getCurrentIndex();
+		changeImage(currentIndex, currentIndex + 1);
+	};
+
+	let carouselTimeout;
+
+	let sectionElem = carouselTemplate.cloneNode(true).content.firstElementChild;
+	sectionElem.style.setProperty("--image-wait-duration", carouselTimeoutDuration + "ms");
+
+	imageElems = Array.from(imageElems);
+	let dotElems = imageElems.map((elem, index) => {
+		let dotElem = document.createElement("div");
+		dotElem.classList.add("section--carousel__dot");
+		dotElem.addEventListener("click", () => changeImage(getCurrentIndex(), index));
+		return dotElem;
+	});
+
+	sectionElem.querySelector(".section--carousel__imagesContainer").append(...imageElems);
+	sectionElem.querySelector(".section--carousel__dotsContainer").append(...dotElems);
+	sectionElem.querySelector(".section--carousel__button--left").addEventListener("click", () => previousImage());
+	sectionElem.querySelector(".section--carousel__button--right").addEventListener("click", () => nextImage());
+	document.querySelector("main").append(sectionElem);
+
+	setTimeout(() => dotElems[0].classList.add("section--carousel__dot--current"), 1);
+	startCarousel();
+};
+function populateSection(h2, elems) {
+	if (h2 == "Tags") {
+	} else if (h2 == "Screenshots") {
+		populateCarouselSection(elems);
+	} else {
+		populateTextSection(h2, elems);
+	};
+};
+
+/* -- Page population -- */
+
+async function populateProjectsListPage() {
+	populatePageIntroHeading("Projects");
+	populatePageIntroDescription(`
+		I learnt to code when I was 12 and have been doing some projects, now and then, in my free time.
+
+		I started coding in Java then HTML, CSS and JavaScript, then I dabbled in some VB, Batch and Bash. I also did some Swift programming. For some full-stack projects I also used PHP and SQL. Nowadays I mainly do Python and HTML, CSS and JavaScript.
+
+		I've made a list of some of my projects below - feel free to check them out and let me know what you think!
+	`.trim());
+
+
+	let sectionElem = document.createElement("section");
+	sectionElem.classList.add("section--projects");
+	await fetchProjects();
+	sectionElem.append(
+		...Object.entries(
+			projects
+		).sort(
+			([projectOneName, projectOne], [projectTwoName, projectTwo]) => (projectOne["startDate"] <= projectTwo["startDate"])
+		).map(([projectName, project]) => {
+			let projectElem = projectTemplate.cloneNode(true).content.firstElementChild;
+			projectElem.getElementsByClassName("project__name")[0].innerText = project["name"];
+			projectElem.getElementsByClassName("project__startDate")[0].innerText =
+				"Started in " +
+				new Date(project["startDate"]).toLocaleDateString(
+					"en-gb", { "month": "long", "year": "numeric" }
+				);
+			projectElem.href = project["url"] ?? "?project=" + projectName;
+
+			let projectDescription = projectElem.getElementsByClassName("project__description")[0];
+			projectDescription.append(...project["description"].map(line => {
+				let paragraph = document.createElement("p");
+				paragraph.innerText = line;
+				return paragraph;
+			}));
+
+			return projectElem;
+		})
+	);
+	document.querySelector(".section--projects").remove();
+	document.querySelector("main").append(sectionElem);
+};
+function populateProjectPage(README) {
+	let tokens = md.parse(README, {});
+	let currentH2;
+	let currentElems;
+	for (let i = 0; i < tokens.length; i++) {
+		// Page intro heading
+		if (
+			(tokens[i]["type"] == "heading_open") &&
+			(tokens[i]["tag"] == "h1")
+		) {
+			populatePageIntroHeading(tokens[i + 1]["content"]);
+			i += 2;
+			continue;
+		};
+
+		// Page intro description
+		if (
+			(tokens[i]["type"] == "blockquote_open") &&
+			(tokens[i - 1]["type"] == "heading_close") &&
+			(tokens[i - 1]["tag"] == "h1")
+		) {
+			populatePageIntroDescription(tokens[i + 2]["content"].replace(/Started in: \d\d\d\d-\d\d\n/, ""));
+			i += 4;
+			continue;
+		};
+
+		// Sections
+		if (
+			(tokens[i]["type"] == "heading_open") &&
+			(tokens[i]["tag"] == "h2")
+		) {
+			if (currentH2)
+				populateSection(currentH2, currentElems);
+			currentH2 = tokens[i + 1]["content"];
+			currentElems = [];
+			i += 2;
+			continue;
+		};
+		if (currentH2) {
+			switch (currentH2) {
+				case "Tags":
+					if (tokens[i]["type"] == "paragraph_open") {
+						let tags = tokens[i + 1]["content"].split(",").map(tag => tag.trim());
+						i += 2;
+					};
+					break;
+				case "Screenshots":
+					if (tokens[i]["type"] == "paragraph_open") {
+						tokens[i + 1]["content"].split("\n").forEach((line, index) => {
+							let lineMatch = line.trim().match(/^\[([^\]]+?)\]\(([^\)]+?)\)$/);
+							let imageElem = document.createElement("img");
+							imageElem.alt = lineMatch[1];
+							imageElem.src = lineMatch[2];
+							imageElem.classList.add("section--carousel__image");
+							imageElem.classList.toggle("section--carousel__image--current", index == 0);
+							currentElems.push(imageElem);
+						});
+						i += 2;
+					};
+					break;
+				default:
+					if (tokens[i]["type"] == "paragraph_open") {
+						let paragraphElem = document.createElement("p");
+						paragraphElem.innerText = tokens[i + 1]["content"];
+						currentElems.push(paragraphElem);
+						i += 2;
+					} else if (tokens[i]["type"] == "bullet_list_open") {
+						let ulElem = document.createElement("ul");
+						while (tokens[i + 1]["type"] == "list_item_open") {
+							i++;
+							let liElem = document.createElement("li");
+							liElem.innerText = tokens[i + 2]["content"];
+							ulElem.append(liElem);
+							i += 4;
+						};
+						currentElems.push(ulElem);
+					};
+					break;
+			};
+		};
+	};
+	if (currentH2)
+		populateSection(currentH2, currentElems);
+};
+
+
+/* Main */
+
+if (urlParams.get("project") && (urlParams.get("project") in projects)) {
+	fetch(
+		urlParams.get("project") + "/README.md"
+	).then(
+		response => response.ok ? response.text() : populateProjectsListPage()
+	).then(README => {
+		if (!README) return;
+		if (README.includes("## Background")) {
+			populateProjectPage(README);
+		} else {
+			window.history.replaceState({}, document.title, "/comingSoon.html?infoTextId=unpublishedProject");
+		};
+	}).catch(error => {
+		console.error(error);
+		populateProjectsListPage();
+	});
+} else {
+	populateProjectsListPage();
+};

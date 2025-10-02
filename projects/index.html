@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="/CSS/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="/CSS/main.css">
 	<link rel="stylesheet" href="/CSS/projects/index.css">
+	<script defer src="/JS/LIBRARIES/markdown-it.min.js"></script>
 	<script defer src="/JS/main.js"></script>
 	<script defer src="/JS/projects/index.js"></script>
 	<title>Rokesh Arumugam | Projects</title>
@@ -18,32 +19,33 @@
 <body>
 	<header></header>
 	<main>
-		<section class="section--pageIntro">
-			<h1 class="section--pageIntro__heading">Projects</h1>
-			<div class="section--pageIntro__description">
-				<p>I learnt to code when I was 12 and have been doing some projects, now and then, in my free time.</p>
-				<p>
-					I started coding in Java then HTML, CSS and JavaScript, then I dabbled in some VB, Batch and Bash. I
-					also did some Swift programming. For some full-stack projects I also used PHP and SQL. Nowadays I
-					mainly do Python and HTML, CSS and JavaScript.
-				</p>
-				<p>
-					I've made a list of some of my projects below - feel free to check them out and let me know what you
-					think!
-				</p>
-			</div>
-		</section>
-		<section class="section--projects" role="list">
-			<template id="projectTemplate">
-				<a class="project surface" role="listitem">
-					<div class="project__infoContainer">
-						<h2 class="project__name"></h2>
-						<span class="project__startDate"></span>
-					</div>
-					<div class="project__description"></div>
-				</a>
-			</template>
-		</section>
+		<template id="pageIntroTemplate">
+			<section class="section--pageIntro">
+				<h1 class="section--pageIntro__heading"></h1>
+				<div class="section--pageIntro__description"></div>
+			</section>
+		</template>
+		<template id="projectTemplate">
+			<a class="project surface" role="listitem">
+				<div class="project__infoContainer">
+					<h2 class="project__name"></h2>
+					<span class="project__startDate"></span>
+				</div>
+				<div class="project__description"></div>
+			</a>
+		</template>
+		<template id="carouselTemplate">
+			<section class="section--carousel">
+				<div class="section--carousel__buttonContainer section--carousel__buttonContainer--left">
+					<i class="section--carousel__button section--carousel__button--left fas fa-arrow-left"></i>
+				</div>
+				<div class="section--carousel__imagesContainer"></div>
+				<div class="section--carousel__buttonContainer section--carousel__buttonContainer--right">
+					<i class="section--carousel__button section--carousel__button--right fas fa-arrow-right"></i>
+				</div>
+				<div class="section--carousel__dotsContainer"></div>
+			</section>
+		</template>
 	</main>
 	<footer></footer>
 </body>

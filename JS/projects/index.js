@@ -3,178 +3,11 @@
 
 /* Variables */
 
-const projectsOld = [
-	{
-		"name": "AVT",
-		"startDate": "2025-09",
-		"description": [
-			"AVT is a simple webapp I made to help collect data for the Ambient Voice Technology study.",
-			"There was already an old website which was quite good but was just missing a few quality of life features, so I quickly whipped up this version to replace it."
-		]
-	},
-	{
-		"name": "Blaze",
-		"startDate": "2024-10",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
-		"description": [
-			"Blaze is a project that I made to convert my university timetable from a website format to a subscribable link.",
-			"My university's timetable is only available on a website (after several logins and clicks) which they update frequently without notice so often students have turned up to a session only to find out that it was cancelled shortly before.",
-			"This project lets me have an always-up-to-date calendar easily accessible on my phone."
-		]
-	},
-	{
-		"name": "NIA",
-		"startDate": "2024-07",
-		"description": [
-			"NIA is a simple webapp I made to help allocate accommodation to students at my college (Gonville and Caius) at the University of Cambridge.",
-			"For clinical medical students, we have to self-assign a representative who then manually allocates rooms to students based on their preferences. This can be a tedious task so I made NIA to help with this.",
-			"Update (2025-08): the accommodation officer is MIA so I sent a link to NIA to the college in case it helps them.",
-		]
-	},
-	{
-		"name": "May Ball Website",
-		"startDate": "2023-12",
-		"description": [
-			"May Ball Website is a website that I made for my college (Gonville and Caius) at the University of Cambridge to be used for the May Ball.",
-			"The May Ball is a big, fancy party at the end of the year and the website is usually used to sell tickets and show FAQs. This year the committee wanted to do something a little more advanced so they enlisted my help."
-		]
-	},
-	{
-		"name": "Salt",
-		"startDate": "2023-08",
-		"description": [
-			"Salt is a browser extension that enhances the meal booking website at my college (Gonville and Caius) at the University of Cambridge.",
-			"Salt applies almost all of the improvements (and more) from my Meal Booking Website project on top of the old website via a browser extension (albeit not as efficiently as replacing the old website would be)."
-		]
-	},
-	{
-		"name": "Video Speeder",
-		"startDate": "2023-07",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
-		"description": [
-			"Video Speeder is a browser extension that allows you to change the playback speed of videos beyond the normal 0.5-2.0x.",
-			"I created this since I sometimes watch lectures at 3.0-4.0x speed, but I had to use Google Chrome instead of Safari (which is what I normally use) to use the 'Fast Panopto' extension - now I can stick with Safari."
-		]
-	},
-	{
-		"name": "Sesame",
-		"startDate": "2022-11",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
-		"description": [
-			"Sesame is a project that allows my Raspberry Pi to unlock the front door of my accomodation using a servomotor and the intercom button in my room.",
-			"Instead of using my key to unlock the front door I can now just tap a button on my watch and buzz myself in.",
-			"This was my first electronics projects so it was a good learning experience."
-		]
-	},
-	{
-		"name": "Character Sheet",
-		"startDate": "2022-09",
-		"description": [
-			"Character Sheet is a digital character sheet that has some web-scraping-powered automations.",
-			"I use this instead of my paper character sheet when I'm playing D&D. I just close the tab when I'm done and reopen it next time to access my previous character sheets.",
-			"All of the data is saved in the browser on your device so anyone can use this and save data without an account. Alternatively you can also download and upload your character sheet as an editable PDF."
-		]
-	},
-	{
-		"name": "Meal Booking Website",
-		"startDate": "2022-07",
-		"description": [
-			"Meal Booking Website is a new website I created to (hopefully) replace the old meal booking website at my college (Gonville and Caius) at the University of Cambridge.",
-			"This was a nice project to do over the summer, but it is yet to be seen whether it will be bought by the college."
-		]
-	},
-	{
-		"name": "Static Site Checker",
-		"startDate": "2022-07",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
-		"description": [
-			"Static Site Checker is a web scraper that checks if a website changes e.g. if the price of a product on amazon.co.uk changes.",
-			"I add the URLs of products I would like to monitor to a file and my phone is pinged when the price changes. It helps me save a few pounds every so often."
-		]
-	},
-	{
-		"name": "Prandium",
-		"startDate": "2021-11",
-		"description": [
-			"Prandium is a bot to book meals at Gonville and Caius college, University of Cambridge.",
-			"We have to book meals in advance and they can be very competitive. People wake up early to book meals and still often miss them.",
-			"So I created Prandium. I have been able to sleep in and get a place at any meal I would like for over a year now. I also let some friends occasionally use it too."
-		]
-	},
-	{
-		"name": "Invoice Generator",
-		"startDate": "2021-06",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
-		"description": [
-			"Invoice Generator is a command-line program that can be used to generate, track and manage invoices.",
-			"I used this create invoices when I worked as a TA for Medify. It uses a HTML template so you can design the invoice to look however you want."
-		]
-	},
-	{
-		"name": "Command Bar",
-		"startDate": "2021-05",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
-		"description": [
-			"Command Bar is menu bar application for MacOS that allow you to run shell commands and see their outputs.",
-			"I spent a week creating this to save me (and hopefully other developers when I released Command Bar on the App Store) some time when performing routine tasks. However less than a week after I finished Command Bar I heard that Apple was developing almost identical functionality as part of their Shortcuts app on MacOS; so I abandoned this project."
-		]
-	},
-	{
-		"name": "TV Tracker",
-		"startDate": "2021-05",
-		"description": [
-			"TV Tracker is a PWA (Progressive Web App) that I created to keep track of how many episodes I've watched of each TV show.",
-			"This project is nowhere near finished and was simply an experiment for me to see how PWAs work. PWAs seem like a way to code in HTML, CSS and JavaScript and make mobile apps for IOS and Android. I only spent a weekend on this but may come back to it in the future."
-		]
-	},
-	{
-		"name": "Remote Controller",
-		"startDate": "2020-09",
-		"url": "/comingSoon.html?infoTextId=unpublishedProject",
-		"description": [
-			"Remote Controller is a command-line and webpage application that can be used to control your computer (via mouse and keyboard) from your phone.",
-			"I created this so I could pause movies that were playing on my laptop which was connected to my TV while I was sitting on the other side of the room."
-		]
-	},
-	{
-		"name": "Solitaire",
-		"startDate": "2017-01",
-		"description": [
-			"Solitaire is a single-player card game. You may know it as Klondike.",
-			"I created this online version of Solitaire for my friends and me to play on our school iPads - since popular gaming websites were blocked at my secondary school.",
-			"For any student reading this, I am obliged to ask you to not play games during lessons like we did. Paying attention in school is highly recommended."
-		]
-	},
-	{
-		"name": "Easy Type",
-		"startDate": "2016-10",
-		"description": [
-			"Easy Type is another secondary school project.",
-			"It is a text editor that I created for my classmates and me to use during ICT lessons at school."
-		]
-	},
-	{
-		"name": "Stickmen Battles",
-		"startDate": "2016-06",
-		"description": [
-			"Stickmen Battles is another project I made during my secondary school years.",
-			"It is a 2D computer game like Ball Jump - however, it was much more of a learning experience. It made me appreciate what worked for Ball Jump and not for Stickmen Battles."
-		]
-	},
-	{
-		"name": "Ball Jump",
-		"startDate": "2015-06",
-		"description": [
-			"Ball Jump is my first ever project.",
-			"It is a 2D computer game I made during my Year 7 summer holidays."
-		]
-	}
-].sort((one, two) => (one["startDate"] <= two["startDate"]));
 const projects = {
 	"avt": {},
 	"blaze": {},
 	"nia": {},
-	"mayBallWebsite": {},
+	"mayball.cai.cam.ac.uk": {},
 	"salt": {},
 	"videoSpeeder": {},
 	"sesame": {},
@@ -216,40 +49,160 @@ async function fetchProjects() {
 			response => response.ok ? response.text() : null
 		).then(text => {
 			if (!text) return;
-
-			let tokens = md.parse(text, {});
-
-			for (let i = 0; i < tokens.length; i++) {
-				// Heading
-				if (
-					(tokens[i]["type"] == "heading_open") &&
-					(tokens[i]["tag"] == "h1")
-				) {
-					projects[projectName]["name"] = tokens[i + 1]["content"].trim();
-					i += 2;
-					continue;
-				};
-
-				// Start date
-				if (tokens[i]["type"] == "blockquote_open") {
-					projects[projectName]["startDate"] = tokens[i + 2]["content"].replace(/.*Started in: (\d\d\d\d-\d\d).*/s, "$1");
-					i += 4;
-					continue;
-				};
-
-				// Description
-				if (tokens[i]["type"] == "paragraph_open") {
-					if (!projects[projectName]["description"]) projects[projectName]["description"] = [];
-					projects[projectName]["description"].push(tokens[i + 1]["content"].trim());
-					if (projects[projectName]["description"].length >= 2) break;
-					i += 2;
-					continue;
-				};
-			};
+			Object.assign(projects[projectName], parseREADME(text));
 		}).catch(
 			error => console.error(error)
 		);
 	}));
+};
+
+function parseREADME(README) {
+	let project = {};
+	let tokens = md.parse(README, {});
+
+	for (let i = 0; i < tokens.length; i++) {
+		// Heading
+		if (
+			(tokens[i]["type"] == "heading_open") &&
+			(tokens[i]["tag"] == "h1")
+		) {
+			project["name"] = tokens[i + 1]["content"].trim();
+			i += 2;
+			continue;
+		};
+
+		// Start date, tags, page intro description
+		if (tokens[i]["type"] == "blockquote_open") {
+			project["pageIntroDescriptionElems"] = [];
+			while (tokens[i + 1]["type"] == "paragraph_open") {
+				i++;
+
+				let elem;
+				let dateMatch = tokens[i + 1]["content"].match(/^\s*Started in: (\d\d\d\d-\d\d)\s*$/);
+				let linkMatch = tokens[i + 1]["content"].match(/^\s*\[([^\]]+?)\]\(([^\)]+?)\)\s*$/);
+				if (dateMatch) {
+					project["startDate"] = dateMatch[1];
+				} else if (linkMatch) {
+					elem = document.createElement("a");
+					elem.title = linkMatch[1];
+					elem.href = linkMatch[2];
+					elem.classList.add("primaryButton");
+				} else if (tokens[i + 1]["content"].match(/^(?:\s*!\[[^\]]+?\]\([^\)]+?\)\s*\n?)+$/)) {
+					project["tags"] ||= [];
+
+					let currentTags = tokens[i + 1]["content"].split("\n").map(line => {
+						let lineMatch = line.match(/^\s*!\[([^\]]+?)\]\(([^\)]+?)\)\s*$/);
+						return { "name": lineMatch[1], "url": lineMatch[2] };
+					});
+
+					project["tags"].push(...currentTags);
+
+					elem = document.createElement("div");
+					elem.classList.add("section--pageIntro__tagsContainer");
+					currentTags.forEach(tag => {
+						let tagElem = document.createElement("img");
+						tagElem.alt = tag["name"];
+						tagElem.src = tag["url"];
+						elem.append(tagElem);
+					});
+				} else {
+					elem = document.createElement("p");
+					elem.innerText = tokens[i + 1]["content"].trim();
+				};
+				if (elem) project["pageIntroDescriptionElems"].push(elem);
+
+				i += 2;
+			};
+			i += 1;
+			continue;
+		};
+
+		// Description
+		if (
+			(!project["sections"]) &&
+			(tokens[i]["type"] == "paragraph_open")
+		) {
+			project["description"] ||= [];
+			project["description"].push(tokens[i + 1]["content"].trim());
+			i += 2;
+			continue;
+		};
+
+		// Sections
+		if (
+			(tokens[i]["type"] == "heading_open") &&
+			(tokens[i]["tag"] == "h2")
+		) {
+			project["sections"] ||= [];
+			project["sections"].push({ "heading": tokens[i + 1]["content"], "elems": [] });
+			i += 2;
+			continue;
+		};
+		if (project["sections"].at(-1)["heading"] == "Screenshots") {
+			if (tokens[i]["type"] == "paragraph_open") {
+				tokens[i + 1]["content"].split("\n").forEach((line, index) => {
+					let lineMatch = line.trim().match(/^!\[([^\]]+?)\]\(([^\)]+?)\)$/);
+					let imageElem = document.createElement("img");
+					imageElem.alt = lineMatch[1];
+					imageElem.src = lineMatch[2];
+					imageElem.classList.add("section--carousel__image");
+					imageElem.classList.toggle("section--carousel__image--current", index == 0);
+					project["sections"].at(-1)["elems"].push(imageElem);
+				});
+				i += 2;
+			};
+		} else if (project["sections"].at(-1)["heading"] == "Video Demo") {
+			if (tokens[i]["type"] == "paragraph_open") {
+				let lineMatch = tokens[i + 1]["content"].trim().match(/^!\[([^\]]+?)\]\(([^\)]+?)\)$/);
+				let videoElem = document.createElement("video");
+				videoElem.alt = lineMatch[1];
+				videoElem.src = lineMatch[2];
+				videoElem.preload = "auto";
+				videoElem.controls = true;
+				videoElem.muted = true;
+				project["sections"].at(-1)["elems"].push(videoElem);
+				i += 2;
+			};
+		} else if (
+			[
+				"Background",
+				"Information for Clients",
+				"Description",
+				"Advantages Over Its Predecessor",
+				"Advantages Over Paper",
+				"Features",
+				"Usage",
+				"Copyright"
+			].includes(project["sections"].at(-1)["heading"])
+		) {
+			project["sections"].at(-1)["tokens"] ||= []
+			project["sections"].at(-1)["tokens"].push(tokens[i])
+		};
+	};
+
+	if (project["sections"]) {
+		project["sections"].forEach(section => {
+			if (!section["tokens"] || !section["tokens"].length) return;
+			let tempDivElem = document.createElement("div");
+			tempDivElem.innerHTML = md.renderer.render(section["tokens"], {}, {});
+			section["elems"] = Array.from(tempDivElem.children);
+		});
+		project["sections"] = project["sections"].filter(section => section["elems"] && section["elems"].length);
+		project["sections"].forEach(section => {
+			section["elems"].forEach(elem => {
+				if (elem.tagName != "UL") return;
+				for (let liElem of elem.children) {
+					let bulletMatch = liElem.innerText.match(/^\s*(.)\s.+$/u);
+					if (bulletMatch) {
+						liElem.dataset.marker = bulletMatch[1];
+						liElem.innerText = liElem.innerText.replace(/^\s*.\s/u, "");
+					};
+				};
+			});
+		});
+	};
+
+	return project;
 };
 
 /* -- Section population -- */
@@ -261,24 +214,10 @@ function populatePageIntroHeading(heading) {
 	};
 	document.getElementsByClassName("section--pageIntro__heading")[0].innerText = heading.trim();
 }
-function populatePageIntroDescription(description) {
+function populatePageIntroDescription(elems) {
 	let descriptionElem = document.getElementsByClassName("section--pageIntro__description")[0];
 	descriptionElem.innerHTML = "";
-	for (let line of description.trim().split("\n")) {
-		line = line.trim();
-		let elem;
-		let linkMatch = line.match(/^\[([^\]]+?)\]\(([^\)]+?)\)$/);
-		if (linkMatch) {
-			elem = document.createElement("a");
-			elem.innerText = linkMatch[1];
-			elem.href = linkMatch[2];
-			elem.classList.add("primaryButton");
-		} else {
-			elem = document.createElement("p");
-			elem.innerText = line;
-		}
-		descriptionElem.append(elem);
-	};
+	descriptionElem.append(...elems);
 };
 function populateTextSection(h2, elems) {
 	if (h2 != "Background") {
@@ -288,8 +227,9 @@ function populateTextSection(h2, elems) {
 	};
 
 	elems.forEach(elem => elem.innerHTML = elem.innerHTML.replaceAll(/\[([^\]]+?)\]\(([^\)]+?)\)/g, "<a href=\"$2\">$1</a>"));
-	
+
 	if (
+		(elems.length == 2) &&
 		(elems[1].tagName == "P") &&
 		(elems[1].children.length == 1) &&
 		(elems[1].firstElementChild.tagName == "A") &&
@@ -352,12 +292,10 @@ function populateCarouselSection(imageElems) {
 	startCarousel();
 };
 function populateSection(h2, elems) {
-	if (h2 == "Tags") {
-	} else if (h2 == "Screenshots") {
+	if (h2 == "Screenshots")
 		populateCarouselSection(elems);
-	} else {
+	else
 		populateTextSection(h2, elems);
-	};
 };
 
 /* -- Page population -- */
@@ -370,7 +308,11 @@ async function populateProjectsListPage() {
 		I started coding in Java then HTML, CSS and JavaScript, then I dabbled in some VB, Batch and Bash. I also did some Swift programming. For some full-stack projects I also used PHP and SQL. Nowadays I mainly do Python and HTML, CSS and JavaScript.
 
 		I've made a list of some of my projects below - feel free to check them out and let me know what you think!
-	`.trim());
+	`.trim().split("\n").map(line => {
+		let elem = document.createElement("p");
+		elem.innerText = line.trim();
+		return elem;
+	}));
 
 
 	let sectionElem = document.createElement("section");
@@ -379,114 +321,51 @@ async function populateProjectsListPage() {
 	sectionElem.append(
 		...Object.entries(
 			projects
+		).filter(
+			([, project]) => project["name"] && project["startDate"] && project["description"]
 		).sort(
 			([projectOneName, projectOne], [projectTwoName, projectTwo]) => (projectOne["startDate"] <= projectTwo["startDate"])
 		).map(([projectName, project]) => {
 			let projectElem = projectTemplate.cloneNode(true).content.firstElementChild;
-			projectElem.getElementsByClassName("project__name")[0].innerText = project["name"];
-			projectElem.getElementsByClassName("project__startDate")[0].innerText =
+			projectElem.querySelector(".project__name").innerText = project["name"];
+			projectElem.querySelector(".project__startDate").innerText =
 				"Started in " +
 				new Date(project["startDate"]).toLocaleDateString(
 					"en-gb", { "month": "long", "year": "numeric" }
 				);
-			projectElem.href = project["url"] ?? "?project=" + projectName;
 
-			let projectDescription = projectElem.getElementsByClassName("project__description")[0];
-			projectDescription.append(...project["description"].map(line => {
-				let paragraph = document.createElement("p");
-				paragraph.innerText = line;
-				return paragraph;
+			if (project["sections"] && project["sections"].map(section => section["heading"]).includes("Background"))
+				projectElem.href = "?project=" + projectName;
+			else
+				projectElem.href = "/comingSoon.html?infoTextId=unpublishedProject";
+
+			let projectDescription = projectElem.querySelector(".project__description");
+			projectDescription.append(...project["description"].slice(0, 2).map(line => {
+				let paragraphElem = document.createElement("p");
+				paragraphElem.innerText = line;
+				return paragraphElem;
 			}));
+
+			if (project["pageIntroDescriptionElems"]) {
+				let tagsContainerElems = project["pageIntroDescriptionElems"].filter(elem => elem.className.includes("section--pageIntro__tagsContainer"));
+				if (tagsContainerElems.length)
+					projectElem.querySelector(".project > .project__tagsContainer").append(...tagsContainerElems.at(-1).children);
+				if (tagsContainerElems.length == 2)
+					projectElem.querySelector(".project__infoContainer .project__tagsContainer").append(...tagsContainerElems[0].children);
+			};
 
 			return projectElem;
 		})
 	);
-	document.querySelector(".section--projects").remove();
+	document.querySelector(".section--projects")?.remove();
 	document.querySelector("main").append(sectionElem);
 };
 function populateProjectPage(README) {
-	let tokens = md.parse(README, {});
-	let currentH2;
-	let currentElems;
-	for (let i = 0; i < tokens.length; i++) {
-		// Page intro heading
-		if (
-			(tokens[i]["type"] == "heading_open") &&
-			(tokens[i]["tag"] == "h1")
-		) {
-			populatePageIntroHeading(tokens[i + 1]["content"]);
-			i += 2;
-			continue;
-		};
-
-		// Page intro description
-		if (
-			(tokens[i]["type"] == "blockquote_open") &&
-			(tokens[i - 1]["type"] == "heading_close") &&
-			(tokens[i - 1]["tag"] == "h1")
-		) {
-			populatePageIntroDescription(tokens[i + 2]["content"].replace(/Started in: \d\d\d\d-\d\d\n/, ""));
-			i += 4;
-			continue;
-		};
-
-		// Sections
-		if (
-			(tokens[i]["type"] == "heading_open") &&
-			(tokens[i]["tag"] == "h2")
-		) {
-			if (currentH2)
-				populateSection(currentH2, currentElems);
-			currentH2 = tokens[i + 1]["content"];
-			currentElems = [];
-			i += 2;
-			continue;
-		};
-		if (currentH2) {
-			switch (currentH2) {
-				case "Tags":
-					if (tokens[i]["type"] == "paragraph_open") {
-						let tags = tokens[i + 1]["content"].split(",").map(tag => tag.trim());
-						i += 2;
-					};
-					break;
-				case "Screenshots":
-					if (tokens[i]["type"] == "paragraph_open") {
-						tokens[i + 1]["content"].split("\n").forEach((line, index) => {
-							let lineMatch = line.trim().match(/^\[([^\]]+?)\]\(([^\)]+?)\)$/);
-							let imageElem = document.createElement("img");
-							imageElem.alt = lineMatch[1];
-							imageElem.src = lineMatch[2];
-							imageElem.classList.add("section--carousel__image");
-							imageElem.classList.toggle("section--carousel__image--current", index == 0);
-							currentElems.push(imageElem);
-						});
-						i += 2;
-					};
-					break;
-				default:
-					if (tokens[i]["type"] == "paragraph_open") {
-						let paragraphElem = document.createElement("p");
-						paragraphElem.innerText = tokens[i + 1]["content"];
-						currentElems.push(paragraphElem);
-						i += 2;
-					} else if (tokens[i]["type"] == "bullet_list_open") {
-						let ulElem = document.createElement("ul");
-						while (tokens[i + 1]["type"] == "list_item_open") {
-							i++;
-							let liElem = document.createElement("li");
-							liElem.innerText = tokens[i + 2]["content"];
-							ulElem.append(liElem);
-							i += 4;
-						};
-						currentElems.push(ulElem);
-					};
-					break;
-			};
-		};
-	};
-	if (currentH2)
-		populateSection(currentH2, currentElems);
+	let project = parseREADME(README);
+	populatePageIntroHeading(project["name"]);
+	populatePageIntroDescription(project["pageIntroDescriptionElems"]);
+	project["sections"].forEach(section => populateSection(section["heading"], section["elems"]));
+	hljs.highlightAll();
 };
 
 
@@ -499,11 +378,11 @@ if (urlParams.get("project") && (urlParams.get("project") in projects)) {
 		response => response.ok ? response.text() : populateProjectsListPage()
 	).then(README => {
 		if (!README) return;
-		if (README.includes("## Background")) {
+
+		if (README.includes("## Background"))
 			populateProjectPage(README);
-		} else {
-			window.history.replaceState({}, document.title, "/comingSoon.html?infoTextId=unpublishedProject");
-		};
+		else
+			window.location.replace("/comingSoon.html?infoTextId=unpublishedProject");
 	}).catch(error => {
 		console.error(error);
 		populateProjectsListPage();

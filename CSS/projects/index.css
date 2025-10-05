@@ -25,6 +25,14 @@
 .project:hover {
 	transform: scale(1.01);
 }
+.project__tagsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+.project__tagsContainer:empty {
+	display: none;
+}
 .project__infoContainer {
 	display: flex;
 	flex-direction: column;
@@ -38,6 +46,9 @@
 .project__startDate {
 	opacity: 0.8;
 	font-size: 0.8em;
+}
+.project__infoContainer .project__tagsContainer {
+	margin-top: 0.5em;
 }
 .project__description p {
 	margin-left: 0em;

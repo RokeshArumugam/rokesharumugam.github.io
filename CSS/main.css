@@ -331,10 +331,11 @@ p {
 	max-width: var(--paragraph-max-width);
 	line-height: 1.3em;
 }
-:is(p, ul) + p {
+:is(p, ul, pre) + p {
 	margin-top: 0.7em;
 }
-:is(p, ul) + ul {
+:is(p, ul, pre) + ul,
+li ul {
 	margin-top: 0.4em;
 }
 a {
@@ -391,7 +392,26 @@ video {
 	margin: auto;
 	margin-top: 1em;
 	width: max-content;
+}
+.section--pageIntro__description .primaryButton::before {
+	content: attr(title);
 	font-size: 1.25em;
+}
+.section--pageIntro__description [title="Donate"] {
+	background-color: unset;
+	color: var(--primary-color);
+}
+.section--pageIntro__description [title="Donate"]::before {
+	content: "\f4be";
+	font-family: "Font Awesome 7 Free";
+	font-size: 2em;
+}
+.section--pageIntro__tagsContainer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin-top: 1em;
 }
 
 /* -- -- Text */
@@ -418,7 +438,20 @@ video {
 .section--text li {
 	line-height: 1.3em;
 }
-.section--text img {
+.section--text ul:has(li[data-marker]) {
+	list-style: none;
+	padding-left: 1.3em;
+}
+.section--text li[data-marker] {
+	position: relative;
+}
+.section--text li[data-marker]::before {
+	content: attr(data-marker) " ";
+	position: absolute;
+	right: calc(100% + 0.3em);
+	font-size: 0.8em;
+}
+.section--text img, .section--text video {
 	display: block;
 	margin: 2em auto;
 }
@@ -428,6 +461,9 @@ video {
 	margin-bottom: 1em;
 	width: max-content;
 	font-size: 1.5em;
+}
+.section--text code {
+	border-radius: var(--border-radius);
 }
 
 /* -- -- Qualifications */

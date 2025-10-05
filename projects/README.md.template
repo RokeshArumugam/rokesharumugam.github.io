@@ -1,19 +1,23 @@
 # Project Name
 
 > Started in: 1970-01
+>
 > Note: text
+>
 > [View Project](https://rokesharumugam.com/projects)
+>
+> ![Status](https://img.shields.io/website?url=https%3A//rokesharumugam.com&label=Status&up_message=Online&down_message=Offline)
+>
+> ![Tag 1](https://img.shields.io/badge/tag_1-1E90FF)
+> ![Tag 2](https://img.shields.io/badge/tag_2-1E90FF)
+>
+> [Donate](https://donate.stripe.com/fZe5kv5SJ3jZfjG000)
 
 What it is
 
 Why I made it and the benefit I get
 
 The skills used
-
-
-## Tags
-
-Languages, skills
 
 
 ## Background
@@ -31,5 +35,5 @@ Paragraph 2
 
 ## Screenshots
 
-[Alt text 1](https://rokesharumugam.com/projects)
-[Alt text 2](https://rokesharumugam.com/projects)
+![Alt text 1](https://rokesharumugam.com/projects)
+![Alt text 2](https://rokesharumugam.com/projects)

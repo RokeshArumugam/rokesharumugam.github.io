@@ -379,6 +379,7 @@ video {
 	font-size: 3em;
 	text-align: center;
 	color: var(--primary-color);
+	word-wrap: break-word;
 }
 .section--pageIntro__heading:not(:has(+ .section--pageIntro__description)) {
 	margin-bottom: 0em;

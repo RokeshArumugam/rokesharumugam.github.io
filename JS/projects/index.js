@@ -192,10 +192,10 @@ function parseREADME(README) {
 			section["elems"].forEach(elem => {
 				if (elem.tagName != "UL") return;
 				for (let liElem of elem.children) {
-					let bulletMatch = liElem.innerText.match(/^\s*(.)\s.+$/u);
+					let bulletMatch = liElem.innerText.match(/^\s*(\p{Emoji})\s.+$/u);
 					if (bulletMatch) {
 						liElem.dataset.marker = bulletMatch[1];
-						liElem.innerText = liElem.innerText.replace(/^\s*.\s/u, "");
+						liElem.innerText = liElem.innerText.replace(/^\s*\p{Emoji}\s/u, "");
 					};
 				};
 			});

@@ -8,13 +8,21 @@ const projects = {
 	"blaze": {},
 	"nia": {},
 	"mayball.cai.cam.ac.uk": {},
-	"salt": {},
+	"salt": {
+		"allowedTextSections": [
+			"Description"
+		]
+	},
 	"videoSpeeder": {},
 	"sesame": {},
 	"characterSheet": {},
 	"mealBookingWebsite": {},
 	"staticSiteChecker": {},
-	"prandium": {},
+	"prandium": {
+		"allowedTextSections": [
+			"Information for Clients"
+		]
+	},
 	"invoiceGenerator": {},
 	"commandBar": {},
 	"tvTracker": {},
@@ -24,6 +32,17 @@ const projects = {
 	"stickmenBattles": {},
 	"ballJump": {}
 };
+Object.values(projects).forEach(project => {
+	project["allowedTextSections"] ||= [
+		"Description",
+		"Advantages Over Its Predecessor",
+		"Advantages Over Paper",
+		"Features",
+		"Usage",
+		"Copyright"
+	];
+	project["allowedTextSections"] = ["Background", ...project["allowedTextSections"]];
+});
 const md = window.markdownit();
 const pageIntroTemplate = document.getElementById("pageIntroTemplate");
 const projectTemplate = document.getElementById("projectTemplate");
@@ -49,15 +68,14 @@ async function fetchProjects() {
 			response => response.ok ? response.text() : null
 		).then(text => {
 			if (!text) return;
-			Object.assign(projects[projectName], parseREADME(text));
+			parseREADME(projectName, text);
 		}).catch(
 			error => console.error(error)
 		);
 	}));
 };
 
-function parseREADME(README) {
-	let project = {};
+function parseREADME(projectName, README) {
 	let tokens = md.parse(README, {});
 
 	for (let i = 0; i < tokens.length; i++) {
@@ -66,14 +84,14 @@ function parseREADME(README) {
 			(tokens[i]["type"] == "heading_open") &&
 			(tokens[i]["tag"] == "h1")
 		) {
-			project["name"] = tokens[i + 1]["content"].trim();
+			projects[projectName]["name"] = tokens[i + 1]["content"].trim();
 			i += 2;
 			continue;
 		};
 
 		// Start date, tags, page intro description
 		if (tokens[i]["type"] == "blockquote_open") {
-			project["pageIntroDescriptionElems"] = [];
+			projects[projectName]["pageIntroDescriptionElems"] = [];
 			while (tokens[i + 1]["type"] == "paragraph_open") {
 				i++;
 
@@ -81,21 +99,21 @@ function parseREADME(README) {
 				let dateMatch = tokens[i + 1]["content"].match(/^\s*Started in: (\d\d\d\d-\d\d)\s*$/);
 				let linkMatch = tokens[i + 1]["content"].match(/^\s*\[([^\]]+?)\]\(([^\)]+?)\)\s*$/);
 				if (dateMatch) {
-					project["startDate"] = dateMatch[1];
+					projects[projectName]["startDate"] = dateMatch[1];
 				} else if (linkMatch) {
 					elem = document.createElement("a");
 					elem.title = linkMatch[1];
 					elem.href = linkMatch[2];
 					elem.classList.add("primaryButton");
 				} else if (tokens[i + 1]["content"].match(/^(?:\s*!\[[^\]]+?\]\([^\)]+?\)\s*\n?)+$/)) {
-					project["tags"] ||= [];
+					projects[projectName]["tags"] ||= [];
 
 					let currentTags = tokens[i + 1]["content"].split("\n").map(line => {
 						let lineMatch = line.match(/^\s*!\[([^\]]+?)\]\(([^\)]+?)\)\s*$/);
 						return { "name": lineMatch[1], "url": lineMatch[2] };
 					});
 
-					project["tags"].push(...currentTags);
+					projects[projectName]["tags"].push(...currentTags);
 
 					elem = document.createElement("div");
 					elem.classList.add("section--pageIntro__tagsContainer");
@@ -109,7 +127,7 @@ function parseREADME(README) {
 					elem = document.createElement("p");
 					elem.innerText = tokens[i + 1]["content"].trim();
 				};
-				if (elem) project["pageIntroDescriptionElems"].push(elem);
+				if (elem) projects[projectName]["pageIntroDescriptionElems"].push(elem);
 
 				i += 2;
 			};
@@ -119,11 +137,11 @@ function parseREADME(README) {
 
 		// Description
 		if (
-			(!project["sections"]) &&
+			(!projects[projectName]["sections"]) &&
 			(tokens[i]["type"] == "paragraph_open")
 		) {
-			project["description"] ||= [];
-			project["description"].push(tokens[i + 1]["content"].trim());
+			projects[projectName]["description"] ||= [];
+			projects[projectName]["description"].push(tokens[i + 1]["content"].trim());
 			i += 2;
 			continue;
 		};
@@ -133,12 +151,12 @@ function parseREADME(README) {
 			(tokens[i]["type"] == "heading_open") &&
 			(tokens[i]["tag"] == "h2")
 		) {
-			project["sections"] ||= [];
-			project["sections"].push({ "heading": tokens[i + 1]["content"], "elems": [] });
+			projects[projectName]["sections"] ||= [];
+			projects[projectName]["sections"].push({ "heading": tokens[i + 1]["content"], "elems": [] });
 			i += 2;
 			continue;
 		};
-		if (project["sections"].at(-1)["heading"] == "Screenshots") {
+		if (projects[projectName]["sections"].at(-1)["heading"] == "Screenshots") {
 			if (tokens[i]["type"] == "paragraph_open") {
 				tokens[i + 1]["content"].split("\n").forEach((line, index) => {
 					let lineMatch = line.trim().match(/^!\[([^\]]+?)\]\(([^\)]+?)\)$/);
@@ -147,11 +165,11 @@ function parseREADME(README) {
 					imageElem.src = lineMatch[2];
 					imageElem.classList.add("section--carousel__image");
 					imageElem.classList.toggle("section--carousel__image--current", index == 0);
-					project["sections"].at(-1)["elems"].push(imageElem);
+					projects[projectName]["sections"].at(-1)["elems"].push(imageElem);
 				});
 				i += 2;
 			};
-		} else if (project["sections"].at(-1)["heading"] == "Video Demo") {
+		} else if (projects[projectName]["sections"].at(-1)["heading"] == "Video Demo") {
 			if (tokens[i]["type"] == "paragraph_open") {
 				let lineMatch = tokens[i + 1]["content"].trim().match(/^!\[([^\]]+?)\]\(([^\)]+?)\)$/);
 				let videoElem = document.createElement("video");
@@ -160,35 +178,26 @@ function parseREADME(README) {
 				videoElem.preload = "auto";
 				videoElem.controls = true;
 				videoElem.muted = true;
-				project["sections"].at(-1)["elems"].push(videoElem);
+				projects[projectName]["sections"].at(-1)["elems"].push(videoElem);
 				i += 2;
 			};
 		} else if (
-			[
-				"Background",
-				"Information for Clients",
-				"Description",
-				"Advantages Over Its Predecessor",
-				"Advantages Over Paper",
-				"Features",
-				"Usage",
-				"Copyright"
-			].includes(project["sections"].at(-1)["heading"])
+			projects[projectName]["allowedTextSections"].includes(projects[projectName]["sections"].at(-1)["heading"])
 		) {
-			project["sections"].at(-1)["tokens"] ||= []
-			project["sections"].at(-1)["tokens"].push(tokens[i])
+			projects[projectName]["sections"].at(-1)["tokens"] ||= []
+			projects[projectName]["sections"].at(-1)["tokens"].push(tokens[i])
 		};
 	};
 
-	if (project["sections"]) {
-		project["sections"].forEach(section => {
+	if (projects[projectName]["sections"]) {
+		projects[projectName]["sections"].forEach(section => {
 			if (!section["tokens"] || !section["tokens"].length) return;
 			let tempDivElem = document.createElement("div");
 			tempDivElem.innerHTML = md.renderer.render(section["tokens"], {}, {});
 			section["elems"] = Array.from(tempDivElem.children);
 		});
-		project["sections"] = project["sections"].filter(section => section["elems"] && section["elems"].length);
-		project["sections"].forEach(section => {
+		projects[projectName]["sections"] = projects[projectName]["sections"].filter(section => section["elems"] && section["elems"].length);
+		projects[projectName]["sections"].forEach(section => {
 			section["elems"].forEach(elem => {
 				if (elem.tagName != "UL") return;
 				for (let liElem of elem.children) {
@@ -201,8 +210,6 @@ function parseREADME(README) {
 			});
 		});
 	};
-
-	return project;
 };
 
 /* -- Section population -- */
@@ -360,11 +367,11 @@ async function populateProjectsListPage() {
 	document.querySelector(".section--projects")?.remove();
 	document.querySelector("main").append(sectionElem);
 };
-function populateProjectPage(README) {
-	let project = parseREADME(README);
-	populatePageIntroHeading(project["name"]);
-	populatePageIntroDescription(project["pageIntroDescriptionElems"]);
-	project["sections"].forEach(section => populateSection(section["heading"], section["elems"]));
+function populateProjectPage(projectName, README) {
+	parseREADME(projectName, README);
+	populatePageIntroHeading(projects[projectName]["name"]);
+	populatePageIntroDescription(projects[projectName]["pageIntroDescriptionElems"]);
+	projects[projectName]["sections"].forEach(section => populateSection(section["heading"], section["elems"]));
 	hljs.highlightAll();
 };
 
@@ -380,7 +387,7 @@ if (urlParams.get("project") && (urlParams.get("project") in projects)) {
 		if (!README) return;
 
 		if (README.includes("## Background"))
-			populateProjectPage(README);
+			populateProjectPage(urlParams.get("project"), README);
 		else
 			window.location.replace("/comingSoon.html?infoTextId=unpublishedProject");
 	}).catch(error => {

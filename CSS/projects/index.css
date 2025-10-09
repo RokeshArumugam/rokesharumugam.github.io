@@ -15,6 +15,7 @@
 	gap: var(--gap);
 	transition: transform var(--transition-duration) ease;
 	border-radius: var(--border-radius);
+	max-width: calc(var(--paragraph-max-width) + var(--gap) * 2);
 	padding: var(--gap);
 	color: var(--on-background-color);
 	text-decoration: none;
@@ -49,9 +50,6 @@
 }
 .project__infoContainer .project__tagsContainer {
 	margin-top: 0.5em;
-}
-.project__description p {
-	margin-left: 0em;
 }
 
 

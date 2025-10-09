@@ -4,22 +4,30 @@
 >
 > [View Project](https://chrome.google.com/webstore/detail/salt/mjmcaioleoioplapgocohdkkcdlhlhci)
 >
-> ![Rating](https://img.shields.io/chrome-web-store/stars/mjmcaioleoioplapgocohdkkcdlhlhci?label=Chrome%20Web%20Store%20Rating&labelColor=4285F4&logo=Chrome-Web-Store&logoColor=white)
+> ![Rating](https://img.shields.io/chrome-web-store/stars/mjmcaioleoioplapgocohdkkcdlhlhci?label=Chrome%20Web%20Store%20Rating&labelColor=4285F4&logo=chrome-web-store&logoColor=white)
 >
 > ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=FFFFFF)
 > ![CSS](https://img.shields.io/badge/CSS-663399?logo=css&logoColor=FFFFFF)
 > ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000000)
+> ![Browser Extension](https://img.shields.io/badge/Browser%20Extension-4285F4?logo=chrome-web-store&logoColor=white)
+> ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=FFFFFF)
+>
+> [Donate](https://donate.stripe.com/fZe5kv5SJ3jZfjG000)
 
-Salt is a browser extension that enhances the meal booking website at my college (Gonville and Caius) at the University of Cambridge.
+Salt is a browser extension that enhances the meal booking website at my college (Gonville and Caius, University of Cambridge).
 
-Salt applies almost all of the improvements (and more) from my Meal Booking Website project on top of the old website via a browser extension (albeit not as efficiently as replacing the old website would be).
+I originally built a full replacement for the meal booking system, but when the college decided not to adopt it, I created Salt so that students could still benefit immediately. It was rewarding to see dozens of people using it daily and to demonstrate that user-centred design and clever engineering can modernise even a legacy system from the outside.
+
+Built using HTML, CSS, and JavaScript with content scripts injected into existing web pages, Salt showcases front-end development, browser extension design, and UI/UX refinement. I also implemented automated configuration via remotely-hosted JSON and managed public deployment and updates through the Chrome Web Store. It was a great demonstration of how user-focused design and lightweight engineering can transform an outdated system with zero institutional involvement.
 
 
 ## Background
 
-At my college (Gonville and Caius) we have to book meals in advance if we would like to dine at the college. The old meal booking website looks as if was made quite a while ago and I noticed that a lot of students (myself included) felt that it could be greatly improved. So I created an improved version (which can be seen [here](meal_booking_website.html)) over the long vacation that is more fitting of our esteemed college.
+At Caius, students must book meals in advance through a dated and often cumbersome web portal. While developing a full replacement system (which can be seen [here](https://rokesharumugam.com/projects/?name=mealBookingWebsite)), I found that the college’s administration decided not to adopt it, despite support from several staff members.
 
-However, it seems uncertain whether the college will actually use it, so in the meantime I converted it into Salt: a browser extension that everyone can benefit from immediately, for free! It works on Google Chrome and Microsoft Edge.
+To let students still benefit from a better interface, I reworked the improvements into a browser extension. Salt 'adds flavour' and applies new functionality and visual improvements directly onto the existing website using injected scripts and styles. It proved immediately popular, reaching around 70 users at its peak before the old website was retired.
+
+Salt was published to the Chrome Web Store and automatically updates for users, making it simple to install and use.
 
 
 ## Description
@@ -38,7 +46,7 @@ It also adds several quality-of-life features (many student-requested) such as:
 - One-click booking from the main page
 - Actual signup open dates instead of '4 days before'
 - The ability to filter through who's booked in for a meal to find your friends
-- In case that still takes too long, the ability to add your friends' names on the profile page so they always show at the top of the list	
+- In case that still takes too long, the ability to add your friends' names on the profile page so they always show at the top of the list
 - Meals have tags (such as gowns, suits, black-tie, guests allowed, etc) so you don't have to read through all that text
 - The allergen key can also be seen above the menu so you finally know what all those letters mean
 - You can quickly copy meal details to send to guests so they know the time, place, dress code, menu, etc

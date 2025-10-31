@@ -13,7 +13,11 @@
 > ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=FFDE57)
 > ![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=FFFFFF)
 > ![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=FFFFFF)
-> ![Nginx](https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=FFFFFF)
+> ![Redis](https://img.shields.io/badge/Redis-FF4438?logo=redis&logoColor=FFFFFF)
+> ![NGINX](https://img.shields.io/badge/NGINX-009639?logo=nginx&logoColor=FFFFFF)
+> ![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=FFFFFF)
+> ![ntfy](https://img.shields.io/badge/ntfy-317F6F?logo=ntfy&logoColor=FFFFFF)
+> ![Ansible](https://img.shields.io/badge/Ansible-EE0000?logo=ansible&logoColor=FFFFFF)
 > ![Debian](https://img.shields.io/badge/Debian-A81D33?logo=debian&logoColor=FFFFFF)
 > ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?logo=raspberry%20pi&logoColor=FFFFFF)
 > ![Cloudflare Tunnels](https://img.shields.io/badge/Cloudflare%20Tunnels-F38020?logo=cloudflare&logoColor=FFFFFF)
@@ -56,24 +60,27 @@ The site went live in early 2024 and was used successfully during the event. I a
 erDiagram
     users {
         VARCHAR(320) email PK
+        VARCHAR(10) crsid "UNIQUE"
         VARCHAR(150) name
     }
 
-    hunt_stages {
-        TINYINT(2) stage_number PK
+    trials_questions {
+        TINYINT(2) question_number PK
+        VARCHAR(150) tab
         VARCHAR(1500) question
-        VARCHAR(16) qr_code "UNIQUE"
+        TINYINT(1) vote_value "DEFAULT 1"
     }
 
-    hunt_answers {
-        TINYINT(2) stage_number FK "PK"
+    trials_answers {
+        TINYINT(2) question_number FK "PK"
         VARCHAR(100) answer "PK"
     }
 
-    hunt_stages_unlocked {
+    trials_questions_correct {
         VARCHAR(320) email FK "PK"
-        TINYINT(2) stage_number FK "PK"
-        VARCHAR(100) last_answer "DEFAULT ''"
+        TINYINT(2) question_number FK "PK"
+        VARCHAR(100) answer
+        VARCHAR(100) voted_team
     }
 
     committee_members {
@@ -122,7 +129,7 @@ erDiagram
         BOOLEAN seen "DEFAULT 0"
     }
 
-    users ||--o{ hunt_stages_unlocked : " "
+    users ||--o{ trials_questions_correct : " "
     users ||--o{ favourite_attractions : " "
     users ||--o{ queuers : " "
     attractions ||--|{ attraction_active_times : " "
@@ -130,6 +137,6 @@ erDiagram
     attractions ||--o{ favourite_attractions : " "
     attractions ||--o{ queues : " "
     attractions ||--o{ queuers : " "
-    hunt_stages ||--|{ hunt_answers : " "
-    hunt_stages ||--o{ hunt_stages_unlocked : " "
+    trials_questions ||--|{ trials_answers : " "
+    trials_questions ||--o{ trials_questions_correct : " "
 ```

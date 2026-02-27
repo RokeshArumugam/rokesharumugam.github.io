@@ -4,7 +4,7 @@
 >
 > [View Project](https://avt.rokesharumugam.com)
 >
-> ![Status](https://img.shields.io/website?url=https%3A//avt.rokesharumugam.com&label=Status&up_message=Online&down_message=Offline)
+> ![Status](https://status.rokesharumugam.com/api/badge/2/status)
 >
 > ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=FFDE57)
 > ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=FFFFFF)

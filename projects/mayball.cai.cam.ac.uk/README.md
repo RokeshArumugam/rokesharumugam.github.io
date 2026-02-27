@@ -4,7 +4,7 @@
 >
 > [View Project](https://caiusball.com)
 >
-> ![Status](https://img.shields.io/website?url=https%3A//caiusball.com&label=Status&up_message=Online&down_message=Offline)
+> ![Status](https://status.rokesharumugam.com/api/badge/4/status)
 >
 > ![PHP](https://img.shields.io/badge/PHP-777BB4?logo=PHP&logoColor=FFFFFF)
 > ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=FFFFFF)
@@ -59,26 +59,27 @@ The site went live in early 2024 and was used successfully during the event. I a
 ```mermaid
 erDiagram
     users {
-        VARCHAR(320) email PK
+        SMALLINT(3) id PK "UNSIGNED"
+        VARCHAR(320) email "UNIQUE"
         VARCHAR(10) crsid "UNIQUE"
         VARCHAR(150) name
     }
 
     trials_questions {
-        TINYINT(2) question_number PK
+        TINYINT(2) question_number PK "UNSIGNED"
         VARCHAR(150) tab
         VARCHAR(1500) question
-        TINYINT(1) vote_value "DEFAULT 1"
+        TINYINT(1) vote_value "UNSIGNED DEFAULT 1"
     }
 
     trials_answers {
-        TINYINT(2) question_number FK "PK"
+        TINYINT(2) question_number FK "PK UNSIGNED"
         VARCHAR(100) answer "PK"
     }
 
     trials_questions_correct {
-        VARCHAR(320) email FK "PK"
-        TINYINT(2) question_number FK "PK"
+        SMALLINT(3) user_id FK "PK UNSIGNED"
+        TINYINT(2) question_number FK "PK UNSIGNED"
         VARCHAR(100) answer
         VARCHAR(100) voted_team
     }
@@ -113,7 +114,7 @@ erDiagram
     }
 
     favourite_attractions {
-        VARCHAR(320) email FK "PK"
+        SMALLINT(3) user_id FK "PK UNSIGNED"
         VARCHAR(150) attraction_name FK "PK"
     }
 
@@ -123,7 +124,7 @@ erDiagram
     }
 
     queuers {
-        VARCHAR(320) email FK "PK"
+        SMALLINT(3) user_id FK "PK UNSIGNED"
         VARCHAR(150) attraction_name FK "PK"
         TIMESTAMP join_time "PK"
         BOOLEAN seen "DEFAULT 0"

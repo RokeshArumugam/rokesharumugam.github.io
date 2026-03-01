@@ -98,6 +98,7 @@ function parseREADME(projectName, README) {
 				let elem;
 				let dateMatch = tokens[i + 1]["content"].match(/^\s*Started in: (\d\d\d\d-\d\d)\s*$/);
 				let linkMatch = tokens[i + 1]["content"].match(/^\s*\[([^\]]+?)\]\(([^\)]+?)\)\s*$/);
+				const imageRegex = /\s*\[?!\[([^\]]+?)\]\(([^\)]+?)\)\]?(?:\(([^\)]+?)\))?\s*/;
 				if (dateMatch) {
 					projects[projectName]["startDate"] = dateMatch[1];
 				} else if (linkMatch) {
@@ -105,12 +106,12 @@ function parseREADME(projectName, README) {
 					elem.title = linkMatch[1];
 					elem.href = linkMatch[2];
 					elem.classList.add("primaryButton");
-				} else if (tokens[i + 1]["content"].match(/^(?:\s*!\[[^\]]+?\]\([^\)]+?\)\s*\n?)+$/)) {
+				} else if (tokens[i + 1]["content"].match(new RegExp(`^(?:${imageRegex.source}\n?)+$`))) {
 					projects[projectName]["tags"] ||= [];
 
 					let currentTags = tokens[i + 1]["content"].split("\n").map(line => {
-						let lineMatch = line.match(/^\s*!\[([^\]]+?)\]\(([^\)]+?)\)\s*$/);
-						return { "name": lineMatch[1], "url": lineMatch[2] };
+						let lineMatch = line.match(new RegExp(`^${imageRegex.source}$`));
+						return { "name": lineMatch[1], "image_url": lineMatch[2], "link_url": lineMatch[3] };
 					});
 
 					projects[projectName]["tags"].push(...currentTags);
@@ -120,8 +121,15 @@ function parseREADME(projectName, README) {
 					currentTags.forEach(tag => {
 						let tagElem = document.createElement("img");
 						tagElem.alt = tag["name"];
-						tagElem.src = tag["url"];
-						elem.append(tagElem);
+						tagElem.src = tag["image_url"];
+						if (tag["link_url"]) {
+							let linkElem = document.createElement("a");
+							linkElem.href = tag["link_url"];
+							linkElem.append(tagElem);
+							elem.append(linkElem);
+						} else {
+							elem.append(tagElem);
+						};
 					});
 				} else {
 					elem = document.createElement("p");

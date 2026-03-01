@@ -414,6 +414,9 @@ video {
 	gap: 0.5em;
 	margin-top: 1em;
 }
+.section--pageIntro__tagsContainer a {
+	display: flex;
+}
 
 /* -- -- Text */
 

@@ -34,6 +34,9 @@
 .project__tagsContainer:empty {
 	display: none;
 }
+.project__tagsContainer a {
+	display: flex;
+}
 .project__infoContainer {
 	display: flex;
 	flex-direction: column;

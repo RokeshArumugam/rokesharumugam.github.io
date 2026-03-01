@@ -4,9 +4,10 @@
 >
 > ![Python](https://img.shields.io/badge/Python-3776AB?logo=Python&logoColor=FFDE57)
 
-Static Site Checker is a web scraper that checks if a website changes e.g. if the price of a product on amazon.co.uk changes.
+Static Site Checker is a web scraper that checks if a website changes e.g. if my website goes down, or if the price of a product on amazon.co.uk changes.
 
 I add the URLs of products I would like to monitor to a file and my phone is pinged when the price changes. It helps me save a few pounds every so often.
+Edit 2026: I now mainly use Uptime Kuma for availability monitoring.
 
 
 ## Usage

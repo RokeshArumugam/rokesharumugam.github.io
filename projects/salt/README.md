@@ -12,7 +12,7 @@
 > ![Browser Extension](https://img.shields.io/badge/Browser%20Extension-4285F4?logo=chrome-web-store&logoColor=white)
 > ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=FFFFFF)
 >
-> [Donate](https://donate.stripe.com/fZe5kv5SJ3jZfjG000)
+> [Donate](https://donate.stripe.com/cNi00k83U96J6QVdK3awo0d)
 
 Salt is a browser extension that enhances the meal booking website at my college (Gonville and Caius, University of Cambridge).
 

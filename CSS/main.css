@@ -406,6 +406,7 @@ video {
 	content: "\f4be";
 	font-family: "Font Awesome 7 Free";
 	font-size: 2em;
+	font-weight: bold;
 }
 .section--pageIntro__tagsContainer {
 	display: flex;

@@ -8,7 +8,6 @@ const textLinks = {
 	"Medicine University Application Advice": "/ask/",
 	"Medicine Personal Statement Advice": "/ask/",
 	"Programming Tutoring": "/tutoring/",
-	"Programming Courses": "/comingSoon.html?infoTextId=courses",
 	"Programming Projects": "/projects/"
 };
 const waitPerCharacterDuration = 175;
